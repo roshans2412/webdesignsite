@@ -6,425 +6,393 @@
 <title>CloudPixel AI Studio | Premium Website Design for Small Businesses – Vijayawada</title>
 <meta name="description" content="Get a professional business website in just 3–5 days. Affordable website design for startups, local businesses & personal brands. Vijayawada, Andhra Pradesh.">
 <meta name="keywords" content="Website Design Vijayawada, Small Business Website India, Affordable Website Design, Web Design Andhra Pradesh, CloudPixel AI Studio">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#030308;
-  --bg2:#0a0a12;
-  --bg3:#10101a;
-  --pk:#25D366;
+  --bg:#03030a;
+  --bg2:#080810;
+  --bg3:#0e0e1a;
+  --bg4:#141422;
+  --pk:#22c55e;
   --pk2:#4ade80;
-  --rd:#16a34a;
-  --pink:#f472b6;
-  --pink2:#ec4899;
-  --pink3:rgba(244,114,182,0.15);
-  --pink-glow:rgba(244,114,182,0.35);
+  --pk3:#16a34a;
+  --accent:#f97316;
+  --accent2:#fb923c;
+  --blue:#6366f1;
+  --blue2:#818cf8;
   --wh:#ffffff;
-  --wh2:#f5f0ff;
-  --gr:#6b6b88;
-  --gr2:#9090b0;
-  --bd:rgba(37,211,102,0.13);
+  --wh2:#f0eeff;
+  --gr:#52526e;
+  --gr2:#8888aa;
+  --bd:rgba(34,197,94,0.12);
   --bd2:rgba(255,255,255,0.06);
-  --bd-pink:rgba(244,114,182,0.2);
+  --bd3:rgba(255,255,255,0.03);
+  --pk-glow:rgba(34,197,94,0.3);
+  --accent-glow:rgba(249,115,22,0.3);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--wh);overflow-x:hidden;cursor:none;}
-::-webkit-scrollbar{width:3px;}
-::-webkit-scrollbar-thumb{background:linear-gradient(var(--pk),var(--pink));}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--wh);overflow-x:hidden;cursor:none;}
+::-webkit-scrollbar{width:2px;}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--pk),var(--accent));}
 
 /* CURSOR */
-#cur{position:fixed;width:12px;height:12px;background:var(--pk);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);box-shadow:0 0 15px var(--pk);transition:width .2s,height .2s,background .2s,border .2s;}
-#cur2{position:fixed;width:38px;height:38px;border:1.5px solid rgba(37,211,102,0.4);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:left .1s,top .1s;}
+#cur{position:fixed;width:10px;height:10px;background:var(--pk);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s,border .2s;box-shadow:0 0 12px var(--pk);}
+#cur2{position:fixed;width:34px;height:34px;border:1.5px solid rgba(34,197,94,0.35);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:left .1s,top .1s;}
 
 /* NAV */
-nav{position:fixed;top:0;width:100%;z-index:990;height:68px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;background:rgba(3,3,8,.93);backdrop-filter:blur(20px);border-bottom:1px solid var(--bd);}
-.nlogo{display:flex;align-items:center;gap:11px;}
-.nlsq{width:40px;height:40px;background:linear-gradient(135deg,#6366f1,#8b5cf6,var(--pk));border-radius:11px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.3rem;box-shadow:0 0 22px rgba(139,92,246,.5);}
-.nltx{font-family:'Bebas Neue',sans-serif;font-size:1.25rem;letter-spacing:2px;background:linear-gradient(90deg,#818cf8,var(--pk));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.nlinks{display:flex;gap:2.2rem;list-style:none;}
-.nlinks a{text-decoration:none;color:var(--gr2);font-size:.84rem;font-weight:500;transition:color .2s;letter-spacing:.4px;}
+nav{position:fixed;top:0;width:100%;z-index:990;height:64px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;background:rgba(3,3,10,.95);backdrop-filter:blur(24px);border-bottom:1px solid var(--bd);}
+.nlogo{display:flex;align-items:center;gap:10px;}
+.nlsq{width:38px;height:38px;background:linear-gradient(135deg,var(--blue),var(--pk));border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:1px;box-shadow:0 0 18px rgba(99,102,241,.4);}
+.nltx{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:2.5px;background:linear-gradient(90deg,var(--blue2),var(--pk2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.nlinks{display:flex;gap:2rem;list-style:none;}
+.nlinks a{text-decoration:none;color:var(--gr2);font-size:.82rem;font-weight:500;transition:color .2s;letter-spacing:.3px;}
 .nlinks a:hover{color:var(--wh);}
-.nwa{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,var(--pk),var(--rd));color:#fff;padding:10px 22px;border-radius:8px;text-decoration:none;font-weight:700;font-size:.82rem;box-shadow:0 0 20px rgba(37,211,102,.4);transition:all .25s;letter-spacing:.5px;}
-.nwa:hover{box-shadow:0 0 40px rgba(37,211,102,.7);transform:translateY(-2px);}
+.nwa{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,var(--pk),var(--pk3));color:#fff;padding:9px 20px;border-radius:8px;text-decoration:none;font-weight:700;font-size:.8rem;box-shadow:0 0 18px var(--pk-glow);transition:all .25s;letter-spacing:.4px;}
+.nwa:hover{box-shadow:0 0 35px var(--pk-glow);transform:translateY(-2px);}
+
+/* NOISE TEXTURE OVERLAY */
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9997;opacity:.4;}
 
 /* HERO */
-.hero{min-height:100vh;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:90px 5% 60px;gap:3rem;}
-.orb{position:absolute;border-radius:50%;filter:blur(100px);animation:op 7s ease-in-out infinite;}
-.o1{width:600px;height:600px;background:rgba(37,211,102,.08);top:-20%;right:-10%;}
-.o2{width:400px;height:400px;background:rgba(244,114,182,.06);bottom:-10%;left:-10%;animation-delay:2.5s;}
-.o3{width:220px;height:220px;background:rgba(139,92,246,.07);top:50%;left:42%;animation-delay:5s;}
-@keyframes op{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
-.gbg{position:absolute;inset:0;background-image:linear-gradient(rgba(37,211,102,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(37,211,102,.022) 1px,transparent 1px);background-size:56px 56px;}
+.hero{min-height:100vh;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:88px 5% 60px;gap:4rem;}
+.orb{position:absolute;border-radius:50%;filter:blur(110px);animation:op 8s ease-in-out infinite;}
+.o1{width:700px;height:700px;background:rgba(34,197,94,.055);top:-25%;right:-15%;}
+.o2{width:500px;height:500px;background:rgba(249,115,22,.04);bottom:-15%;left:-15%;animation-delay:3s;}
+.o3{width:250px;height:250px;background:rgba(99,102,241,.06);top:45%;left:40%;animation-delay:5.5s;}
+@keyframes op{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+.gbg{position:absolute;inset:0;background-image:linear-gradient(rgba(34,197,94,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(34,197,94,.018) 1px,transparent 1px);background-size:64px 64px;}
 .hleft{position:relative;z-index:1;}
-.hchip{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(244,114,182,.3);background:rgba(244,114,182,.07);padding:7px 16px;border-radius:100px;font-size:.74rem;font-weight:600;color:var(--pink);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1.8rem;}
-.ldot{width:7px;height:7px;background:var(--pink);border-radius:50%;box-shadow:0 0 10px var(--pink);animation:lb 1.4s infinite;}
-@keyframes lb{0%,100%{opacity:1}50%{opacity:.2}}
-.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.2rem,6vw,5.6rem);line-height:.95;letter-spacing:2px;margin-bottom:1rem;}
+
+/* HERO BADGE */
+.hchip{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(249,115,22,.3);background:rgba(249,115,22,.07);padding:7px 16px;border-radius:100px;font-size:.72rem;font-weight:700;color:var(--accent2);letter-spacing:1.8px;text-transform:uppercase;margin-bottom:1.6rem;}
+.ldot{width:6px;height:6px;background:var(--accent);border-radius:50%;box-shadow:0 0 8px var(--accent);animation:lb 1.4s infinite;}
+@keyframes lb{0%,100%{opacity:1}50%{opacity:.15}}
+
+.tagline-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.22);padding:5px 13px;border-radius:100px;font-size:.7rem;font-weight:600;color:var(--blue2);letter-spacing:.8px;margin-bottom:1.2rem;}
+
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.4rem,6.2vw,5.8rem);line-height:.93;letter-spacing:2px;margin-bottom:1rem;}
 .hero h1 .w1{color:var(--wh);display:block;}
-.hero h1 .w2{background:linear-gradient(90deg,var(--pk),var(--pink),#818cf8,var(--pk));background-size:300% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:tg 4s linear infinite;display:block;}
-.hero h1 .w3{color:var(--wh2);display:block;font-size:clamp(1.2rem,2.5vw,1.8rem);font-family:'Outfit',sans-serif;font-weight:400;letter-spacing:0;margin-top:.6rem;}
+.hero h1 .w2{background:linear-gradient(90deg,var(--pk),var(--pk2),var(--accent),var(--pk));background-size:300% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:tg 5s linear infinite;display:block;}
+.hero h1 .w3{color:var(--wh2);display:block;font-size:clamp(1.1rem,2vw,1.5rem);font-family:'Plus Jakarta Sans',sans-serif;font-weight:400;letter-spacing:0;margin-top:.7rem;line-height:1.6;}
 @keyframes tg{0%{background-position:0%}100%{background-position:300%}}
-.tagline-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.25);padding:5px 14px;border-radius:100px;font-size:.72rem;font-weight:600;color:#a5b4fc;letter-spacing:1px;margin-bottom:1.3rem;}
-.hdesc{font-size:.97rem;color:var(--gr2);line-height:1.8;max-width:490px;margin-bottom:2.5rem;}
+
+.hdesc{font-size:.95rem;color:var(--gr2);line-height:1.85;max-width:480px;margin-bottom:2.2rem;}
 .hdesc strong{color:var(--wh2);}
-.hbtns{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:2.5rem;}
-.bpk{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--pk),var(--rd));color:#fff;padding:14px 32px;border-radius:10px;text-decoration:none;font-weight:800;font-size:.9rem;box-shadow:0 0 32px rgba(37,211,102,.4);transition:all .25s;}
-.bpk:hover{box-shadow:0 0 55px rgba(37,211,102,.65);transform:translateY(-3px);}
-.bgh{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--wh2);padding:14px 32px;border-radius:10px;text-decoration:none;font-weight:600;font-size:.9rem;border:1px solid rgba(255,255,255,.12);transition:all .25s;}
-.bgh:hover{border-color:var(--pink);color:var(--pink);}
-.hkpis{display:flex;gap:0;border:1px solid var(--bd);border-radius:14px;overflow:hidden;max-width:510px;}
-.kpi{flex:1;padding:1.1rem .8rem;text-align:center;border-right:1px solid var(--bd);background:rgba(37,211,102,.02);transition:background .2s;}
+.hbtns{display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:2.5rem;margin-top:1.8rem;}
+.bpk{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--pk),var(--pk3));color:#fff;padding:13px 30px;border-radius:10px;text-decoration:none;font-weight:800;font-size:.88rem;box-shadow:0 0 28px var(--pk-glow);transition:all .25s;}
+.bpk:hover{box-shadow:0 0 50px var(--pk-glow);transform:translateY(-3px);}
+.bgh{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--wh2);padding:13px 30px;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;border:1px solid rgba(255,255,255,.1);transition:all .25s;}
+.bgh:hover{border-color:var(--pk);color:var(--pk);}
+
+/* HERO KPIs */
+.hkpis{display:flex;gap:0;border:1px solid var(--bd);border-radius:14px;overflow:hidden;max-width:480px;}
+.kpi{flex:1;padding:1rem .7rem;text-align:center;border-right:1px solid var(--bd);background:rgba(34,197,94,.025);transition:background .2s;}
 .kpi:last-child{border-right:none;}
-.kpi:nth-child(2){background:rgba(244,114,182,.03);}
-.kpi:hover{background:rgba(37,211,102,.07);}
-.kpin{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;letter-spacing:1px;background:linear-gradient(135deg,var(--pk),var(--rd));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.kpin.pink{background:linear-gradient(135deg,var(--pink),var(--pink2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.kpil{font-size:.66rem;color:var(--gr);margin-top:3px;letter-spacing:.4px;}
+.kpi:nth-child(even){background:rgba(249,115,22,.025);}
+.kpi:hover{background:rgba(34,197,94,.07);}
+.kpin{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:1px;background:linear-gradient(135deg,var(--pk),var(--pk2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.kpin.org{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.kpil{font-size:.63rem;color:var(--gr);margin-top:3px;letter-spacing:.3px;font-weight:500;}
 
 /* HERO RIGHT SLIDER */
 .hright{position:relative;z-index:1;}
-.hslider{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.55),0 0 0 1px rgba(37,211,102,.15);aspect-ratio:4/3;}
-.hslide{position:absolute;inset:0;opacity:0;transition:opacity .8s ease;display:block;}
+.hslider{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.6),0 0 0 1px rgba(34,197,94,.12);aspect-ratio:4/3;}
+.hslide{position:absolute;inset:0;opacity:0;transition:opacity .9s ease;display:block;}
 .hslide.active{opacity:1;}
-.hslide img{width:100%;height:100%;object-fit:cover;filter:brightness(.72) saturate(1.3);}
-.hslide-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(37,211,102,.2),rgba(0,0,0,.4));}
-.hslide-label{position:absolute;bottom:16px;left:16px;background:rgba(3,3,8,.85);border:1px solid rgba(37,211,102,.25);border-radius:8px;padding:8px 14px;backdrop-filter:blur(10px);font-size:.75rem;font-weight:600;color:var(--pk2);}
-.hdots{position:absolute;bottom:16px;right:16px;display:flex;gap:6px;z-index:2;}
-.hdot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);cursor:pointer;transition:all .3s;}
-.hdot.on{background:var(--pk);box-shadow:0 0 8px var(--pk);}
-.hfc{position:absolute;background:rgba(10,10,18,.92);border:1px solid rgba(37,211,102,.25);border-radius:12px;padding:11px 15px;backdrop-filter:blur(10px);display:flex;align-items:center;gap:9px;z-index:3;}
-.fc1{bottom:-16px;left:-16px;animation:fl 3s ease-in-out infinite;}
-.fc2{top:16px;right:-16px;animation:fl 3s 1.5s ease-in-out infinite;border-color:rgba(244,114,182,.3);}
-@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-.fci{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,var(--pk),var(--rd));display:flex;align-items:center;justify-content:center;font-size:1rem;box-shadow:0 0 14px rgba(37,211,102,.4);}
-.fci.pink-i{background:linear-gradient(135deg,var(--pink),var(--pink2));box-shadow:0 0 14px var(--pink-glow);}
-.fcv{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--pk);line-height:1;}
-.fcv.pink-v{color:var(--pink);}
-.fct{font-size:.66rem;color:var(--gr2);margin-top:2px;}
-
-/* TEAM BRAND */
-.team-brand{background:linear-gradient(90deg,#818cf8,var(--pk));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:800;}
+.hslide img{width:100%;height:100%;object-fit:cover;filter:brightness(.68) saturate(1.2);}
+.hslide-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(34,197,94,.18),rgba(0,0,0,.35));}
+.hslide-label{position:absolute;bottom:14px;left:14px;background:rgba(3,3,10,.88);border:1px solid rgba(34,197,94,.22);border-radius:7px;padding:7px 13px;backdrop-filter:blur(10px);font-size:.73rem;font-weight:600;color:var(--pk2);}
+.hdots{position:absolute;bottom:14px;right:14px;display:flex;gap:5px;z-index:2;}
+.hdot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:all .3s;}
+.hdot.on{background:var(--pk);box-shadow:0 0 7px var(--pk);}
+.hfc{position:absolute;background:rgba(8,8,16,.94);border:1px solid rgba(34,197,94,.22);border-radius:12px;padding:10px 14px;backdrop-filter:blur(12px);display:flex;align-items:center;gap:9px;z-index:3;}
+.fc1{bottom:-14px;left:-14px;animation:fl 3.5s ease-in-out infinite;}
+.fc2{top:14px;right:-14px;animation:fl 3.5s 1.75s ease-in-out infinite;border-color:rgba(249,115,22,.25);}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.fci{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--pk),var(--pk3));display:flex;align-items:center;justify-content:center;font-size:.95rem;box-shadow:0 0 12px var(--pk-glow);}
+.fci.org-i{background:linear-gradient(135deg,var(--accent),#c2410c);box-shadow:0 0 12px var(--accent-glow);}
+.fcv{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:var(--pk);line-height:1;}
+.fcv.org-v{color:var(--accent2);}
+.fct{font-size:.63rem;color:var(--gr2);margin-top:2px;}
 
 /* TICKER */
-.ticker{border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:13px 0;overflow:hidden;background:rgba(37,211,102,.02);}
-.tinner{display:flex;animation:tr 22s linear infinite;white-space:nowrap;}
-.ti{color:var(--gr);font-size:.7rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;padding:0 2.5rem;flex-shrink:0;}
+.ticker{border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:12px 0;overflow:hidden;background:rgba(34,197,94,.018);}
+.tinner{display:flex;animation:tr 24s linear infinite;white-space:nowrap;}
+.ti{color:var(--gr);font-size:.68rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;padding:0 2.2rem;flex-shrink:0;}
 .td{color:var(--pk);}
-.td.pink-td{color:var(--pink);}
+.td.org-td{color:var(--accent);}
 @keyframes tr{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-/* WHY US SECTION */
-.whyus{padding:65px 5%;background:var(--bg2);border-bottom:1px solid var(--bd2);}
-.wu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
-.wucard{background:var(--bg3);border:1px solid var(--bd2);border-radius:16px;padding:1.8rem;display:flex;align-items:flex-start;gap:1rem;transition:all .3s;position:relative;overflow:hidden;}
-.wucard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--pk),var(--pink));transform:scaleX(0);transform-origin:left;transition:transform .4s;}
-.wucard:hover{border-color:rgba(37,211,102,.25);transform:translateY(-4px);}
+/* WHY US */
+.whyus{padding:60px 5%;background:var(--bg2);border-bottom:1px solid var(--bd2);}
+.wu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.2rem;}
+.wucard{background:var(--bg3);border:1px solid var(--bd2);border-radius:16px;padding:1.7rem;display:flex;align-items:flex-start;gap:1rem;transition:all .3s;position:relative;overflow:hidden;}
+.wucard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--pk),var(--accent));transform:scaleX(0);transform-origin:left;transition:transform .4s;}
+.wucard:hover{border-color:rgba(34,197,94,.22);transform:translateY(-4px);}
 .wucard:hover::before{transform:scaleX(1);}
-.wucard:nth-child(2){border-color:var(--bd-pink);}
-.wucard:nth-child(2)::before{background:linear-gradient(90deg,var(--pink),#818cf8);}
-.wucard:nth-child(2):hover{border-color:rgba(244,114,182,.35);}
-.wu-icon{width:48px;height:48px;border-radius:12px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.4rem;}
-.wu-icon.g{background:rgba(37,211,102,.1);border:1px solid rgba(37,211,102,.2);}
-.wu-icon.p{background:rgba(244,114,182,.1);border:1px solid rgba(244,114,182,.2);}
-.wu-icon.b{background:rgba(129,140,248,.1);border:1px solid rgba(129,140,248,.2);}
-.wu-title{font-weight:700;font-size:.95rem;margin-bottom:.4rem;}
-.wu-desc{font-size:.8rem;color:var(--gr2);line-height:1.6;}
+.wu-icon{width:46px;height:46px;border-radius:12px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.3rem;}
+.wu-icon.g{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.18);}
+.wu-icon.o{background:rgba(249,115,22,.1);border:1px solid rgba(249,115,22,.18);}
+.wu-icon.b{background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.18);}
+.wu-title{font-weight:700;font-size:.93rem;margin-bottom:.4rem;}
+.wu-desc{font-size:.79rem;color:var(--gr2);line-height:1.65;}
 
-/* SECTIONS */
-.sec{padding:95px 5%;position:relative;}
+/* SECTION BASE */
+.sec{padding:90px 5%;position:relative;}
 .seca{background:var(--bg2);}
-.stag{display:inline-flex;align-items:center;gap:10px;color:var(--pk);font-size:.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:1.2rem;}
-.stag::before{content:'';width:26px;height:2px;background:linear-gradient(90deg,var(--pk),var(--rd));}
-.stag::after{content:'';width:8px;height:8px;border:2px solid var(--pk);border-radius:50%;}
-.stag.pink-tag{color:var(--pink);}
-.stag.pink-tag::before{background:linear-gradient(90deg,var(--pink),var(--pink2));}
-.stag.pink-tag::after{border-color:var(--pink);}
-.stitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.3rem,3.8vw,3.6rem);letter-spacing:2px;line-height:1;margin-bottom:1rem;}
+.stag{display:inline-flex;align-items:center;gap:10px;color:var(--pk);font-size:.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:1.1rem;}
+.stag::before{content:'';width:24px;height:2px;background:linear-gradient(90deg,var(--pk),var(--pk3));}
+.stag::after{content:'';width:7px;height:7px;border:2px solid var(--pk);border-radius:50%;}
+.stag.org-tag{color:var(--accent2);}
+.stag.org-tag::before{background:linear-gradient(90deg,var(--accent),var(--accent2));}
+.stag.org-tag::after{border-color:var(--accent);}
+.stitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,3.6vw,3.4rem);letter-spacing:2px;line-height:1;margin-bottom:1rem;}
 .stitle .pk{color:var(--pk);}
-.stitle .pink{color:var(--pink);}
-.sdesc{color:var(--gr2);font-size:.97rem;line-height:1.75;max-width:570px;}
+.stitle .org{color:var(--accent2);}
+.sdesc{color:var(--gr2);font-size:.94rem;line-height:1.78;max-width:560px;}
 
 /* ABOUT */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-top:3rem;}
-.aslider-wrap{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45);}
+.aslider-wrap{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 28px 75px rgba(0,0,0,.45);}
 .aslider{position:relative;aspect-ratio:4/3;}
 .asl{position:absolute;inset:0;opacity:0;transition:opacity .9s ease;}
 .asl.on{opacity:1;}
-.asl img{width:100%;height:100%;object-fit:cover;filter:brightness(.68) saturate(1.3);}
-.asl-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(37,211,102,.2),rgba(0,0,0,.3));}
-.asl-cap{position:absolute;bottom:0;left:0;right:0;padding:1.5rem;background:linear-gradient(to top,rgba(3,3,8,.95),transparent);}
-.asl-cap h4{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:1px;margin-bottom:3px;}
-.asl-cap p{font-size:.75rem;color:var(--gr2);}
-.asl-dots{position:absolute;top:14px;right:14px;display:flex;gap:5px;}
-.asl-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:all .3s;}
-.asl-dot.on{background:var(--pk);box-shadow:0 0 8px var(--pk);}
-.aright{display:flex;flex-direction:column;gap:1.2rem;}
-.aval{display:flex;gap:1rem;align-items:flex-start;padding:1.3rem;background:var(--bg3);border:1px solid var(--bd);border-radius:13px;transition:all .2s;}
-.aval:hover{border-color:var(--pk);background:rgba(37,211,102,.05);}
-.aval.pink-val:hover{border-color:var(--pink);background:rgba(244,114,182,.05);}
-.avi{width:44px;height:44px;flex-shrink:0;border-radius:11px;background:rgba(37,211,102,.1);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;font-size:1.2rem;}
-.avi.pink-avi{background:rgba(244,114,182,.1);border-color:var(--bd-pink);}
-.avt{font-weight:700;font-size:.92rem;margin-bottom:3px;}
-.avs{font-size:.81rem;color:var(--gr);line-height:1.6;}
-.astat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:3rem;}
-.astat{background:var(--bg3);border:1px solid var(--bd);border-radius:14px;padding:1.5rem 1rem;text-align:center;position:relative;overflow:hidden;transition:all .25s;}
-.astat::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--pk),var(--rd));}
-.astat.pink-stat::before{background:linear-gradient(90deg,var(--pink),var(--pink2));}
-.astat:hover{border-color:var(--pk);background:rgba(37,211,102,.06);}
-.astat.pink-stat:hover{border-color:var(--pink);background:rgba(244,114,182,.06);}
-.astn{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:var(--pk);line-height:1;}
-.astn.pink{color:var(--pink);}
-.astl{font-size:.72rem;color:var(--gr);margin-top:5px;}
+.asl img{width:100%;height:100%;object-fit:cover;filter:brightness(.66) saturate(1.25);}
+.asl-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(34,197,94,.18),rgba(0,0,0,.28));}
+.asl-cap{position:absolute;bottom:0;left:0;right:0;padding:1.4rem;background:linear-gradient(to top,rgba(3,3,10,.95),transparent);}
+.asl-cap h4{font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:1px;margin-bottom:2px;}
+.asl-cap p{font-size:.73rem;color:var(--gr2);}
+.asl-dots{position:absolute;top:12px;right:12px;display:flex;gap:5px;}
+.asl-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.18);cursor:pointer;transition:all .3s;}
+.asl-dot.on{background:var(--pk);box-shadow:0 0 7px var(--pk);}
+.aright{display:flex;flex-direction:column;gap:1.1rem;}
+.aval{display:flex;gap:1rem;align-items:flex-start;padding:1.2rem;background:var(--bg3);border:1px solid var(--bd2);border-radius:13px;transition:all .2s;}
+.aval:hover{border-color:var(--pk);background:rgba(34,197,94,.04);}
+.aval.org-val:hover{border-color:var(--accent);background:rgba(249,115,22,.04);}
+.avi{width:42px;height:42px;flex-shrink:0;border-radius:11px;background:rgba(34,197,94,.1);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;font-size:1.1rem;}
+.avi.org-avi{background:rgba(249,115,22,.1);border-color:rgba(249,115,22,.18);}
+.avt{font-weight:700;font-size:.9rem;margin-bottom:3px;}
+.avs{font-size:.79rem;color:var(--gr);line-height:1.6;}
+.astat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;margin-top:2.5rem;}
+.astat{background:var(--bg3);border:1px solid var(--bd);border-radius:13px;padding:1.4rem .9rem;text-align:center;position:relative;overflow:hidden;transition:all .25s;}
+.astat::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--pk),var(--pk3));}
+.astat.org-stat::before{background:linear-gradient(90deg,var(--accent),var(--accent2));}
+.astat:hover{border-color:var(--pk);background:rgba(34,197,94,.05);}
+.astat.org-stat:hover{border-color:var(--accent);background:rgba(249,115,22,.05);}
+.astn{font-family:'Bebas Neue',sans-serif;font-size:2.4rem;color:var(--pk);line-height:1;}
+.astn.org{color:var(--accent2);}
+.astl{font-size:.7rem;color:var(--gr);margin-top:4px;}
 
 /* SERVICES */
-.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd2);border:1px solid var(--bd2);border-radius:20px;overflow:hidden;margin-top:3rem;}
-.srv{background:var(--bg2);padding:2.4rem 2rem;transition:all .3s;position:relative;overflow:hidden;cursor:pointer;}
-.srv::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--pk),var(--rd));transform:scaleX(0);transform-origin:left;transition:transform .4s;}
-.srv.pink-srv::after{background:linear-gradient(90deg,var(--pink),var(--pink2));}
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd2);border:1px solid var(--bd2);border-radius:18px;overflow:hidden;margin-top:2.8rem;}
+.srv{background:var(--bg2);padding:2.2rem 1.8rem;transition:all .3s;position:relative;overflow:hidden;cursor:pointer;}
+.srv::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--pk),var(--pk3));transform:scaleX(0);transform-origin:left;transition:transform .4s;}
+.srv.org-srv::after{background:linear-gradient(90deg,var(--accent),var(--accent2));}
 .srv:hover{background:var(--bg3);}
 .srv:hover::after{transform:scaleX(1);}
-.srvn{font-family:'Bebas Neue',sans-serif;font-size:.72rem;letter-spacing:3px;color:var(--pk);opacity:.5;margin-bottom:1.4rem;}
-.srvn.pink-n{color:var(--pink);}
-.srvi{font-size:2.7rem;margin-bottom:1.1rem;display:block;}
-.srv h3{font-size:1.08rem;font-weight:700;margin-bottom:.7rem;}
-.srv p{font-size:.81rem;color:var(--gr);line-height:1.7;}
-.srvlnk{display:inline-flex;align-items:center;gap:5px;color:var(--pk);font-size:.79rem;font-weight:600;margin-top:1.1rem;transition:gap .2s;}
-.srvlnk.pink-lnk{color:var(--pink);}
-.srv:hover .srvlnk{gap:10px;}
+.srvn{font-family:'Bebas Neue',sans-serif;font-size:.7rem;letter-spacing:3px;color:var(--pk);opacity:.5;margin-bottom:1.3rem;}
+.srvn.org-n{color:var(--accent);}
+.srvi{font-size:2.5rem;margin-bottom:1rem;display:block;}
+.srv h3{font-size:1.02rem;font-weight:700;margin-bottom:.65rem;}
+.srv p{font-size:.79rem;color:var(--gr);line-height:1.7;}
+.srvlnk{display:inline-flex;align-items:center;gap:5px;color:var(--pk);font-size:.77rem;font-weight:600;margin-top:1rem;transition:gap .2s;}
+.srvlnk.org-lnk{color:var(--accent2);}
+.srv:hover .srvlnk{gap:9px;}
 
 /* PORTFOLIO */
-.port-slider-wrap{position:relative;margin-top:3rem;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4);}
-.pslider{display:flex;transition:transform .7s cubic-bezier(.4,0,.2,1);}
-.pslide{min-width:100%;position:relative;}
-.pslide-inner{display:grid;grid-template-columns:1fr 1fr;height:420px;}
-.pslide-img{position:relative;overflow:hidden;}
-.pslide-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.7) saturate(1.2);}
-.pslide-img-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(37,211,102,.22),rgba(0,0,0,.3));}
-.pslide-info{background:var(--bg3);padding:2.5rem;display:flex;flex-direction:column;justify-content:center;border-left:1px solid var(--bd);}
-.pslide-num{font-family:'Bebas Neue',sans-serif;font-size:.72rem;letter-spacing:3px;color:var(--pk);opacity:.6;margin-bottom:1rem;}
-.pslide-info h3{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:1px;margin-bottom:.8rem;line-height:1.1;}
-.pslide-info p{font-size:.85rem;color:var(--gr2);line-height:1.7;margin-bottom:1.5rem;}
-.pslide-tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem;}
-.ptg{background:rgba(37,211,102,.1);color:var(--pk2);font-size:.65rem;font-weight:700;padding:4px 10px;border-radius:100px;border:1px solid rgba(37,211,102,.2);}
-.pslide-btn{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,var(--pk),var(--rd));color:#fff;padding:11px 24px;border-radius:9px;text-decoration:none;font-weight:700;font-size:.82rem;box-shadow:0 4px 18px rgba(37,211,102,.35);transition:all .25s;width:fit-content;}
-.pslide-btn:hover{box-shadow:0 8px 28px rgba(37,211,102,.55);}
-.pslider-controls{display:flex;align-items:center;justify-content:space-between;margin-top:1.2rem;}
-.psl-dots{display:flex;gap:8px;}
-.psl-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.15);cursor:pointer;transition:all .3s;}
-.psl-dot.on{background:var(--pk);width:24px;border-radius:4px;box-shadow:0 0 8px var(--pk);}
-.psl-arrows{display:flex;gap:.8rem;}
-.psl-arr{width:44px;height:44px;border-radius:50%;background:var(--bg3);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;font-size:1.1rem;color:var(--wh);}
-.psl-arr:hover{background:var(--pk);border-color:var(--pk);}
+.port-placeholder{margin-top:2.8rem;background:var(--bg3);border:2px dashed rgba(34,197,94,.2);border-radius:18px;padding:4rem 2rem;text-align:center;position:relative;overflow:hidden;}
+.port-placeholder::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--pk),var(--accent),var(--blue));}
+.pp-icon{font-size:3.5rem;margin-bottom:1rem;opacity:.6;}
+.pp-title{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:2px;color:var(--pk);margin-bottom:.6rem;}
+.pp-desc{font-size:.9rem;color:var(--gr2);line-height:1.7;max-width:480px;margin:0 auto 1.5rem;}
+.pp-industries{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-bottom:2rem;}
+.pp-tag{background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.18);color:var(--pk2);font-size:.7rem;font-weight:700;padding:5px 13px;border-radius:100px;}
+.pp-tag.org-pt{background:rgba(249,115,22,.08);border-color:rgba(249,115,22,.18);color:var(--accent2);}
+.pp-note{font-size:.75rem;color:var(--gr);background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.1);border-radius:8px;padding:.7rem 1.2rem;display:inline-block;}
 
 /* PRICING */
-.pdeck{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;align-items:start;}
-.prc{border-radius:22px;padding:2.5rem 2rem;border:1px solid var(--bd2);background:var(--bg3);position:relative;transition:all .3s;}
-.prc:hover{border-color:rgba(37,211,102,.3);transform:translateY(-5px);}
-.prc.hot{border-color:var(--pink);background:linear-gradient(145deg,rgba(244,114,182,.06),var(--bg3));transform:scale(1.04);}
+.pdeck{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.8rem;align-items:start;}
+.prc{border-radius:20px;padding:2.4rem 1.9rem;border:1px solid var(--bd2);background:var(--bg3);position:relative;transition:all .3s;}
+.prc:hover{border-color:rgba(34,197,94,.28);transform:translateY(-5px);}
+.prc.hot{border-color:var(--accent);background:linear-gradient(145deg,rgba(249,115,22,.06),var(--bg3));transform:scale(1.04);}
 .prc.hot:hover{transform:scale(1.04) translateY(-5px);}
-.htag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--pink),var(--pink2));color:#fff;font-size:.65rem;font-weight:800;letter-spacing:2px;padding:5px 20px;border-radius:100px;white-space:nowrap;box-shadow:0 4px 18px var(--pink-glow);text-transform:uppercase;}
-.prct{font-size:.67rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--pk);margin-bottom:1rem;}
-.prct.pink{color:var(--pink);}
-.prci{font-size:2.6rem;margin-bottom:1rem;display:block;}
-.prca{font-family:'Bebas Neue',sans-serif;font-size:3.4rem;letter-spacing:1px;line-height:1;margin-bottom:.3rem;}
-.prca sup{font-size:1.3rem;vertical-align:top;margin-top:8px;display:inline-block;}
-.prcn{font-size:.72rem;color:var(--gr);margin-bottom:1rem;}
-.prck{font-size:.82rem;color:var(--wh2);line-height:1.6;margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--bd2);}
-.prcl{list-style:none;margin-bottom:2rem;}
-.prcl li{font-size:.81rem;color:#bbb;padding:7px 0;display:flex;align-items:center;gap:9px;border-bottom:1px solid rgba(255,255,255,.03);}
+.htag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--accent),#c2410c);color:#fff;font-size:.62rem;font-weight:800;letter-spacing:2px;padding:5px 18px;border-radius:100px;white-space:nowrap;box-shadow:0 4px 16px var(--accent-glow);text-transform:uppercase;}
+.prct{font-size:.65rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--pk);margin-bottom:.9rem;}
+.prct.org{color:var(--accent2);}
+.prci{font-size:2.4rem;margin-bottom:.9rem;display:block;}
+.prca{font-family:'Bebas Neue',sans-serif;font-size:3.2rem;letter-spacing:1px;line-height:1;margin-bottom:.3rem;}
+.prca sup{font-size:1.2rem;vertical-align:top;margin-top:7px;display:inline-block;}
+.prcn{font-size:.7rem;color:var(--gr);margin-bottom:.9rem;}
+.prck{font-size:.8rem;color:var(--wh2);line-height:1.65;margin-bottom:1.4rem;padding-bottom:1.4rem;border-bottom:1px solid var(--bd2);}
+.prcl{list-style:none;margin-bottom:1.8rem;}
+.prcl li{font-size:.79rem;color:#bbb;padding:6px 0;display:flex;align-items:center;gap:9px;border-bottom:1px solid rgba(255,255,255,.025);}
 .prcl li::before{content:'✓';color:var(--pk);font-weight:800;flex-shrink:0;}
-.prcl li.off::before{content:'✕';color:#333;}
-.prcl li.off{color:#3a3a3a;}
-.pbtn{width:100%;padding:13px;border-radius:10px;font-weight:800;font-size:.87rem;cursor:pointer;transition:all .2s;font-family:'Outfit',sans-serif;letter-spacing:.5px;}
-.pbtn.o{background:transparent;color:var(--pk);border:1px solid rgba(37,211,102,.3);}
-.pbtn.o:hover{background:rgba(37,211,102,.1);border-color:var(--pk);}
-.pbtn.s{background:linear-gradient(135deg,var(--pink),var(--pink2));color:#fff;border:none;box-shadow:0 8px 25px var(--pink-glow);}
-.pbtn.s:hover{box-shadow:0 12px 40px rgba(244,114,182,.5);transform:translateY(-2px);}
-
-/* DOMAINS */
-.dom-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:.8rem;margin-top:2.5rem;}
-.dep{background:var(--bg3);border:1px solid var(--bd);border-radius:10px;padding:.9rem .7rem;text-align:center;transition:all .25s;cursor:pointer;}
-.dep:hover{border-color:var(--pk);background:rgba(37,211,102,.08);transform:translateY(-4px);box-shadow:0 8px 24px rgba(37,211,102,.2);}
-.depe{font-family:'Bebas Neue',sans-serif;font-size:1.25rem;letter-spacing:1px;color:var(--pk);margin-bottom:3px;}
-.depn{font-size:.63rem;color:var(--gr);}
-.ind-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem;}
-.itag{background:rgba(37,211,102,.07);border:1px solid rgba(37,211,102,.14);color:var(--pk2);font-size:.7rem;font-weight:600;padding:5px 13px;border-radius:100px;transition:all .2s;cursor:default;}
-.itag:hover{background:rgba(37,211,102,.14);border-color:var(--pk);}
-.dom-split{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
-.dom-img-w{position:relative;}
-.dom-img-w img{width:100%;border-radius:18px;filter:brightness(.65) saturate(1.3);box-shadow:0 28px 70px rgba(0,0,0,.4);}
-.dio{position:absolute;inset:0;border-radius:18px;background:linear-gradient(135deg,rgba(37,211,102,.2),rgba(0,0,0,.25));}
-.dbadge{position:absolute;bottom:-18px;right:22px;background:linear-gradient(135deg,var(--pink),var(--pink2));border-radius:14px;padding:16px 22px;box-shadow:0 10px 35px var(--pink-glow);text-align:center;}
-.dbn{font-family:'Bebas Neue',sans-serif;font-size:2.6rem;line-height:1;}
-.dbt{font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;opacity:.85;}
-
-/* EXPERIENCE */
-.expl{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-top:3rem;}
-.exp-iw{position:relative;}
-.exp-iw img{width:100%;border-radius:20px;filter:brightness(.65) saturate(1.3);box-shadow:0 32px 85px rgba(0,0,0,.45);}
-.eio{position:absolute;inset:0;border-radius:20px;background:linear-gradient(135deg,rgba(37,211,102,.25),rgba(0,0,0,.2));}
-.eis{position:absolute;bottom:-1px;left:0;right:0;background:linear-gradient(to top,rgba(3,3,8,.97),transparent);border-radius:0 0 20px 20px;padding:1.8rem;text-align:center;}
-.eisn{font-family:'Bebas Neue',sans-serif;font-size:2.3rem;color:var(--pk);line-height:1;}
-.eisl{font-size:.68rem;color:var(--gr);margin-top:3px;}
-.e666{margin-bottom:2.5rem;}
-.e6b{border-radius:13px;border:1px solid var(--bd-pink);background:rgba(244,114,182,.04);padding:2rem;text-align:center;position:relative;overflow:hidden;transition:all .25s;}
-.e6b::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--pink),var(--pink2));}
-.e6b:hover{border-color:var(--pink);background:rgba(244,114,182,.08);}
-.e6n{font-family:'Bebas Neue',sans-serif;font-size:3.5rem;background:linear-gradient(135deg,var(--pink),var(--pink2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;letter-spacing:1px;}
-.e6l{font-size:.85rem;color:var(--gr);margin-top:8px;line-height:1.4;}
-.sbars{display:flex;flex-direction:column;gap:1.1rem;}
-.sbr{display:flex;flex-direction:column;gap:6px;}
-.sbh{display:flex;justify-content:space-between;}
-.sbn{font-size:.84rem;font-weight:600;color:var(--wh2);}
-.sbp{font-family:'Bebas Neue',sans-serif;font-size:.93rem;color:var(--pk);letter-spacing:1px;}
-.sbt{height:5px;background:rgba(255,255,255,.05);border-radius:5px;overflow:hidden;}
-.sbf{height:100%;border-radius:5px;width:0%;background:linear-gradient(90deg,var(--pk),var(--rd));transition:width 1.5s cubic-bezier(.4,0,.2,1);}
-.sbf.pink-bar{background:linear-gradient(90deg,var(--pink),var(--pink2));}
-
-/* TESTIMONIALS */
-.trow{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3rem;}
-.tc{background:var(--bg3);border:1px solid var(--bd2);border-radius:18px;padding:1.9rem;transition:all .3s;position:relative;overflow:hidden;}
-.tc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--pk),var(--rd));transform:scaleX(0);transform-origin:left;transition:transform .4s;}
-.tc.pink-tc::before{background:linear-gradient(90deg,var(--pink),var(--pink2));}
-.tc:hover{border-color:rgba(37,211,102,.25);transform:translateY(-5px);box-shadow:0 20px 50px rgba(37,211,102,.08);}
-.tc.pink-tc:hover{border-color:rgba(244,114,182,.25);box-shadow:0 20px 50px rgba(244,114,182,.08);}
-.tc:hover::before{transform:scaleX(1);}
-.tst{color:var(--pk);font-size:.9rem;letter-spacing:2px;margin-bottom:1rem;}
-.tst.pink-stars{color:var(--pink);}
-.ttx{font-size:.86rem;color:#aaa;line-height:1.75;font-style:italic;margin-bottom:1.4rem;}
-.tau{display:flex;align-items:center;gap:12px;padding-top:1.1rem;border-top:1px solid var(--bd2);}
-.tav{width:42px;height:42px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;color:#fff;}
-.av1{background:linear-gradient(135deg,var(--pk),var(--rd));}
-.av2{background:linear-gradient(135deg,var(--pink),var(--pink2));}
-.av3{background:linear-gradient(135deg,var(--rd),#ff6900);}
-.tnm{font-weight:700;font-size:.87rem;}
-.trl{font-size:.7rem;color:var(--gr);}
-
-/* DASHBOARD / REPORTING SECTION */
-.dash-sec{padding:95px 5%;background:var(--bg);}
-.dash-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.5rem;}
-.dcard{background:var(--bg3);border:1px solid var(--bd2);border-radius:16px;padding:1.5rem;position:relative;overflow:hidden;transition:all .3s;}
-.dcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
-.dcard.green::before{background:linear-gradient(90deg,var(--pk),var(--rd));}
-.dcard.pink::before{background:linear-gradient(90deg,var(--pink),var(--pink2));}
-.dcard.purple::before{background:linear-gradient(90deg,#818cf8,#6366f1);}
-.dcard.teal::before{background:linear-gradient(90deg,#2dd4bf,#0891b2);}
-.dcard:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.1);}
-.dcard.pink:hover{border-color:var(--bd-pink);box-shadow:0 12px 35px rgba(244,114,182,.12);}
-.dcard-icon{font-size:1.8rem;margin-bottom:.8rem;}
-.dcard-label{font-size:.7rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gr);margin-bottom:.4rem;}
-.dcard-val{font-family:'Bebas Neue',sans-serif;font-size:2.4rem;letter-spacing:1px;line-height:1;}
-.dcard.green .dcard-val{color:var(--pk);}
-.dcard.pink .dcard-val{background:linear-gradient(135deg,var(--pink),var(--pink2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.dcard.purple .dcard-val{color:#a5b4fc;}
-.dcard.teal .dcard-val{color:#2dd4bf;}
-.dcard-sub{font-size:.72rem;color:var(--gr);margin-top:.4rem;}
-.dcard-badge{display:inline-flex;align-items:center;gap:4px;font-size:.67rem;font-weight:700;padding:3px 8px;border-radius:100px;margin-top:.6rem;}
-.badge-up{background:rgba(37,211,102,.12);color:var(--pk);}
-.badge-up-pink{background:rgba(244,114,182,.12);color:var(--pink);}
-/* Chart bars */
-.mini-chart{display:flex;align-items:flex-end;gap:3px;height:40px;margin-top:1rem;}
-.mc-bar{flex:1;border-radius:3px 3px 0 0;min-width:6px;transition:height .5s ease;}
-.mc-bar.g{background:linear-gradient(to top,var(--rd),var(--pk));}
-.mc-bar.p{background:linear-gradient(to top,var(--pink2),var(--pink));}
-
-/* CTA */
-.ctasec{padding:95px 5%;text-align:center;position:relative;overflow:hidden;}
-.ctaorb{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(244,114,182,.08),transparent 70%);border-radius:50%;pointer-events:none;}
-.ctaorb2{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(37,211,102,.07),transparent 70%);border-radius:50%;pointer-events:none;}
-.ctasec h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5.5vw,4.8rem);letter-spacing:2px;line-height:.95;margin-bottom:1.5rem;position:relative;z-index:1;}
-.ctasec h2 em{color:var(--pk);font-style:normal;}
-.ctasec h2 .pinkw{color:var(--pink);}
-.ctasec p{color:var(--gr2);font-size:1.03rem;margin-bottom:2.5rem;position:relative;z-index:1;}
-.ctabtns{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;position:relative;z-index:1;}
-.ctadet{display:flex;justify-content:center;gap:2.5rem;margin-top:2.8rem;flex-wrap:wrap;position:relative;z-index:1;}
-.cd{display:flex;align-items:center;gap:9px;font-size:.87rem;color:var(--gr2);}
-.cdi{width:34px;height:34px;border-radius:8px;background:rgba(37,211,102,.1);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;font-size:.9rem;}
+.prcl li.off::before{content:'✕';color:#2a2a2a;}
+.prcl li.off{color:#2e2e2e;}
+.pbtn{width:100%;padding:12px;border-radius:9px;font-weight:800;font-size:.85rem;cursor:pointer;transition:all .2s;font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:.4px;}
+.pbtn.o{background:transparent;color:var(--pk);border:1px solid rgba(34,197,94,.28);}
+.pbtn.o:hover{background:rgba(34,197,94,.1);border-color:var(--pk);}
+.pbtn.s{background:linear-gradient(135deg,var(--accent),#c2410c);color:#fff;border:none;box-shadow:0 8px 24px var(--accent-glow);}
+.pbtn.s:hover{box-shadow:0 12px 36px rgba(249,115,22,.5);transform:translateY(-2px);}
 
 /* PRICING TABS */
-.ptabs{display:flex;gap:.8rem;margin:2rem 0 0 0;flex-wrap:wrap;}
-.ptab{background:var(--bg3);border:1px solid var(--bd2);color:var(--gr2);padding:12px 28px;border-radius:10px;font-family:'Outfit',sans-serif;font-weight:700;font-size:.88rem;cursor:pointer;transition:all .25s;letter-spacing:.5px;}
-.ptab.on{background:linear-gradient(135deg,var(--pk),var(--rd));color:#fff;border-color:transparent;box-shadow:0 0 25px rgba(37,211,102,.4);}
+.ptabs{display:flex;gap:.7rem;margin:1.8rem 0 0 0;flex-wrap:wrap;}
+.ptab{background:var(--bg3);border:1px solid var(--bd2);color:var(--gr2);padding:11px 26px;border-radius:9px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.86rem;cursor:pointer;transition:all .25s;letter-spacing:.3px;}
+.ptab.on{background:linear-gradient(135deg,var(--pk),var(--pk3));color:#fff;border-color:transparent;box-shadow:0 0 22px var(--pk-glow);}
 .ptab:hover:not(.on){border-color:var(--pk);color:var(--pk);}
 #tab-custom{display:none;}
 
 /* CUSTOM PLAN FORM */
-.cpwrap{margin-top:2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
-.cpinfo{background:var(--bg3);border:1px solid var(--bd);border-radius:20px;padding:2.5rem;position:relative;overflow:hidden;}
-.cpinfo::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--pk),var(--pink));}
-.cp-services{display:flex;flex-direction:column;gap:.8rem;margin-top:1.5rem;}
-.cpchk{display:flex;align-items:center;gap:12px;padding:.9rem 1rem;background:var(--bg2);border:1px solid var(--bd2);border-radius:10px;cursor:pointer;transition:all .2s;}
-.cpchk:hover{border-color:var(--pk);background:rgba(37,211,102,.04);}
-.cpchk input[type=checkbox]{width:18px;height:18px;accent-color:var(--pk);cursor:pointer;flex-shrink:0;}
-.cpchk-lbl{font-size:.88rem;font-weight:600;color:var(--wh2);}
-.cpchk-sub{font-size:.72rem;color:var(--gr);margin-left:auto;}
-.cpform{background:var(--bg3);border:1px solid var(--bd);border-radius:20px;padding:2.5rem;position:relative;overflow:hidden;}
-.cpform::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--pink),var(--pk));}
-.cptitle{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:1px;margin-bottom:1.5rem;}
-.cprow{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;}
-.cpfield{display:flex;flex-direction:column;gap:6px;}
+.cpwrap{margin-top:2.2rem;display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start;}
+.cpinfo{background:var(--bg3);border:1px solid var(--bd);border-radius:18px;padding:2.2rem;position:relative;overflow:hidden;}
+.cpinfo::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--pk),var(--accent));}
+.cp-services{display:flex;flex-direction:column;gap:.7rem;margin-top:1.3rem;}
+.cpchk{display:flex;align-items:center;gap:11px;padding:.85rem .95rem;background:var(--bg2);border:1px solid var(--bd2);border-radius:9px;cursor:pointer;transition:all .2s;}
+.cpchk:hover{border-color:var(--pk);background:rgba(34,197,94,.04);}
+.cpchk input[type=checkbox]{width:17px;height:17px;accent-color:var(--pk);cursor:pointer;flex-shrink:0;}
+.cpchk-lbl{font-size:.86rem;font-weight:600;color:var(--wh2);}
+.cpchk-sub{font-size:.7rem;color:var(--gr);margin-left:auto;}
+.cpform{background:var(--bg3);border:1px solid var(--bd);border-radius:18px;padding:2.2rem;position:relative;overflow:hidden;}
+.cpform::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--pk));}
+.cptitle{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:1px;margin-bottom:1.3rem;}
+.cprow{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-bottom:.9rem;}
+.cpfield{display:flex;flex-direction:column;gap:5px;}
 .cpfield.full{grid-column:1/-1;}
-.cplabel{font-size:.74rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--pk);}
-.cpinput{background:var(--bg2);border:1px solid var(--bd2);border-radius:8px;padding:11px 14px;font-family:'Outfit',sans-serif;font-size:.9rem;color:var(--wh);outline:none;transition:border .2s;}
+.cplabel{font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--pk);}
+.cpinput{background:var(--bg2);border:1px solid var(--bd2);border-radius:8px;padding:10px 13px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.88rem;color:var(--wh);outline:none;transition:border .2s;}
 .cpinput:focus{border-color:var(--pk);}
 .cpinput::placeholder{color:var(--gr);}
-textarea.cpinput{resize:vertical;min-height:90px;}
-.cpselect{background:var(--bg2);border:1px solid var(--bd2);border-radius:8px;padding:11px 14px;font-family:'Outfit',sans-serif;font-size:.9rem;color:var(--wh);outline:none;transition:border .2s;cursor:pointer;}
+textarea.cpinput{resize:vertical;min-height:85px;}
+.cpselect{background:var(--bg2);border:1px solid var(--bd2);border-radius:8px;padding:10px 13px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.88rem;color:var(--wh);outline:none;transition:border .2s;cursor:pointer;}
 .cpselect:focus{border-color:var(--pk);}
-.cpsubmit{width:100%;padding:14px;background:linear-gradient(135deg,var(--pk),var(--rd));color:#fff;border:none;border-radius:10px;font-family:'Outfit',sans-serif;font-weight:800;font-size:.95rem;cursor:pointer;transition:all .25s;box-shadow:0 8px 25px rgba(37,211,102,.4);letter-spacing:.5px;margin-top:.5rem;}
-.cpsubmit:hover{box-shadow:0 12px 40px rgba(37,211,102,.6);transform:translateY(-2px);}
+.cpsubmit{width:100%;padding:13px;background:linear-gradient(135deg,var(--pk),var(--pk3));color:#fff;border:none;border-radius:9px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:.92rem;cursor:pointer;transition:all .25s;box-shadow:0 8px 22px var(--pk-glow);letter-spacing:.4px;margin-top:.4rem;}
+.cpsubmit:hover{box-shadow:0 12px 36px var(--pk-glow);transform:translateY(-2px);}
 @media(max-width:1024px){.cpwrap{grid-template-columns:1fr;}}
 
-/* FLOATING WA BUTTON */
-.wa-float{position:fixed;bottom:28px;right:28px;z-index:980;width:62px;height:62px;background:linear-gradient(135deg,#25D366,#128C7E);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 8px 30px rgba(37,211,102,.5);text-decoration:none;animation:wapulse 2.5s ease-in-out infinite;transition:transform .2s;}
+/* TEAM SECTION */
+.team-sec{padding:90px 5%;background:var(--bg);}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.8rem;}
+.team-card{background:var(--bg3);border:1px solid var(--bd2);border-radius:18px;overflow:hidden;transition:all .3s;position:relative;}
+.team-card:hover{border-color:rgba(34,197,94,.25);transform:translateY(-5px);}
+.team-card-img{width:100%;aspect-ratio:1/1;object-fit:cover;filter:brightness(.7) saturate(1.1);display:block;}
+.team-card-ph{width:100%;aspect-ratio:1/1;background:linear-gradient(135deg,var(--bg4),var(--bg3));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;border-bottom:1px solid var(--bd2);}
+.team-card-ph-icon{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,rgba(34,197,94,.15),rgba(99,102,241,.15));border:2px dashed rgba(34,197,94,.25);display:flex;align-items:center;justify-content:center;font-size:2rem;}
+.team-card-ph-text{font-size:.72rem;color:var(--gr);letter-spacing:1px;text-transform:uppercase;font-weight:600;}
+.team-card-info{padding:1.4rem;}
+.team-card-name{font-weight:800;font-size:.98rem;margin-bottom:.2rem;}
+.team-card-role{font-size:.75rem;color:var(--pk);font-weight:600;letter-spacing:.5px;margin-bottom:.6rem;}
+.team-card-desc{font-size:.78rem;color:var(--gr2);line-height:1.6;}
+.team-note{margin-top:2.5rem;background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.14);border-radius:13px;padding:1.4rem 1.8rem;display:flex;align-items:center;gap:1rem;}
+.team-note-icon{font-size:1.6rem;flex-shrink:0;}
+.team-note-text{font-size:.83rem;color:var(--gr2);line-height:1.65;}
+.team-note-text strong{color:var(--pk);}
+
+/* TESTIMONIALS */
+.trow{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:2.8rem;}
+.tc{background:var(--bg3);border:1px solid var(--bd2);border-radius:16px;padding:1.8rem;transition:all .3s;position:relative;overflow:hidden;}
+.tc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--pk),var(--pk3));transform:scaleX(0);transform-origin:left;transition:transform .4s;}
+.tc.org-tc::before{background:linear-gradient(90deg,var(--accent),var(--accent2));}
+.tc:hover{border-color:rgba(34,197,94,.22);transform:translateY(-5px);box-shadow:0 20px 48px rgba(34,197,94,.07);}
+.tc.org-tc:hover{border-color:rgba(249,115,22,.22);box-shadow:0 20px 48px rgba(249,115,22,.07);}
+.tc:hover::before{transform:scaleX(1);}
+.tst{color:var(--pk);font-size:.88rem;letter-spacing:2px;margin-bottom:.9rem;}
+.tst.org-stars{color:var(--accent2);}
+.ttx{font-size:.84rem;color:#aaa;line-height:1.78;font-style:italic;margin-bottom:1.3rem;}
+.tau{display:flex;align-items:center;gap:11px;padding-top:1rem;border-top:1px solid var(--bd2);}
+.tav{width:40px;height:40px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.95rem;color:#fff;}
+.av1{background:linear-gradient(135deg,var(--pk),var(--pk3));}
+.av2{background:linear-gradient(135deg,var(--accent),#c2410c);}
+.av3{background:linear-gradient(135deg,var(--blue),var(--blue2));}
+.tnm{font-weight:700;font-size:.85rem;}
+.trl{font-size:.68rem;color:var(--gr);}
+.t-placeholder{background:rgba(34,197,94,.04);border:2px dashed rgba(34,197,94,.15);border-radius:16px;padding:1.8rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:.7rem;}
+.t-ph-icon{font-size:2rem;opacity:.45;}
+.t-ph-text{font-size:.78rem;color:var(--gr);line-height:1.6;}
+.t-ph-text strong{color:var(--pk2);display:block;margin-bottom:.3rem;}
+
+/* CONTACT */
+.contact-cards{display:flex;flex-direction:column;gap:1.3rem;}
+.ccard{display:flex;align-items:center;gap:13px;padding:.95rem;background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.15);border-radius:11px;text-decoration:none;transition:all .2s;}
+.ccard:hover{border-color:var(--pk);background:rgba(34,197,94,.09);}
+.ccard.org-card{background:rgba(249,115,22,.05);border-color:rgba(249,115,22,.15);}
+.ccard.org-card:hover{border-color:var(--accent);background:rgba(249,115,22,.09);}
+.ccard-icon{width:40px;height:40px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;}
+.ci-wa{background:linear-gradient(135deg,#25D366,#128C7E);}
+.ci-ph{background:linear-gradient(135deg,var(--accent),#c2410c);}
+.ci-em{background:linear-gradient(135deg,var(--blue),var(--blue2));}
+.ci-lo{background:linear-gradient(135deg,#0088cc,#005fa3);}
+.ci-hr{background:linear-gradient(135deg,var(--pk),var(--pk3));}
+.ccard-title{font-weight:700;font-size:.88rem;color:#fff;}
+.ccard-sub{font-size:.78rem;color:var(--gr2);}
+.guarantee-box{background:linear-gradient(135deg,rgba(249,115,22,.07),rgba(34,197,94,.05));border:1px solid rgba(249,115,22,.18);border-radius:13px;padding:1.4rem;text-align:center;}
+.gb-icon{font-size:1.8rem;margin-bottom:.4rem;}
+.gb-title{font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:1px;margin-bottom:.3rem;}
+.gb-desc{font-size:.8rem;color:var(--gr2);}
+.gb-desc strong{color:var(--accent2);}
+
+/* CTA */
+.ctasec{padding:90px 5%;text-align:center;position:relative;overflow:hidden;}
+.ctaorb{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:550px;height:550px;background:radial-gradient(circle,rgba(249,115,22,.07),transparent 70%);border-radius:50%;pointer-events:none;}
+.ctaorb2{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:380px;height:380px;background:radial-gradient(circle,rgba(34,197,94,.06),transparent 70%);border-radius:50%;pointer-events:none;}
+.ctasec h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.4rem,5vw,4.5rem);letter-spacing:2px;line-height:.95;margin-bottom:1.4rem;position:relative;z-index:1;}
+.ctasec h2 em{color:var(--pk);font-style:normal;}
+.ctasec h2 .orgw{color:var(--accent2);}
+.ctasec p{color:var(--gr2);font-size:1rem;margin-bottom:2.3rem;position:relative;z-index:1;}
+.ctabtns{display:flex;justify-content:center;gap:.9rem;flex-wrap:wrap;position:relative;z-index:1;}
+.ctadet{display:flex;justify-content:center;gap:2.2rem;margin-top:2.6rem;flex-wrap:wrap;position:relative;z-index:1;}
+.cd{display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--gr2);}
+.cdi{width:32px;height:32px;border-radius:8px;background:rgba(34,197,94,.1);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;font-size:.88rem;}
+
+/* FLOATING WA */
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:980;width:58px;height:58px;background:linear-gradient(135deg,#25D366,#128C7E);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.7rem;box-shadow:0 8px 28px rgba(37,211,102,.48);text-decoration:none;animation:wapulse 2.5s ease-in-out infinite;transition:transform .2s;}
 .wa-float:hover{transform:scale(1.12);}
-@keyframes wapulse{0%,100%{box-shadow:0 8px 30px rgba(37,211,102,.5)}50%{box-shadow:0 8px 45px rgba(37,211,102,.8),0 0 0 10px rgba(37,211,102,.08)}}
+@keyframes wapulse{0%,100%{box-shadow:0 8px 28px rgba(37,211,102,.48)}50%{box-shadow:0 8px 42px rgba(37,211,102,.75),0 0 0 9px rgba(37,211,102,.07)}}
 
 /* FOOTER */
-footer{background:var(--bg2);border-top:1px solid var(--bd);padding:65px 5% 0;display:grid;grid-template-columns:2.5fr 1fr 1fr 1fr;gap:3rem;}
-.flb p{font-size:.81rem;color:var(--gr);line-height:1.8;max-width:265px;margin-top:1rem;}
-.fllogo{display:flex;align-items:center;gap:10px;}
-.flsq{width:35px;height:35px;border-radius:9px;background:linear-gradient(135deg,#6366f1,#8b5cf6,var(--pk));display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:1px;box-shadow:0 0 14px rgba(139,92,246,.4);}
-.flnm{font-family:'Bebas Neue',sans-serif;font-size:1.05rem;letter-spacing:2px;background:linear-gradient(90deg,#818cf8,var(--pk));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.fsocs{display:flex;gap:9px;margin-top:1.4rem;}
-.fsc{width:35px;height:35px;border-radius:8px;background:rgba(255,255,255,.04);border:1px solid var(--bd2);display:flex;align-items:center;justify-content:center;font-size:.88rem;transition:all .2s;cursor:pointer;}
-.fsc:hover{background:var(--pink);border-color:var(--pink);}
-footer h5{font-size:.67rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.18);margin-bottom:1.1rem;}
-footer ul{list-style:none;display:flex;flex-direction:column;gap:.7rem;}
-footer ul a{color:var(--gr);text-decoration:none;font-size:.81rem;transition:color .2s;}
+footer{background:var(--bg2);border-top:1px solid var(--bd);padding:60px 5% 0;display:grid;grid-template-columns:2.5fr 1fr 1fr 1fr;gap:3rem;}
+.flb p{font-size:.79rem;color:var(--gr);line-height:1.8;max-width:255px;margin-top:.9rem;}
+.fllogo{display:flex;align-items:center;gap:9px;}
+.flsq{width:33px;height:33px;border-radius:9px;background:linear-gradient(135deg,var(--blue),var(--pk));display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.05rem;letter-spacing:1px;box-shadow:0 0 12px rgba(99,102,241,.35);}
+.flnm{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:2px;background:linear-gradient(90deg,var(--blue2),var(--pk2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.fsocs{display:flex;gap:8px;margin-top:1.2rem;}
+.fsc{width:33px;height:33px;border-radius:8px;background:rgba(255,255,255,.03);border:1px solid var(--bd2);display:flex;align-items:center;justify-content:center;font-size:.85rem;transition:all .2s;cursor:pointer;}
+.fsc:hover{background:var(--accent);border-color:var(--accent);}
+footer h5{font-size:.64rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.15);margin-bottom:1rem;}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:.65rem;}
+footer ul a{color:var(--gr);text-decoration:none;font-size:.79rem;transition:color .2s;}
 footer ul a:hover{color:var(--pk);}
-.fbot{border-top:1px solid var(--bd2);padding:20px 5%;display:flex;justify-content:space-between;align-items:center;font-size:.72rem;color:rgba(255,255,255,.17);background:var(--bg2);}
+.fbot{border-top:1px solid var(--bd2);padding:18px 5%;display:flex;justify-content:space-between;align-items:center;font-size:.7rem;color:rgba(255,255,255,.15);background:var(--bg2);}
 
 /* REVEAL */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease;}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;}
 .rv.in{opacity:1;transform:translateY(0);}
+
+/* BRAND TEXT */
+.team-brand{background:linear-gradient(90deg,var(--blue2),var(--pk2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:800;}
 
 /* RESPONSIVE */
 @media(max-width:1024px){
   nav .nlinks{display:none;}
-  .hero{grid-template-columns:1fr;padding-top:88px;}
+  .hero{grid-template-columns:1fr;padding-top:84px;}
   .hright{display:none;}
-  .about-grid,.dom-split,.expl{grid-template-columns:1fr;}
+  .about-grid,.expl{grid-template-columns:1fr;}
   .srv-grid{grid-template-columns:1fr 1fr;}
-  .pslide-inner{grid-template-columns:1fr;height:auto;}
   .pdeck{grid-template-columns:1fr;}
   .prc.hot{transform:none;}
   .trow{grid-template-columns:1fr 1fr;}
   footer{grid-template-columns:1fr 1fr;}
-  .dom-grid{grid-template-columns:repeat(4,1fr);}
   .astat-row{grid-template-columns:repeat(2,1fr);}
-  .dash-grid{grid-template-columns:repeat(2,1fr);}
   .wu-grid{grid-template-columns:1fr;}
+  .team-grid{grid-template-columns:1fr 1fr;}
+  #contact-grid{grid-template-columns:1fr!important;}
 }
 @media(max-width:640px){
-  .sec{padding:65px 4%;}
+  .sec{padding:60px 4%;}
   .srv-grid,.trow,.astat-row{grid-template-columns:1fr;}
-  .dom-grid{grid-template-columns:repeat(3,1fr);}
   footer{grid-template-columns:1fr;}
-  .dash-grid{grid-template-columns:1fr;}
+  .team-grid{grid-template-columns:1fr;}
 }
-@media(max-width:1024px){#contact-grid{grid-template-columns:1fr!important;}}
 </style>
 </head>
 <body>
@@ -444,14 +412,13 @@ footer ul a:hover{color:var(--pk);}
     <li><a href="#services">Services</a></li>
     <li><a href="#portfolio">Work</a></li>
     <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#domains">Domains</a></li>
-    <li><a href="#exp">Team</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#contact-form">Contact</a></li>
   </ul>
   <a href="https://wa.me/918367540839?text=Hi%20CloudPixel%20AI%20Team!%20%F0%9F%91%8B%20I%20need%20a%20website.%20Please%20help!" class="nwa">&#128172; WhatsApp Now</a>
 </nav>
 
-<!-- PAGE 1: HERO -->
+<!-- HERO -->
 <section class="hero" id="home">
   <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
   <div class="gbg"></div>
@@ -464,48 +431,47 @@ footer ul a:hover{color:var(--pk);}
       <span class="w1">SMALL BUSINESSES</span>
       <span class="w3">Get a professional website in just 3–5 days. Perfect for startups, local businesses &amp; personal brands.</span>
     </h1>
-    <div class="hbtns" style="margin-top:1.8rem;">
+    <div class="hbtns">
       <a href="https://wa.me/918367540839?text=Hi%20CloudPixel%20AI%20Team!%20%F0%9F%91%8B%20I%20want%20to%20start%20my%20project!" class="bpk">&#128640; Start Your Project</a>
       <a href="#portfolio" class="bgh">View Our Work &#8594;</a>
     </div>
-    <a href="https://wa.me/918367540839" class="bpk" style="display:inline-flex;background:linear-gradient(135deg,var(--pink),var(--pink2));margin-bottom:2rem;box-shadow:0 0 32px var(--pink-glow);">&#128172; Contact Us on WhatsApp</a>
     <div class="hkpis">
       <div class="kpi"><div class="kpin" id="kn1">0+</div><div class="kpil">Domains Built</div></div>
-      <div class="kpi"><div class="kpin pink" id="kn2">0+</div><div class="kpil">Happy Clients</div></div>
-      <div class="kpi"><div class="kpin" id="kn3">0%</div><div class="kpil">Satisfaction</div></div>
-      <div class="kpi"><div class="kpin">4.8&#9733;</div><div class="kpil">Client Rating</div></div>
+      <div class="kpi"><div class="kpin org" id="kn2">0+</div><div class="kpil">Happy Clients</div></div>
+      <div class="kpi"><div class="kpin" id="kn3">100%</div><div class="kpil">Satisfaction</div></div>
+      <div class="kpi"><div class="kpin org">4.8&#9733;</div><div class="kpil">Client Rating</div></div>
     </div>
   </div>
   <div class="hright">
     <div class="hslider" id="heroSlider">
       <div class="hslide active"><img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=700&q=80" alt="Web Design"><div class="hslide-overlay"></div><div class="hslide-label">&#127760; Website Design</div></div>
-      <div class="hslide"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=700&q=80" alt="Creative Design"><div class="hslide-overlay"></div><div class="hslide-label">&#128105; Creative Design</div></div>
-      <div class="hslide"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=80" alt="Analytics"><div class="hslide-overlay"></div><div class="hslide-label">&#128200; AI &amp; Analytics</div></div>
+      <div class="hslide"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=700&q=80" alt="Creative Design"><div class="hslide-overlay"></div><div class="hslide-label">&#127912; Creative Design</div></div>
+      <div class="hslide"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=80" alt="Analytics"><div class="hslide-overlay"></div><div class="hslide-label">&#128200; Growth & SEO</div></div>
       <div class="hslide"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700&q=80" alt="Team"><div class="hslide-overlay"></div><div class="hslide-label">&#128101; Our Team</div></div>
       <div class="hdots" id="heroDots"></div>
     </div>
     <div class="hfc fc1"><div class="fci">&#9889;</div><div><div class="fcv">3 DAYS</div><div class="fct">Fast Delivery</div></div></div>
-    <div class="hfc fc2"><div class="fci pink-i">&#11088;</div><div><div class="fcv pink-v">4.8</div><div class="fct">Client Rating</div></div></div>
+    <div class="hfc fc2"><div class="fci org-i">&#11088;</div><div><div class="fcv org-v">4.8</div><div class="fct">Client Rating</div></div></div>
   </div>
 </section>
 
 <!-- TICKER -->
 <div class="ticker"><div class="tinner">
-  <span class="ti">Premium Web Design</span><span class="td">&#10022;</span><span class="ti">AI-Powered</span><span class="td pink-td">&#10022;</span><span class="ti">E-Commerce</span><span class="td">&#10022;</span><span class="ti">200+ Domains</span><span class="td pink-td">&#10022;</span><span class="ti">Logo &amp; Brand</span><span class="td">&#10022;</span><span class="ti">Mobile-Ready</span><span class="td pink-td">&#10022;</span><span class="ti">SEO Optimized</span><span class="td">&#10022;</span><span class="ti">Vijayawada, AP</span><span class="td pink-td">&#10022;</span><span class="ti">CloudPixel AI</span><span class="td">&#10022;</span>
-  <span class="ti">Premium Web Design</span><span class="td">&#10022;</span><span class="ti">AI-Powered</span><span class="td pink-td">&#10022;</span><span class="ti">E-Commerce</span><span class="td">&#10022;</span><span class="ti">200+ Domains</span><span class="td pink-td">&#10022;</span><span class="ti">Logo &amp; Brand</span><span class="td">&#10022;</span><span class="ti">Mobile-Ready</span><span class="td pink-td">&#10022;</span><span class="ti">SEO Optimized</span><span class="td">&#10022;</span><span class="ti">Vijayawada, AP</span><span class="td pink-td">&#10022;</span><span class="ti">CloudPixel AI</span><span class="td">&#10022;</span>
+  <span class="ti">Premium Web Design</span><span class="td">&#10022;</span><span class="ti">AI-Powered</span><span class="td org-td">&#10022;</span><span class="ti">E-Commerce</span><span class="td">&#10022;</span><span class="ti">200+ Domains</span><span class="td org-td">&#10022;</span><span class="ti">Logo &amp; Brand</span><span class="td">&#10022;</span><span class="ti">Mobile-Ready</span><span class="td org-td">&#10022;</span><span class="ti">SEO Optimized</span><span class="td">&#10022;</span><span class="ti">Vijayawada, AP</span><span class="td org-td">&#10022;</span><span class="ti">CloudPixel AI</span><span class="td">&#10022;</span>
+  <span class="ti">Premium Web Design</span><span class="td">&#10022;</span><span class="ti">AI-Powered</span><span class="td org-td">&#10022;</span><span class="ti">E-Commerce</span><span class="td">&#10022;</span><span class="ti">200+ Domains</span><span class="td org-td">&#10022;</span><span class="ti">Logo &amp; Brand</span><span class="td">&#10022;</span><span class="ti">Mobile-Ready</span><span class="td org-td">&#10022;</span><span class="ti">SEO Optimized</span><span class="td">&#10022;</span><span class="ti">Vijayawada, AP</span><span class="td org-td">&#10022;</span><span class="ti">CloudPixel AI</span><span class="td">&#10022;</span>
 </div></div>
 
-<!-- WHY US (new section) -->
+<!-- WHY US -->
 <div class="whyus">
   <div class="stag">Why CloudPixel AI?</div>
   <div class="wu-grid rv">
     <div class="wucard"><div class="wu-icon g">&#9889;</div><div><div class="wu-title">Delivered in 3–5 Days</div><div class="wu-desc">No waiting weeks. Your professional website is live fast, so you can start getting customers immediately.</div></div></div>
-    <div class="wucard"><div class="wu-icon p">&#129304;</div><div><div class="wu-title">AI-Powered Quality</div><div class="wu-desc">We use the latest AI design tools to create stunning, modern websites that stand out from the crowd.</div></div></div>
+    <div class="wucard"><div class="wu-icon o">&#129302;</div><div><div class="wu-title">AI-Powered Quality</div><div class="wu-desc">We use the latest AI design tools to create stunning, modern websites that stand out from the crowd.</div></div></div>
     <div class="wucard"><div class="wu-icon b">&#128176;</div><div><div class="wu-title">Best Price in AP</div><div class="wu-desc">Professional quality starting at just ₹2,999. Designed specifically for Indian small businesses.</div></div></div>
   </div>
 </div>
 
-<!-- PAGE 2: ABOUT -->
+<!-- ABOUT -->
 <section class="sec seca" id="about">
   <div class="stag">Who We Are</div>
   <div class="stitle">VIJAYAWADA'S MOST<br><span class="pk">TRUSTED WEB STUDIO</span></div>
@@ -522,60 +488,58 @@ footer ul a:hover{color:var(--pk);}
       </div>
     </div>
     <div class="aright">
-      <p style="color:var(--gr2);font-size:.97rem;line-height:1.8;margin-bottom:1.5rem;">We are <strong style="color:#fff">CloudPixel AI Studio</strong> — Vijayawada's most creative web design studio led by <strong><span class="team-brand">CloudPixel AI Team</span></strong>. We help small businesses, shops, clinics &amp; startups build beautiful websites that attract customers and grow revenue.</p>
+      <p style="color:var(--gr2);font-size:.95rem;line-height:1.85;margin-bottom:1.4rem;">We are <strong style="color:#fff">CloudPixel AI Studio</strong> — Vijayawada's most creative web design studio led by <strong><span class="team-brand">CloudPixel AI Team</span></strong>. We help small businesses, shops, clinics &amp; startups build beautiful websites that attract customers and grow revenue.</p>
       <div class="aval"><div class="avi">&#129302;</div><div><div class="avt">AI-Enhanced Design</div><div class="avs">Latest AI tools to create modern, unique websites faster than any traditional studio.</div></div></div>
-      <div class="aval pink-val"><div class="avi pink-avi">&#128176;</div><div><div class="avt">Best Price in AP</div><div class="avs">Professional quality starting at just ₹2,999 — made for Indian small businesses.</div></div></div>
-      <div class="aval"><div class="avi">&#129309;</div><div><div class="avt">Personal Support by Our Team</div><div class="avs">Direct WhatsApp support — no call centers, always available 9AM–9PM.</div></div></div>
+      <div class="aval org-val"><div class="avi org-avi">&#128176;</div><div><div class="avt">Best Price in AP</div><div class="avs">Professional quality starting at just ₹2,999 — made for Indian small businesses.</div></div></div>
+      <div class="aval"><div class="avi">&#129309;</div><div><div class="avt">Personal Support — WhatsApp Direct</div><div class="avs">No call centers, no delays. Direct WhatsApp support available 9AM–9PM, 7 days a week.</div></div></div>
     </div>
   </div>
   <div class="astat-row rv">
     <div class="astat"><div class="astn">200+</div><div class="astl">Domains Delivered</div></div>
-    <div class="astat pink-stat"><div class="astn pink">50+</div><div class="astl">Happy Clients</div></div>
+    <div class="astat org-stat"><div class="astn org">50+</div><div class="astl">Happy Clients</div></div>
     <div class="astat"><div class="astn">3 Day</div><div class="astl">Fastest Delivery</div></div>
-    <div class="astat pink-stat"><div class="astn pink">4.8&#9733;</div><div class="astl">Client Rating</div></div>
+    <div class="astat org-stat"><div class="astn org">4.8&#9733;</div><div class="astl">Client Rating</div></div>
   </div>
 </section>
 
-<!-- PAGE 3: SERVICES (5 clear services) -->
+<!-- SERVICES -->
 <section class="sec" id="services">
   <div class="stag">What We Do</div>
-  <div class="stitle">5 CORE SERVICES FOR <span class="pk">YOUR BUSINESS</span></div>
-  <p class="sdesc">Clear, focused services — from a landing page to a full AI-powered business website.</p>
-  <div class="srv-grid rv" style="grid-template-columns:repeat(3,1fr);">
+  <div class="stitle">6 CORE SERVICES FOR <span class="pk">YOUR BUSINESS</span></div>
+  <div class="srv-grid rv">
     <div class="srv"><div class="srvn">01</div><span class="srvi">&#127760;</span><h3>Business Website Design</h3><p>Multi-page professional sites for shops, clinics &amp; agencies. Mobile-ready, fast, built to convert visitors into customers.</p><a href="https://wa.me/918367540839?text=Hi!%20I%20need%20a%20Business%20Website." class="srvlnk">Get Your Website Now &#8594;</a></div>
-    <div class="srv pink-srv"><div class="srvn pink-n">02</div><span class="srvi">&#128241;</span><h3>Portfolio Websites</h3><p>Showcase your work, skills &amp; projects professionally. Perfect for photographers, architects, freelancers &amp; creative professionals.</p><a href="https://wa.me/918367540839?text=Hi!%20I%20need%20a%20Portfolio%20Website." class="srvlnk pink-lnk">Get Your Website Now &#8594;</a></div>
+    <div class="srv org-srv"><div class="srvn org-n">02</div><span class="srvi">&#128241;</span><h3>Portfolio Websites</h3><p>Showcase your work, skills &amp; projects professionally. Perfect for photographers, architects, freelancers &amp; creative professionals.</p><a href="https://wa.me/918367540839?text=Hi!%20I%20need%20a%20Portfolio%20Website." class="srvlnk org-lnk">Get Your Website Now &#8594;</a></div>
     <div class="srv"><div class="srvn">03</div><span class="srvi">&#129302;</span><h3>AI Content &amp; Automation</h3><p>AI-powered website content, blog articles, product descriptions &amp; social posts. Plus chatbot &amp; WhatsApp auto-responses.</p><a href="https://wa.me/918367540839?text=Hi!%20I%20need%20AI%20Content%20%26%20Automation." class="srvlnk">Start Your Project &#8594;</a></div>
-    <div class="srv pink-srv"><div class="srvn pink-n">04</div><span class="srvi">&#128200;</span><h3>SEO Setup</h3><p>Rank on Google for "Website Design Vijayawada" &amp; more. Keyword optimization, on-page SEO, Google Analytics &amp; Search Console setup.</p><a href="https://wa.me/918367540839?text=Hi!%20I%20need%20SEO%20Setup." class="srvlnk pink-lnk">Start Your Project &#8594;</a></div>
+    <div class="srv org-srv"><div class="srvn org-n">04</div><span class="srvi">&#128200;</span><h3>SEO Setup</h3><p>Rank on Google for "Website Design Vijayawada" &amp; more. Keyword optimization, on-page SEO, Google Analytics &amp; Search Console setup.</p><a href="https://wa.me/918367540839?text=Hi!%20I%20need%20SEO%20Setup." class="srvlnk org-lnk">Start Your Project &#8594;</a></div>
     <div class="srv"><div class="srvn">05</div><span class="srvi">&#128295;</span><h3>Website Maintenance</h3><p>Monthly updates, security monitoring, performance improvements &amp; content changes. We keep your website fresh &amp; fast.</p><a href="https://wa.me/918367540839?text=Hi!%20I%20need%20Website%20Maintenance." class="srvlnk">Contact Us on WhatsApp &#8594;</a></div>
-    <div class="srv"><div class="srvn">06</div><span class="srvi">&#128722;</span><h3>E-Commerce Store</h3><p>Full online stores with Razorpay/UPI, product catalog, cart, admin panel &amp; WhatsApp orders. Revenue from day one.</p><a href="https://wa.me/918367540839?text=Hi!%20I%20need%20an%20E-Commerce%20Store." class="srvlnk">Get Your Website Now &#8594;</a></div>
+    <div class="srv org-srv"><div class="srvn org-n">06</div><span class="srvi">&#128722;</span><h3>E-Commerce Store</h3><p>Full online stores with Razorpay/UPI, product catalog, cart, admin panel &amp; WhatsApp orders. Revenue from day one.</p><a href="https://wa.me/918367540839?text=Hi!%20I%20need%20an%20E-Commerce%20Store." class="srvlnk org-lnk">Get Your Website Now &#8594;</a></div>
   </div>
 </section>
 
-<!-- PAGE 4: PORTFOLIO -->
+<!-- PORTFOLIO — PLACEHOLDER -->
 <section class="sec seca" id="portfolio">
   <div class="stag">Our Work</div>
   <div class="stitle">RECENT <span class="pk">PROJECTS</span></div>
   <p class="sdesc">Real websites built for real businesses — each one a growth story.</p>
-  <div class="port-slider-wrap rv">
-    <div class="pslider" id="portSlider">
-      <div class="pslide"><div class="pslide-inner"><div class="pslide-img"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80" alt="Restaurant"><div class="pslide-img-ov"></div></div><div class="pslide-info"><div class="pslide-num">PROJECT 01 / 06</div><h3>RESTAURANT &amp; CAFE WEBSITE</h3><p>Full online menu, table booking system, home delivery integration and Google Maps. 3x more bookings within first month.</p><div class="pslide-tags"><span class="ptg">HTML/CSS</span><span class="ptg">Responsive</span><span class="ptg">Booking</span></div><a href="https://wa.me/918367540839?text=Hi!%20I%20want%20a%20similar%20website!" class="pslide-btn">Get Similar Site &#8594;</a></div></div></div>
-      <div class="pslide"><div class="pslide-inner"><div class="pslide-img"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80" alt="E-Commerce"><div class="pslide-img-ov"></div></div><div class="pslide-info"><div class="pslide-num">PROJECT 02 / 06</div><h3>FASHION E-COMMERCE STORE</h3><p>Full online boutique with 200+ products, Razorpay/UPI checkout, WhatsApp ordering, admin panel. Revenue doubled in 2 months.</p><div class="pslide-tags"><span class="ptg">E-Commerce</span><span class="ptg">Razorpay</span><span class="ptg">UPI</span></div><a href="https://wa.me/918367540839?text=Hi!%20I%20want%20a%20similar%20website!" class="pslide-btn">Get Similar Site &#8594;</a></div></div></div>
-      <div class="pslide"><div class="pslide-inner"><div class="pslide-img"><img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80" alt="Clinic"><div class="pslide-img-ov"></div></div><div class="pslide-info"><div class="pslide-num">PROJECT 03 / 06</div><h3>CLINIC &amp; DOCTOR WEBSITE</h3><p>Professional medical website with online appointment booking, doctor profiles, patient testimonials. 60+ appointments/month.</p><div class="pslide-tags"><span class="ptg">Medical</span><span class="ptg">Appointment</span><span class="ptg">SEO</span></div><a href="https://wa.me/918367540839?text=Hi!%20I%20want%20a%20similar%20website!" class="pslide-btn">Get Similar Site &#8594;</a></div></div></div>
-      <div class="pslide"><div class="pslide-inner"><div class="pslide-img"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="Real Estate"><div class="pslide-img-ov"></div></div><div class="pslide-info"><div class="pslide-num">PROJECT 04 / 06</div><h3>REAL ESTATE LANDING PAGE</h3><p>High-converting real estate landing page with property gallery, EMI calculator, enquiry form. Generated 120+ leads in first month.</p><div class="pslide-tags"><span class="ptg">Landing Page</span><span class="ptg">Lead Gen</span><span class="ptg">EMI Calc</span></div><a href="https://wa.me/918367540839?text=Hi!%20I%20want%20a%20similar%20website!" class="pslide-btn">Get Similar Site &#8594;</a></div></div></div>
-      <div class="pslide"><div class="pslide-inner"><div class="pslide-img"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80" alt="Coaching"><div class="pslide-img-ov"></div></div><div class="pslide-info"><div class="pslide-num">PROJECT 05 / 06</div><h3>COACHING INSTITUTE WEBSITE</h3><p>Education website with courses listing, faculty profiles, online admission form, fee structure. Admissions up 40%.</p><div class="pslide-tags"><span class="ptg">Education</span><span class="ptg">Admission Form</span><span class="ptg">SEO</span></div><a href="https://wa.me/918367540839?text=Hi!%20I%20want%20a%20similar%20website!" class="pslide-btn">Get Similar Site &#8594;</a></div></div></div>
-      <div class="pslide"><div class="pslide-inner"><div class="pslide-img"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="Salon"><div class="pslide-img-ov"></div></div><div class="pslide-info"><div class="pslide-num">PROJECT 06 / 06</div><h3>SALON &amp; BEAUTY WEBSITE</h3><p>Beautiful salon website with service menu, online appointment booking, Instagram gallery. Bookings tripled after launch.</p><div class="pslide-tags"><span class="ptg">Salon</span><span class="ptg">Booking</span><span class="ptg">Instagram</span></div><a href="https://wa.me/918367540839?text=Hi!%20I%20want%20a%20similar%20website!" class="pslide-btn">Get Similar Site &#8594;</a></div></div></div>
+  <div class="port-placeholder rv">
+    <div class="pp-icon">&#128247;</div>
+    <div class="pp-title">PORTFOLIO COMING SOON</div>
+    <div class="pp-desc">We are completing websites for our clients. Real project screenshots with live links will be added here very soon. Industries we've worked in:</div>
+    <div class="pp-industries">
+      <span class="pp-tag">&#127869; Restaurant</span>
+      <span class="pp-tag org-pt">&#127947; Gym & Fitness</span>
+      <span class="pp-tag">&#128138; Clinic</span>
+      <span class="pp-tag org-pt">&#127769; Travels</span>
+      <span class="pp-tag">&#127963; Play School</span>
+      <span class="pp-tag org-pt">&#128136; Salon</span>
+      <span class="pp-tag">&#127968; Real Estate</span>
+      <span class="pp-tag org-pt">&#128218; Coaching</span>
     </div>
-    <div class="pslider-controls">
-      <div class="psl-dots" id="portDots"></div>
-      <div class="psl-arrows">
-        <div class="psl-arr" id="portPrev">&#8592;</div>
-        <div class="psl-arr" id="portNext">&#8594;</div>
-      </div>
-    </div>
+    <div class="pp-note">&#128640; Want to see a sample for your industry? <a href="https://wa.me/918367540839?text=Hi!%20I%20want%20to%20see%20a%20sample%20website%20for%20my%20business." style="color:var(--pk);font-weight:700;text-decoration:none;">WhatsApp us — we'll show you one instantly!</a></div>
   </div>
 </section>
 
-<!-- PAGE 5: PRICING -->
+<!-- PRICING -->
 <section class="sec" id="pricing">
   <div class="stag">Transparent Pricing</div>
   <div class="stitle">PLANS FOR EVERY <span class="pk">BUDGET</span></div>
@@ -596,7 +560,7 @@ footer ul a:hover{color:var(--pk);}
       </div>
       <div class="prc hot rv">
         <div class="htag">&#10024; MOST POPULAR</div>
-        <div class="prct pink">Standard Plan</div><span class="prci">&#128640;</span>
+        <div class="prct org">Standard Plan</div><span class="prci">&#128640;</span>
         <div class="prca"><sup>&#8377;</sup>6,999</div>
         <div class="prcn">One-time · No renewal</div>
         <div class="prck">Best for growing businesses, clinics &amp; agencies serious about more clients.</div>
@@ -616,8 +580,8 @@ footer ul a:hover{color:var(--pk);}
   <div id="tab-custom">
     <div class="cpwrap rv">
       <div class="cpinfo">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:1px;margin-bottom:.5rem;">SELECT YOUR <span style="color:var(--pk)">SERVICES</span></div>
-        <p style="font-size:.83rem;color:var(--gr2);line-height:1.6;margin-bottom:1.5rem;">Pick exactly what you need. We will build a custom quote just for you — no extra charges!</p>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:1px;margin-bottom:.5rem;">SELECT YOUR <span style="color:var(--pk)">SERVICES</span></div>
+        <p style="font-size:.81rem;color:var(--gr2);line-height:1.65;margin-bottom:1.3rem;">Pick exactly what you need. We will build a custom quote just for you — no extra charges!</p>
         <div class="cp-services">
           <label class="cpchk"><input type="checkbox" id="cs1" value="Business Website"><span class="cpchk-lbl">&#127760; Business Website Design</span><span class="cpchk-sub">from &#8377;2,999</span></label>
           <label class="cpchk"><input type="checkbox" id="cs2" value="E-Commerce Store"><span class="cpchk-lbl">&#128722; E-Commerce Store</span><span class="cpchk-sub">from &#8377;8,999</span></label>
@@ -632,7 +596,7 @@ footer ul a:hover{color:var(--pk);}
         </div>
       </div>
       <div class="cpform">
-        <div class="cptitle">GET YOUR <span style="color:var(--pink)">CUSTOM QUOTE</span></div>
+        <div class="cptitle">GET YOUR <span style="color:var(--accent2)">CUSTOM QUOTE</span></div>
         <div class="cprow">
           <div class="cpfield"><label class="cplabel">Your Name</label><input class="cpinput" id="cf-name" type="text" placeholder="Your Name"></div>
           <div class="cpfield"><label class="cplabel">Phone / WhatsApp</label><input class="cpinput" id="cf-phone" type="tel" placeholder="+91 XXXXX XXXXX"></div>
@@ -640,7 +604,7 @@ footer ul a:hover{color:var(--pk);}
         <div class="cprow">
           <div class="cpfield"><label class="cplabel">Business Name</label><input class="cpinput" id="cf-biz" type="text" placeholder="My Shop Name"></div>
           <div class="cpfield"><label class="cplabel">Business Type</label>
-            <select class="cpselect" id="cf-type"><option value="">Select Type</option><option>Restaurant / Cafe</option><option>Medical / Clinic</option><option>Fashion / Boutique</option><option>Real Estate</option><option>Education / Coaching</option><option>Salon / Beauty</option><option>IT / Software</option><option>Agriculture</option><option>Automobile</option><option>Other</option></select>
+            <select class="cpselect" id="cf-type"><option value="">Select Type</option><option>Restaurant / Cafe</option><option>Medical / Clinic</option><option>Fashion / Boutique</option><option>Real Estate</option><option>Education / Coaching</option><option>Salon / Beauty</option><option>Gym / Fitness</option><option>Travel Agency</option><option>Play School</option><option>IT / Software</option><option>Agriculture</option><option>Automobile</option><option>Other</option></select>
           </div>
         </div>
         <div class="cprow">
@@ -655,197 +619,155 @@ footer ul a:hover{color:var(--pk);}
           <div class="cpfield full"><label class="cplabel">Extra Requirements</label><textarea class="cpinput" id="cf-notes" placeholder="Reference sites, features, colors, Telugu/English, etc."></textarea></div>
         </div>
         <button class="cpsubmit" onclick="sendCustomQuote()">&#128172; Send to WhatsApp &amp; Get Quote</button>
-        <p style="font-size:.72rem;color:var(--gr);text-align:center;margin-top:1rem;">&#128994; Our Team replies within 30 minutes · 9AM–9PM</p>
+        <p style="font-size:.7rem;color:var(--gr);text-align:center;margin-top:.9rem;">&#128994; Our Team replies within 30 minutes · 9AM–9PM</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PAGE 6: DOMAINS -->
-<section class="sec seca" id="domains">
-  <div class="stag">Domain Expertise</div>
-  <div class="stitle">200+ DOMAINS <span class="pink">DELIVERED</span></div>
-  <div class="dom-split rv">
-    <div>
-      <p class="sdesc" style="margin-bottom:2rem;">Every business type, every domain extension — built across AP, Telangana &amp; Pan-India. From .com to .clinic, we've done it all.</p>
-      <div class="dom-grid">
-        <div class="dep"><div class="depe">.com</div><div class="depn">Business</div></div>
-        <div class="dep"><div class="depe">.in</div><div class="depn">India</div></div>
-        <div class="dep"><div class="depe">.shop</div><div class="depn">E-Commerce</div></div>
-        <div class="dep"><div class="depe">.co.in</div><div class="depn">Company</div></div>
-        <div class="dep"><div class="depe">.org</div><div class="depn">NGO/Trust</div></div>
-        <div class="dep"><div class="depe">.clinic</div><div class="depn">Medical</div></div>
-        <div class="dep"><div class="depe">.studio</div><div class="depn">Creative</div></div>
-        <div class="dep"><div class="depe">.tech</div><div class="depn">IT/Tech</div></div>
-        <div class="dep"><div class="depe">.edu</div><div class="depn">Education</div></div>
-        <div class="dep"><div class="depe">.net</div><div class="depn">Network</div></div>
+<!-- TEAM SECTION -->
+<section class="sec seca team-sec" id="team">
+  <div class="stag">Meet The Team</div>
+  <div class="stitle">THE PEOPLE BEHIND <span class="pk">CLOUDPIXEL</span></div>
+  <p class="sdesc">Real people, real passion — dedicated to making your business shine online.</p>
+  <div class="team-grid rv" style="margin-top:2.8rem;">
+    <!-- PLACEHOLDER CARDS — Replace with real photos & names -->
+    <div class="team-card">
+      <div class="team-card-ph">
+        <div class="team-card-ph-icon">&#128100;</div>
+        <div class="team-card-ph-text">Photo Coming Soon</div>
       </div>
-      <div class="ind-row">
-        <span class="itag">&#127869; Restaurant</span><span class="itag">&#128138; Medical</span><span class="itag">&#127968; Real Estate</span><span class="itag">&#128248; Fashion</span><span class="itag">&#128218; Education</span><span class="itag">&#128136; Salon</span><span class="itag">&#9878; Legal/CA</span><span class="itag">&#127947; Gym</span><span class="itag">&#128664; Auto</span><span class="itag">&#127749; Travel</span><span class="itag">&#128247; Photography</span><span class="itag">&#127919; Marketing</span><span class="itag">&#128295; Services</span><span class="itag">&#128187; IT</span><span class="itag">&#127807; Agriculture</span>
+      <div class="team-card-info">
+        <div class="team-card-name">[ Your Name Here ]</div>
+        <div class="team-card-role">Founder & Lead Designer</div>
+        <div class="team-card-desc">Expert in UI/UX design, branding & AI-powered web development. Passionate about helping Vijayawada businesses grow online.</div>
       </div>
     </div>
-    <div class="dom-img-w">
-      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&q=80" alt="Domains">
-      <div class="dio"></div>
-      <div class="dbadge"><div class="dbn">200+</div><div class="dbt">Domains Built</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- DASHBOARD / REPORTING SECTION -->
-<section class="dash-sec" id="dashboard">
-  <div class="stag pink-tag">Performance Reporting</div>
-  <div class="stitle">WEBSITE PERFORMANCE <span class="pink">DASHBOARD</span></div>
-  <p class="sdesc">We track your website's performance and share monthly reports — so you always know how your site is growing.</p>
-  <div class="dash-grid rv">
-    <div class="dcard green">
-      <div class="dcard-icon">&#128200;</div>
-      <div class="dcard-label">Total Visitors</div>
-      <div class="dcard-val">12,480</div>
-      <div class="dcard-sub">This month</div>
-      <span class="dcard-badge badge-up">&#8593; +24% from last month</span>
-      <div class="mini-chart">
-        <div class="mc-bar g" style="height:30%"></div><div class="mc-bar g" style="height:45%"></div><div class="mc-bar g" style="height:35%"></div><div class="mc-bar g" style="height:60%"></div><div class="mc-bar g" style="height:50%"></div><div class="mc-bar g" style="height:75%"></div><div class="mc-bar g" style="height:65%"></div><div class="mc-bar g" style="height:90%"></div><div class="mc-bar g" style="height:80%"></div><div class="mc-bar g" style="height:100%"></div>
+    <div class="team-card">
+      <div class="team-card-ph">
+        <div class="team-card-ph-icon">&#128100;</div>
+        <div class="team-card-ph-text">Photo Coming Soon</div>
+      </div>
+      <div class="team-card-info">
+        <div class="team-card-name">[ Your Name Here ]</div>
+        <div class="team-card-role">Web Developer & SEO</div>
+        <div class="team-card-desc">Specializes in fast-loading websites, e-commerce development, Google ranking & WhatsApp automation for small businesses.</div>
       </div>
     </div>
-    <div class="dcard pink">
-      <div class="dcard-icon">&#128233;</div>
-      <div class="dcard-label">Leads Generated</div>
-      <div class="dcard-val">348</div>
-      <div class="dcard-sub">Enquiries this month</div>
-      <span class="dcard-badge badge-up-pink">&#8593; +38% growth</span>
-      <div class="mini-chart">
-        <div class="mc-bar p" style="height:25%"></div><div class="mc-bar p" style="height:40%"></div><div class="mc-bar p" style="height:55%"></div><div class="mc-bar p" style="height:45%"></div><div class="mc-bar p" style="height:70%"></div><div class="mc-bar p" style="height:60%"></div><div class="mc-bar p" style="height:85%"></div><div class="mc-bar p" style="height:75%"></div><div class="mc-bar p" style="height:95%"></div><div class="mc-bar p" style="height:100%"></div>
+    <div class="team-card">
+      <div class="team-card-ph">
+        <div class="team-card-ph-icon">&#128100;</div>
+        <div class="team-card-ph-text">Photo Coming Soon</div>
       </div>
-    </div>
-    <div class="dcard purple">
-      <div class="dcard-icon">&#128269;</div>
-      <div class="dcard-label">Google Ranking</div>
-      <div class="dcard-val">#3</div>
-      <div class="dcard-sub">For "Website Design Vijayawada"</div>
-      <span class="dcard-badge" style="background:rgba(129,140,248,.12);color:#a5b4fc;">&#8593; Moved up 5 spots</span>
-    </div>
-    <div class="dcard teal">
-      <div class="dcard-icon">&#9200;</div>
-      <div class="dcard-label">Page Load Speed</div>
-      <div class="dcard-val">1.2s</div>
-      <div class="dcard-sub">Average load time</div>
-      <span class="dcard-badge" style="background:rgba(45,212,191,.1);color:#2dd4bf;">&#9989; Excellent Speed</span>
-    </div>
-  </div>
-</section>
-
-<!-- PAGE 7: EXPERIENCE -->
-<section class="sec seca" id="exp">
-  <div class="stag">Our Experience</div>
-  <div class="stitle">10+ YEARS OF <span class="pk">EXPERTISE</span></div>
-  <div class="expl">
-    <div class="exp-iw rv">
-      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&q=80" alt="Team">
-      <div class="eio"></div>
-      <div class="eis"><div><div class="eisn">10+</div><div class="eisl">Years Experience</div></div></div>
-    </div>
-    <div class="rv">
-      <div class="e666">
-        <div class="e6b"><div class="e6n">10+</div><div class="e6l">Years of Web Design &amp; Digital Experience</div></div>
-      </div>
-      <p style="color:var(--gr2);font-size:.94rem;line-height:1.8;margin-bottom:2rem;">Led by <strong><span class="team-brand">CloudPixel AI Team</span></strong> — Vijayawada's trusted experts with 10+ years of experience in web design, e-commerce development &amp; digital marketing. 200+ websites delivered, 50+ happy clients across AP &amp; India.</p>
-      <div class="sbars" id="sb">
-        <div class="sbr"><div class="sbh"><span class="sbn">Web Design &amp; UI/UX</span><span class="sbp">95%</span></div><div class="sbt"><div class="sbf" data-w="95"></div></div></div>
-        <div class="sbr"><div class="sbh"><span class="sbn">E-Commerce Development</span><span class="sbp">90%</span></div><div class="sbt"><div class="sbf" data-w="90"></div></div></div>
-        <div class="sbr"><div class="sbh"><span class="sbn">SEO &amp; Digital Marketing</span><span class="sbp" style="color:var(--pink)">85%</span></div><div class="sbt"><div class="sbf pink-bar" data-w="85"></div></div></div>
-        <div class="sbr"><div class="sbh"><span class="sbn">Logo &amp; Brand Design</span><span class="sbp" style="color:var(--pink)">92%</span></div><div class="sbt"><div class="sbf pink-bar" data-w="92"></div></div></div>
-        <div class="sbr"><div class="sbh"><span class="sbn">AI-Powered Tools</span><span class="sbp">88%</span></div><div class="sbt"><div class="sbf" data-w="88"></div></div></div>
+      <div class="team-card-info">
+        <div class="team-card-name">[ Your Name Here ]</div>
+        <div class="team-card-role">Client Success Manager</div>
+        <div class="team-card-desc">Your direct point of contact. Ensures every project is delivered on time, within budget, and exceeds expectations.</div>
       </div>
     </div>
   </div>
+  <div class="team-note rv">
+    <div class="team-note-icon">&#128172;</div>
+    <div class="team-note-text"><strong>We believe in personal service.</strong> When you contact CloudPixel AI, you talk directly to our team — not a bot, not a middleman. That's our promise to every client in Vijayawada and across AP &amp; Telangana.</div>
+  </div>
 </section>
 
-<!-- PAGE 8: TESTIMONIALS -->
+<!-- TESTIMONIALS -->
 <section class="sec" id="testimonials">
   <div class="stag">Client Reviews</div>
-  <div class="stitle">WHAT CLIENTS <span class="pink">SAY</span></div>
+  <div class="stitle">WHAT CLIENTS <span class="org">SAY</span></div>
   <p class="sdesc">Real feedback from real business owners across Andhra Pradesh &amp; Telangana.</p>
-  <div class="trow">
-    <div class="tc rv"><div class="tst">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="ttx">"My salon website was ready in just 3 days! Beautiful design, perfect on mobile. Online bookings doubled in one month. CloudPixel AI Team is the best in Vijayawada!"</p><div class="tau"><div class="tav av1">P</div><div><div class="tnm">Priya Sharma</div><div class="trl">Beauty Salon Owner, Vijayawada</div></div></div></div>
-    <div class="tc pink-tc rv"><div class="tst pink-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="ttx">"Needed website urgently for our institute. CloudPixel AI Team delivered in 5 days — fully mobile-ready with inquiry form. Best quality at the lowest price in Andhra Pradesh!"</p><div class="tau"><div class="tav av2">R</div><div><div class="tnm">Ravi Kumar</div><div class="trl">Institute Director, Vijayawada</div></div></div></div>
-    <div class="tc rv"><div class="tst">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="ttx">"Logo, online store, SEO — all in premium package. Customers now find my boutique on Google! Best investment for my business. CloudPixel rocks!"</p><div class="tau"><div class="tav av3">S</div><div><div class="tnm">Sunitha Reddy</div><div class="trl">Boutique Owner, Guntur</div></div></div></div>
+  <div class="trow rv">
+    <div class="tc">
+      <div class="tst">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="ttx">"My salon website was ready in just 3 days! Beautiful design, perfect on mobile. Online bookings doubled in one month. CloudPixel AI Team is the best in Vijayawada!"</p>
+      <div class="tau"><div class="tav av1">P</div><div><div class="tnm">Priya Sharma</div><div class="trl">Beauty Salon Owner, Vijayawada</div></div></div>
+    </div>
+    <div class="tc org-tc">
+      <div class="tst org-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="ttx">"Needed a website urgently for our institute. CloudPixel AI Team delivered in 5 days — fully mobile-ready with inquiry form. Best quality at the best price in Andhra Pradesh!"</p>
+      <div class="tau"><div class="tav av2">R</div><div><div class="tnm">Ravi Kumar</div><div class="trl">Institute Director, Vijayawada</div></div></div>
+    </div>
+    <div class="tc">
+      <div class="tst">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="ttx">"Logo, online store, SEO — all in one premium package. Customers now find my boutique on Google! Best investment for my business. CloudPixel rocks!"</p>
+      <div class="tau"><div class="tav av3">S</div><div><div class="tnm">Sunitha Reddy</div><div class="trl">Boutique Owner, Guntur</div></div></div>
+    </div>
+  </div>
+  <!-- PLACEHOLDER for more reviews -->
+  <div class="trow rv" style="margin-top:1.3rem;">
+    <div class="t-placeholder">
+      <div class="t-ph-icon">&#127775;</div>
+      <div class="t-ph-text"><strong>More Reviews Coming Soon</strong>Google Reviews &amp; real client screenshots will be added here. Check our WhatsApp for recent client feedback.</div>
+    </div>
+    <div class="t-placeholder">
+      <div class="t-ph-icon">&#127775;</div>
+      <div class="t-ph-text"><strong>Your Review Here?</strong>Become one of our happy clients. We'd love to feature your success story on this page!</div>
+    </div>
+    <div class="t-placeholder">
+      <div class="t-ph-icon">&#127775;</div>
+      <div class="t-ph-text"><strong>Your Review Here?</strong>Become one of our happy clients. We'd love to feature your success story on this page!</div>
+    </div>
   </div>
 </section>
 
-<!-- CONTACT SECTION -->
+<!-- CONTACT -->
 <section class="sec seca" id="contact-form" style="padding-bottom:60px;">
   <div class="stag">Get In Touch</div>
   <div class="stitle">CONTACT <span class="pk">US</span></div>
   <p class="sdesc">Fill the form below or WhatsApp directly — we respond within 30 minutes!</p>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem;" class="rv" id="contact-grid">
-    <div style="display:flex;flex-direction:column;gap:1.5rem;">
-      <div style="background:var(--bg3);border:1px solid var(--bd);border-radius:16px;padding:2rem;position:relative;overflow:hidden;">
-        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--pk),var(--pink));"></div>
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:1px;margin-bottom:1.5rem;">REACH US DIRECTLY</div>
-        <div style="display:flex;flex-direction:column;gap:1rem;">
-          <a href="https://wa.me/918367540839" style="display:flex;align-items:center;gap:14px;padding:1rem;background:rgba(37,211,102,.06);border:1px solid rgba(37,211,102,.18);border-radius:11px;text-decoration:none;transition:all .2s;" onmouseover="this.style.borderColor='var(--pk)'" onmouseout="this.style.borderColor='rgba(37,211,102,.18)'">
-            <div style="width:42px;height:42px;background:linear-gradient(135deg,#25D366,#128C7E);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">&#128172;</div>
-            <div><div style="font-weight:700;font-size:.9rem;color:#fff;">WhatsApp — Contact Us Now</div><div style="font-size:.8rem;color:var(--gr2);">+91 8367540839 · Reply in 30 mins</div></div>
-          </a>
-          <a href="tel:+918367540839" style="display:flex;align-items:center;gap:14px;padding:1rem;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.18);border-radius:11px;text-decoration:none;transition:all .2s;" onmouseover="this.style.borderColor='var(--pink)'" onmouseout="this.style.borderColor='rgba(244,114,182,.18)'">
-            <div style="width:42px;height:42px;background:linear-gradient(135deg,var(--pink),var(--pink2));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">&#128222;</div>
-            <div><div style="font-weight:700;font-size:.9rem;color:#fff;">Call Us</div><div style="font-size:.8rem;color:var(--gr2);">+91 8367540839</div></div>
-          </a>
-          <a href="mailto:info@cloudpixelai.in" style="display:flex;align-items:center;gap:14px;padding:1rem;background:rgba(37,211,102,.06);border:1px solid rgba(37,211,102,.18);border-radius:11px;text-decoration:none;transition:all .2s;" onmouseover="this.style.borderColor='var(--pk)'" onmouseout="this.style.borderColor='rgba(37,211,102,.18)'">
-            <div style="width:42px;height:42px;background:linear-gradient(135deg,#7c3aed,#a78bfa);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">&#128231;</div>
-            <div><div style="font-weight:700;font-size:.9rem;color:#fff;">Email Us</div><div style="font-size:.8rem;color:var(--gr2);">info@cloudpixelai.in</div></div>
-          </a>
-          <div style="display:flex;align-items:center;gap:14px;padding:1rem;background:rgba(37,211,102,.06);border:1px solid rgba(37,211,102,.18);border-radius:11px;">
-            <div style="width:42px;height:42px;background:linear-gradient(135deg,#0088cc,#005fa3);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">&#128205;</div>
-            <div><div style="font-weight:700;font-size:.9rem;color:#fff;">Location</div><div style="font-size:.8rem;color:var(--gr2);">Vijayawada, Andhra Pradesh</div></div>
-          </div>
-          <div style="display:flex;align-items:center;gap:14px;padding:1rem;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.18);border-radius:11px;">
-            <div style="width:42px;height:42px;background:linear-gradient(135deg,var(--pink),var(--pink2));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">&#9200;</div>
-            <div><div style="font-weight:700;font-size:.9rem;color:#fff;">Working Hours</div><div style="font-size:.8rem;color:var(--gr2);">9AM – 9PM · 7 Days a Week</div></div>
-          </div>
+    <div style="display:flex;flex-direction:column;gap:1.3rem;" class="contact-cards">
+      <div style="background:var(--bg3);border:1px solid var(--bd);border-radius:16px;padding:1.9rem;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--pk),var(--accent));"></div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.25rem;letter-spacing:1px;margin-bottom:1.4rem;">REACH US DIRECTLY</div>
+        <div style="display:flex;flex-direction:column;gap:.95rem;">
+          <a href="https://wa.me/918367540839" class="ccard"><div class="ccard-icon ci-wa">&#128172;</div><div><div class="ccard-title">WhatsApp — Contact Us Now</div><div class="ccard-sub">+91 8367540839 · Reply in 30 mins</div></div></a>
+          <a href="tel:+918367540839" class="ccard org-card"><div class="ccard-icon ci-ph">&#128222;</div><div><div class="ccard-title">Call Us</div><div class="ccard-sub">+91 8367540839</div></div></a>
+          <a href="mailto:info@cloudpixelai.in" class="ccard"><div class="ccard-icon ci-em">&#128231;</div><div><div class="ccard-title">Email Us</div><div class="ccard-sub">info@cloudpixelai.in</div></div></a>
+          <div class="ccard" style="cursor:default;"><div class="ccard-icon ci-lo">&#128205;</div><div><div class="ccard-title">Location</div><div class="ccard-sub">Vijayawada, Andhra Pradesh</div></div></div>
+          <div class="ccard org-card" style="cursor:default;"><div class="ccard-icon ci-hr">&#9200;</div><div><div class="ccard-title">Working Hours</div><div class="ccard-sub">9AM – 9PM · 7 Days a Week</div></div></div>
         </div>
       </div>
-      <div style="background:linear-gradient(135deg,rgba(244,114,182,.08),rgba(37,211,102,.05));border:1px solid rgba(244,114,182,.2);border-radius:14px;padding:1.5rem;text-align:center;">
-        <div style="font-size:2rem;margin-bottom:.5rem;">&#9889;</div>
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:1px;margin-bottom:.3rem;">FAST RESPONSE GUARANTEE</div>
-        <div style="font-size:.82rem;color:var(--gr2);">Our Team replies within <strong style="color:var(--pink)">30 minutes</strong> on WhatsApp during working hours. Free consultation, no obligation!</div>
+      <div class="guarantee-box">
+        <div class="gb-icon">&#9889;</div>
+        <div class="gb-title">FAST RESPONSE GUARANTEE</div>
+        <div class="gb-desc">Our Team replies within <strong>30 minutes</strong> on WhatsApp during working hours. Free consultation, no obligation!</div>
       </div>
     </div>
-    <div style="background:var(--bg3);border:1px solid var(--bd);border-radius:20px;padding:2.5rem;position:relative;overflow:hidden;">
-      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--pink),var(--pk));"></div>
-      <div style="font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:1px;margin-bottom:1.5rem;">SEND A <span style="color:var(--pink)">MESSAGE</span></div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+    <div style="background:var(--bg3);border:1px solid var(--bd);border-radius:18px;padding:2.4rem;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--pk));"></div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:1.35rem;letter-spacing:1px;margin-bottom:1.4rem;">SEND A <span style="color:var(--accent2)">MESSAGE</span></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-bottom:.9rem;">
         <div class="cpfield"><label class="cplabel">Your Name</label><input class="cpinput" id="cnt-name" type="text" placeholder="Your Name"></div>
         <div class="cpfield"><label class="cplabel">WhatsApp Number</label><input class="cpinput" id="cnt-phone" type="tel" placeholder="+91 XXXXX XXXXX"></div>
       </div>
-      <div style="margin-bottom:1rem;"><div class="cpfield"><label class="cplabel">Business / Shop Name</label><input class="cpinput" id="cnt-biz" type="text" placeholder="My Business Name" style="width:100%;"></div></div>
-      <div style="margin-bottom:1rem;"><div class="cpfield"><label class="cplabel">Service Needed</label>
-        <select class="cpselect" id="cnt-svc" style="width:100%;"><option value="">Select a Service</option><option>Business Website ₹2,999+</option><option>E-Commerce Store ₹8,999+</option><option>Portfolio Website ₹2,499+</option><option>AI Content & Automation</option><option>SEO Setup</option><option>Website Maintenance</option><option>Customized Package</option><option>Not Sure — Need Consultation</option></select>
+      <div style="margin-bottom:.9rem;"><div class="cpfield"><label class="cplabel">Business / Shop Name</label><input class="cpinput" id="cnt-biz" type="text" placeholder="My Business Name" style="width:100%;"></div></div>
+      <div style="margin-bottom:.9rem;"><div class="cpfield"><label class="cplabel">Service Needed</label>
+        <select class="cpselect" id="cnt-svc" style="width:100%;"><option value="">Select a Service</option><option>Business Website ₹2,999+</option><option>E-Commerce Store ₹8,999+</option><option>Portfolio Website ₹2,499+</option><option>AI Content &amp; Automation</option><option>SEO Setup</option><option>Website Maintenance</option><option>Customized Package</option><option>Not Sure — Need Consultation</option></select>
       </div></div>
-      <div style="margin-bottom:1.2rem;"><div class="cpfield"><label class="cplabel">Your Message</label><textarea class="cpinput" id="cnt-msg" style="width:100%;min-height:100px;" placeholder="Tell us about your business and what you need..."></textarea></div></div>
-      <button class="cpsubmit" onclick="sendContactForm()" style="background:linear-gradient(135deg,var(--pink),var(--pink2));box-shadow:0 8px 25px var(--pink-glow);margin-top:0;">&#128172; Get Your Website Now</button>
-      <p style="font-size:.72rem;color:var(--gr);text-align:center;margin-top:.8rem;">&#128275; Your information is safe. We never share your details.</p>
+      <div style="margin-bottom:1.1rem;"><div class="cpfield"><label class="cplabel">Your Message</label><textarea class="cpinput" id="cnt-msg" style="width:100%;min-height:95px;" placeholder="Tell us about your business and what you need..."></textarea></div></div>
+      <button class="cpsubmit" onclick="sendContactForm()" style="background:linear-gradient(135deg,var(--accent),#c2410c);box-shadow:0 8px 22px var(--accent-glow);margin-top:0;">&#128172; Get Your Website Now</button>
+      <p style="font-size:.7rem;color:var(--gr);text-align:center;margin-top:.8rem;">&#128275; Your information is safe. We never share your details.</p>
     </div>
   </div>
 </section>
 
-<!-- CTA SECTION -->
+<!-- CTA -->
 <section class="ctasec" id="contact">
   <div class="ctaorb"></div>
   <div class="ctaorb2"></div>
-  <h2>READY TO <em>BUILD</em><br>SOMETHING <span class="pinkw">BOLD?</span></h2>
+  <h2>READY TO <em>BUILD</em><br>SOMETHING <span class="orgw">BOLD?</span></h2>
   <p>WhatsApp our team now — free consultation &amp; instant quote in 5 minutes!</p>
   <div class="ctabtns">
-    <a href="https://wa.me/918367540839?text=Hi%20CloudPixel%20AI%20Team!%20I%20want%20to%20get%20my%20website%20now." class="bpk" style="font-size:1rem;padding:17px 40px;">&#128640; Get Your Website Now</a>
-    <a href="https://wa.me/918367540839" class="bpk" style="font-size:1rem;padding:17px 40px;background:linear-gradient(135deg,var(--pink),var(--pink2));box-shadow:0 0 32px var(--pink-glow);">&#128172; Contact Us on WhatsApp</a>
-    <a href="tel:+918367540839" class="bgh" style="font-size:1rem;padding:17px 40px;">&#128222; Call Now</a>
+    <a href="https://wa.me/918367540839?text=Hi%20CloudPixel%20AI%20Team!%20I%20want%20to%20get%20my%20website%20now." class="bpk" style="font-size:.97rem;padding:16px 38px;">&#128640; Get Your Website Now</a>
+    <a href="tel:+918367540839" class="bgh" style="font-size:.97rem;padding:16px 38px;">&#128222; Call Now</a>
   </div>
   <div class="ctadet">
     <div class="cd"><div class="cdi">&#128241;</div><span>+91 8367540839</span></div>
-    <div class="cd"><div class="cdi" style="background:rgba(244,114,182,.1);border-color:var(--bd-pink);">&#128231;</div><span>info@cloudpixelai.in</span></div>
+    <div class="cd"><div class="cdi" style="background:rgba(249,115,22,.1);border-color:rgba(249,115,22,.18);">&#128231;</div><span>info@cloudpixelai.in</span></div>
     <div class="cd"><div class="cdi">&#128205;</div><span>Vijayawada, AP</span></div>
-    <div class="cd"><div class="cdi" style="background:rgba(244,114,182,.1);border-color:var(--bd-pink);">&#9200;</div><span>9AM – 9PM Daily</span></div>
+    <div class="cd"><div class="cdi" style="background:rgba(249,115,22,.1);border-color:rgba(249,115,22,.18);">&#9200;</div><span>9AM – 9PM Daily</span></div>
   </div>
 </section>
 
@@ -868,9 +790,9 @@ const cur=document.getElementById('cur'),cur2=document.getElementById('cur2');
 let mx=0,my=0,cx=0,cy=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
 setInterval(()=>{cx+=(mx-cx)*.15;cy+=(my-cy)*.15;cur2.style.left=cx+'px';cur2.style.top=cy+'px';},16);
-document.querySelectorAll('a,button,.dep,.srv,.prc,.tc,.itag,.psl-arr,.psl-dot,.hdot,.asl-dot,.dcard').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cur.style.width='20px';cur.style.height='20px';cur.style.background='transparent';cur.style.border='2px solid #25D366';cur.style.boxShadow='none';});
-  el.addEventListener('mouseleave',()=>{cur.style.width='12px';cur.style.height='12px';cur.style.background='#25D366';cur.style.border='none';cur.style.boxShadow='0 0 15px #25D366';});
+document.querySelectorAll('a,button,.srv,.prc,.tc,.psl-arr,.hdot,.asl-dot').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.width='18px';cur.style.height='18px';cur.style.background='transparent';cur.style.border='2px solid #22c55e';cur.style.boxShadow='none';});
+  el.addEventListener('mouseleave',()=>{cur.style.width='10px';cur.style.height='10px';cur.style.background='#22c55e';cur.style.border='none';cur.style.boxShadow='0 0 12px #22c55e';});
 });
 
 // SMOOTH SCROLL
@@ -878,7 +800,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'});});
 });
 
-// REVEAL ANIMATION
+// REVEAL
 const obs=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.07});
 document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
 
@@ -886,54 +808,28 @@ document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
 (function(){
   const slides=document.querySelectorAll('#heroSlider .hslide');
   const dotsWrap=document.getElementById('heroDots');
-  let cur=0,timer;
+  let c=0,timer;
   slides.forEach((_,i)=>{const d=document.createElement('div');d.className='hdot'+(i===0?' on':'');d.onclick=()=>go(i);dotsWrap.appendChild(d);});
-  function go(n){slides[cur].classList.remove('active');cur=n;slides[cur].classList.add('active');document.querySelectorAll('#heroDots .hdot').forEach((d,i)=>d.className='hdot'+(i===cur?' on':''));}
-  function next(){go((cur+1)%slides.length);}
-  timer=setInterval(next,3500);
+  function go(n){slides[c].classList.remove('active');c=n;slides[c].classList.add('active');document.querySelectorAll('#heroDots .hdot').forEach((d,i)=>d.className='hdot'+(i===c?' on':''));}
+  timer=setInterval(()=>go((c+1)%slides.length),3800);
   document.getElementById('heroSlider').addEventListener('mouseenter',()=>clearInterval(timer));
-  document.getElementById('heroSlider').addEventListener('mouseleave',()=>{timer=setInterval(next,3500);});
+  document.getElementById('heroSlider').addEventListener('mouseleave',()=>{timer=setInterval(()=>go((c+1)%slides.length),3800);});
 })();
 
 // ABOUT SLIDER
 (function(){
   const slides=document.querySelectorAll('#aboutSlider .asl');
   const dotsWrap=document.getElementById('aboutDots');
-  let cur=0,timer;
+  let c=0;
   slides.forEach((_,i)=>{const d=document.createElement('div');d.className='asl-dot'+(i===0?' on':'');d.onclick=()=>go(i);dotsWrap.appendChild(d);});
-  function go(n){slides[cur].classList.remove('on');cur=n;slides[cur].classList.add('on');document.querySelectorAll('#aboutDots .asl-dot').forEach((d,i)=>d.className='asl-dot'+(i===cur?' on':''));}
-  timer=setInterval(()=>go((cur+1)%slides.length),4000);
+  function go(n){slides[c].classList.remove('on');c=n;slides[c].classList.add('on');document.querySelectorAll('#aboutDots .asl-dot').forEach((d,i)=>d.className='asl-dot'+(i===c?' on':''));}
+  setInterval(()=>go((c+1)%slides.length),4200);
 })();
-
-// PORTFOLIO SLIDER
-(function(){
-  const track=document.getElementById('portSlider');
-  const slides=track.querySelectorAll('.pslide');
-  const total=slides.length;
-  let cur=0;
-  const dotsWrap=document.getElementById('portDots');
-  slides.forEach((_,i)=>{const d=document.createElement('div');d.className='psl-dot'+(i===0?' on':'');d.onclick=()=>go(i);dotsWrap.appendChild(d);});
-  function go(n){cur=((n%total)+total)%total;track.style.transform='translateX(-'+cur*100+'%)';document.querySelectorAll('#portDots .psl-dot').forEach((d,i)=>d.className='psl-dot'+(i===cur?' on':''));}
-  document.getElementById('portNext').onclick=()=>go(cur+1);
-  document.getElementById('portPrev').onclick=()=>go(cur-1);
-  let t=setInterval(()=>go(cur+1),5000);
-  track.parentElement.addEventListener('mouseenter',()=>clearInterval(t));
-  track.parentElement.addEventListener('mouseleave',()=>{t=setInterval(()=>go(cur+1),5000);});
-  let sx=0;
-  track.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;},{passive:true});
-  track.addEventListener('touchend',e=>{const dx=sx-e.changedTouches[0].clientX;if(Math.abs(dx)>50)go(dx>0?cur+1:cur-1);});
-})();
-
-// SKILL BARS
-const bo=new IntersectionObserver(en=>{
-  en.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.sbf').forEach(b=>{setTimeout(()=>{b.style.width=b.dataset.w+'%';},200);});bo.unobserve(e.target);}});
-},{threshold:.3});
-const sb=document.getElementById('sb');if(sb)bo.observe(sb);
 
 // COUNTER ANIMATION
-function animCount(el,target,suffix){
-  let n=0;const step=Math.ceil(target/60);
-  const t=setInterval(()=>{n=Math.min(n+step,target);el.textContent=n+suffix;if(n>=target)clearInterval(t);},25);
+function animCount(el,target,suffix,prefix){
+  let n=0;const step=Math.ceil(target/55);
+  const t=setInterval(()=>{n=Math.min(n+step,target);el.textContent=(prefix||'')+n+suffix;if(n>=target)clearInterval(t);},22);
 }
 const co=new IntersectionObserver(en=>{
   en.forEach(e=>{if(e.isIntersecting){
@@ -953,7 +849,7 @@ function switchTab(tab,btn){
   btn.classList.add('on');
 }
 
-// CUSTOM QUOTE
+// CUSTOM QUOTE WHATSAPP
 function sendCustomQuote(){
   const name=document.getElementById('cf-name').value.trim()||'Customer';
   const phone=document.getElementById('cf-phone').value.trim()||'';
@@ -976,7 +872,7 @@ function sendCustomQuote(){
   window.open('https://wa.me/918367540839?text='+msg,'_blank');
 }
 
-// CONTACT FORM
+// CONTACT FORM WHATSAPP
 function sendContactForm(){
   const name=document.getElementById('cnt-name').value.trim()||'Customer';
   const phone=document.getElementById('cnt-phone').value.trim()||'';
