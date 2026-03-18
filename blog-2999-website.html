@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Analytics -->
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4971HLPLT2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -9,942 +9,458 @@
   gtag('js', new Date());
   gtag('config', 'G-4971HLPLT2');
 </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>₹2999 Website — Worth It? | CloudPixel AI Blog</title>
-  <meta name="description" content="Is a ₹2999 website worth it for your small business in AP & Telangana? Read our honest breakdown — what you get, what you don't, and who it's perfect for." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
-
-  <style>
-    :root {
-      --bg: #0a0a0f;
-      --surface: #111118;
-      --surface2: #16161f;
-      --border: rgba(255,255,255,0.07);
-      --accent: #6c63ff;
-      --accent2: #00d4aa;
-      --accent3: #ff6b6b;
-      --text: #e8e8f0;
-      --muted: #7a7a95;
-      --white: #ffffff;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(10,10,15,0.92);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--border);
-      padding: 0 clamp(1.5rem, 5vw, 4rem);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-    }
-
-    .nav-brand {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 1.15rem;
-      color: var(--white);
-      text-decoration: none;
-      letter-spacing: -0.02em;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .nav-brand span.dot {
-      display: inline-block;
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--accent2);
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%,100% { transform: scale(1); opacity:1; }
-      50% { transform: scale(1.4); opacity:0.7; }
-    }
-
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--white); }
-
-    .nav-cta {
-      background: var(--accent);
-      color: #fff;
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 600;
-      padding: 8px 20px;
-      border-radius: 100px;
-      transition: opacity 0.2s, transform 0.2s;
-    }
-    .nav-cta:hover { opacity: 0.85; transform: translateY(-1px); }
-
-    /* ── HERO ── */
-    .hero {
-      padding: clamp(4rem, 10vw, 7rem) clamp(1.5rem, 5vw, 4rem) clamp(3rem, 6vw, 5rem);
-      max-width: 860px;
-      margin: 0 auto;
-      position: relative;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -100px; left: -200px;
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(108,99,255,0.12) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .breadcrumb {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 2rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-    .breadcrumb a { color: var(--muted); text-decoration: none; }
-    .breadcrumb a:hover { color: var(--accent2); }
-    .breadcrumb .sep { opacity: 0.4; }
-
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 1.5rem;
-    }
-
-    .tag {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 4px 12px;
-      border-radius: 100px;
-      border: 1px solid;
-    }
-    .tag.purple { color: #a89dff; border-color: rgba(108,99,255,0.4); background: rgba(108,99,255,0.1); }
-    .tag.teal   { color: #5effd9; border-color: rgba(0,212,170,0.4); background: rgba(0,212,170,0.1); }
-    .tag.red    { color: #ff9a9a; border-color: rgba(255,107,107,0.4); background: rgba(255,107,107,0.1); }
-
-    h1.hero-title {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(2rem, 5vw, 3.4rem);
-      font-weight: 800;
-      line-height: 1.15;
-      letter-spacing: -0.03em;
-      color: var(--white);
-      margin-bottom: 1.25rem;
-    }
-
-    h1.hero-title em {
-      font-style: normal;
-      background: linear-gradient(90deg, var(--accent2), var(--accent));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero-sub {
-      font-size: 1.1rem;
-      color: var(--muted);
-      max-width: 600px;
-      margin-bottom: 2.5rem;
-      font-weight: 300;
-    }
-
-    .author-row {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .author-avatar {
-      width: 44px; height: 44px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 1rem;
-      color: #fff;
-      flex-shrink: 0;
-    }
-
-    .author-info { display: flex; flex-direction: column; }
-    .author-name { font-weight: 600; font-size: 0.9rem; color: var(--white); }
-    .author-meta { font-size: 0.78rem; color: var(--muted); }
-
-    /* ── HERO IMAGE BAND ── */
-    .hero-visual {
-      margin: 3rem 0;
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      background: var(--surface2);
-      position: relative;
-      height: 220px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    .hero-visual::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(0,212,170,0.1), rgba(255,107,107,0.08));
-    }
-
-    .price-badge {
-      position: relative;
-      text-align: center;
-    }
-
-    .price-badge .amount {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      font-weight: 800;
-      color: var(--white);
-      line-height: 1;
-    }
-
-    .price-badge .label {
-      font-size: 0.8rem;
-      color: var(--accent2);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-weight: 600;
-      margin-top: 4px;
-    }
-
-    .divider-vert {
-      width: 1px;
-      height: 80px;
-      background: var(--border);
-      position: relative;
-    }
-
-    .value-list {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .value-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.9rem;
-      color: var(--text);
-    }
-
-    .value-item .icon {
-      width: 22px; height: 22px;
-      border-radius: 6px;
-      background: rgba(0,212,170,0.15);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 0.75rem;
-      flex-shrink: 0;
-    }
-
-    /* ── CONTENT ── */
-    .article-wrap {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 0 clamp(1.5rem, 5vw, 4rem);
-      display: grid;
-      grid-template-columns: 1fr 300px;
-      gap: 4rem;
-      align-items: start;
-    }
-
-    .article-body { min-width: 0; }
-
-    /* TOC */
-    .toc {
-      position: sticky;
-      top: 80px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.5rem;
-    }
-
-    .toc-title {
-      font-family: 'Syne', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted);
-      margin-bottom: 1rem;
-    }
-
-    .toc ol { list-style: none; counter-reset: toc; }
-    .toc ol li { counter-increment: toc; margin-bottom: 10px; }
-    .toc ol li::before {
-      content: counter(toc, decimal-leading-zero) ".";
-      color: var(--accent);
-      font-size: 0.7rem;
-      font-weight: 700;
-      margin-right: 8px;
-    }
-    .toc a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.82rem;
-      line-height: 1.4;
-      transition: color 0.2s;
-    }
-    .toc a:hover { color: var(--accent2); }
-
-    .toc-cta {
-      margin-top: 1.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .toc-cta p {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-bottom: 0.75rem;
-    }
-
-    .btn-wa {
-      display: block;
-      text-align: center;
-      background: #25D366;
-      color: #fff;
-      text-decoration: none;
-      font-size: 0.82rem;
-      font-weight: 700;
-      padding: 10px 16px;
-      border-radius: 10px;
-      transition: opacity 0.2s;
-    }
-    .btn-wa:hover { opacity: 0.85; }
-
-    /* Sections */
-    .section { margin-bottom: 3.5rem; }
-
-    h2.section-title {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.45rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 1rem;
-      letter-spacing: -0.02em;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    h2.section-title .num {
-      font-size: 0.75rem;
-      font-weight: 800;
-      color: var(--accent);
-      background: rgba(108,99,255,0.12);
-      border: 1px solid rgba(108,99,255,0.3);
-      border-radius: 6px;
-      padding: 2px 8px;
-      letter-spacing: 0.05em;
-    }
-
-    p { margin-bottom: 1.1rem; color: var(--text); font-weight: 300; }
-    p strong { color: var(--white); font-weight: 600; }
-
-    /* Highlight Box */
-    .highlight-box {
-      border-radius: 14px;
-      padding: 1.5rem 1.75rem;
-      margin: 1.75rem 0;
-      border-left: 3px solid;
-    }
-    .highlight-box.green {
-      background: rgba(0,212,170,0.06);
-      border-color: var(--accent2);
-    }
-    .highlight-box.purple {
-      background: rgba(108,99,255,0.07);
-      border-color: var(--accent);
-    }
-    .highlight-box.red {
-      background: rgba(255,107,107,0.06);
-      border-color: var(--accent3);
-    }
-
-    .highlight-box .box-title {
-      font-family: 'Syne', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 0.6rem;
-    }
-    .highlight-box.green .box-title { color: var(--accent2); }
-    .highlight-box.purple .box-title { color: #a89dff; }
-    .highlight-box.red .box-title { color: #ff9a9a; }
-
-    /* Feature Grid */
-    .feature-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin: 1.5rem 0;
-    }
-
-    .feature-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.25rem;
-      transition: border-color 0.2s;
-    }
-    .feature-card:hover { border-color: rgba(108,99,255,0.3); }
-
-    .feature-card .fc-icon {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .feature-card .fc-title {
-      font-family: 'Syne', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 0.25rem;
-    }
-
-    .feature-card .fc-desc {
-      font-size: 0.8rem;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
-    /* Comparison Table */
-    .compare-table {
-      width: 100%;
-      border-collapse: collapse;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      margin: 1.5rem 0;
-      font-size: 0.88rem;
-    }
-
-    .compare-table thead tr {
-      background: var(--surface2);
-    }
-
-    .compare-table th {
-      padding: 12px 16px;
-      text-align: left;
-      font-family: 'Syne', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      color: var(--muted);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .compare-table td {
-      padding: 12px 16px;
-      border-bottom: 1px solid rgba(255,255,255,0.04);
-      color: var(--text);
-      font-weight: 300;
-    }
-
-    .compare-table tr:last-child td { border-bottom: none; }
-    .compare-table tbody tr:nth-child(odd) { background: rgba(255,255,255,0.02); }
-
-    .check { color: var(--accent2); font-weight: 700; }
-    .cross { color: var(--accent3); }
-
-    /* Who it's for */
-    .persona-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin: 1.25rem 0;
-    }
-
-    .persona-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1rem 1.25rem;
-      font-weight: 300;
-    }
-
-    .persona-list li .pl-icon {
-      font-size: 1.3rem;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .persona-list li .pl-text strong {
-      display: block;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--white);
-      margin-bottom: 2px;
-    }
-
-    .persona-list li .pl-text span {
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    /* FAQ */
-    .faq-list { display: flex; flex-direction: column; gap: 12px; }
-
-    .faq-item {
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .faq-q {
-      width: 100%;
-      background: var(--surface);
-      border: none;
-      padding: 1rem 1.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      cursor: pointer;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.92rem;
-      font-weight: 500;
-      color: var(--white);
-      text-align: left;
-      gap: 12px;
-      transition: background 0.2s;
-    }
-    .faq-q:hover { background: var(--surface2); }
-
-    .faq-q .faq-arrow {
-      flex-shrink: 0;
-      color: var(--muted);
-      font-size: 0.8rem;
-      transition: transform 0.3s;
-    }
-
-    .faq-a {
-      display: none;
-      padding: 0 1.25rem 1rem;
-      background: var(--surface);
-      font-size: 0.88rem;
-      color: var(--muted);
-      font-weight: 300;
-      line-height: 1.7;
-    }
-
-    .faq-item.open .faq-arrow { transform: rotate(180deg); }
-    .faq-item.open .faq-a { display: block; }
-
-    /* CTA Block */
-    .cta-block {
-      background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(0,212,170,0.1));
-      border: 1px solid rgba(108,99,255,0.25);
-      border-radius: 20px;
-      padding: 2.5rem 2rem;
-      text-align: center;
-      margin: 3rem 0;
-    }
-
-    .cta-block h3 {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: var(--white);
-      margin-bottom: 0.75rem;
-      letter-spacing: -0.02em;
-    }
-
-    .cta-block p {
-      font-size: 0.95rem;
-      color: var(--muted);
-      max-width: 420px;
-      margin: 0 auto 1.75rem;
-    }
-
-    .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-
-    .btn-primary {
-      background: var(--accent2);
-      color: #000;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.9rem;
-      padding: 12px 24px;
-      border-radius: 100px;
-      transition: opacity 0.2s, transform 0.2s;
-    }
-    .btn-primary:hover { opacity: 0.85; transform: translateY(-2px); }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.9rem;
-      padding: 12px 24px;
-      border-radius: 100px;
-      border: 1px solid var(--border);
-      transition: border-color 0.2s;
-    }
-    .btn-outline:hover { border-color: var(--muted); }
-
-    /* Footer */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2.5rem clamp(1.5rem, 5vw, 4rem);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-      max-width: 1100px;
-      margin: 4rem auto 0;
-    }
-
-    footer p { font-size: 0.8rem; color: var(--muted); margin: 0; }
-    footer a { color: var(--muted); text-decoration: none; }
-    footer a:hover { color: var(--accent2); }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      .article-wrap {
-        grid-template-columns: 1fr;
-      }
-      .toc { display: none; }
-      .feature-grid { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
-      .hero-visual .value-list,
-      .hero-visual .divider-vert { display: none; }
-    }
-
-    /* Scroll reveal */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Your Business Needs a Website | Small Business Digital Growth | CloudPixel AI</title>
+<meta name="description" content="How a website helps clinics, restaurants, travel agencies, play schools and home businesses get found on Google and reach more customers. Built for AP & Telangana.">
+<meta name="keywords" content="small business website, website design Vijayawada, clinic website, Google search local business, CloudPixel AI">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://cloudpixelai.in/blog-2999-website.html">
+<!-- Open Graph -->
+<meta property="og:title" content="Why Your Business Needs a Website | CloudPixel AI">
+<meta property="og:description" content="How clinics, restaurants, travel agencies & home businesses get found on Google with a website.">
+<meta property="og:url" content="https://cloudpixelai.in/blog-2999-website.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CloudPixel AI">
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Why Your Business Needs a Website — And How Customers Find You on Google",
+  "description": "How a website helps clinics, restaurants, travel agencies, play schools and home businesses reach customers today.",
+  "url": "https://cloudpixelai.in/blog-2999-website.html",
+  "inLanguage": ["en", "te"],
+  "author": {
+    "@type": "Organization",
+    "name": "CloudPixel AI",
+    "url": "https://cloudpixelai.in"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CloudPixel AI",
+    "url": "https://cloudpixelai.in"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://cloudpixelai.in/blog-2999-website.html"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f6f2;
+    --surface: #ffffff;
+    --ink: #1c1c1c;
+    --ink2: #3a3a3a;
+    --muted: #737373;
+    --border: #e4e2da;
+    --accent: #c94a1a;
+    --accent-soft: #fdf0eb;
+    --green: #1f6e40;
+    --green-soft: #edf7f1;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--ink); font-size: 16px; line-height: 1.8; }
+
+  .nav { background: var(--surface); border-bottom: 1px solid var(--border); padding: 14px 32px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 200; }
+  .nav-brand { font-family: 'Lora', serif; font-weight: 700; font-size: 18px; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
+  .nav-brand span { color: var(--accent); }
+  .nav-link { font-size: 13px; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; }
+  .nav-link:hover { color: var(--ink); }
+
+  .wrapper { max-width: 740px; margin: 0 auto; padding: 0 24px; }
+
+  .hero { padding: 60px 0 0; }
+  .hero-category { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
+  .hero-category::before { content: ''; display: block; width: 20px; height: 2px; background: var(--accent); border-radius: 1px; }
+  .hero h1 { font-family: 'Lora', serif; font-size: clamp(28px, 5vw, 46px); font-weight: 700; line-height: 1.22; letter-spacing: -0.025em; color: var(--ink); margin-bottom: 20px; }
+  .hero-intro { font-size: 17px; color: var(--ink2); line-height: 1.7; max-width: 620px; margin-bottom: 28px; font-weight: 300; }
+  .hero-byline { display: flex; align-items: center; gap: 16px; font-size: 13px; color: var(--muted); margin-bottom: 32px; }
+  .hero-byline .dot { opacity: .4; }
+
+  .tab-bar { display: flex; border-bottom: 2px solid var(--border); }
+  .tab-btn { padding: 11px 24px; font-size: 13px; font-weight: 600; font-family: 'Outfit', sans-serif; letter-spacing: .04em; cursor: pointer; border: none; background: transparent; color: var(--muted); border-bottom: 2px solid transparent; margin-bottom: -2px; transition: color .2s, border-color .2s; }
+  .tab-btn.active { color: var(--ink); border-bottom-color: var(--ink); }
+  .tab-btn:hover:not(.active) { color: var(--ink2); }
+
+  .tab-content { display: none; padding: 48px 0 80px; }
+  .tab-content.active { display: block; animation: fadeUp .3s ease; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+  .blog-body h2 { font-family: 'Lora', serif; font-size: clamp(20px, 3vw, 26px); font-weight: 700; color: var(--ink); margin: 48px 0 14px; letter-spacing: -0.02em; line-height: 1.3; }
+  .blog-body h2:first-child { margin-top: 0; }
+  .blog-body p { font-size: 16px; color: var(--ink2); margin-bottom: 20px; line-height: 1.85; font-weight: 300; }
+  .blog-body strong { font-weight: 600; color: var(--ink); }
+
+  .pull-quote { border-left: 3px solid var(--accent); padding: 4px 0 4px 22px; margin: 32px 0; }
+  .pull-quote p { font-family: 'Lora', serif; font-size: 18px; font-style: italic; color: var(--ink); line-height: 1.6; margin: 0; }
+
+  .segment-grid { display: flex; flex-direction: column; gap: 1px; margin: 28px 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--border); }
+  .segment { background: var(--surface); padding: 22px 24px; display: grid; grid-template-columns: 44px 1fr; gap: 16px; align-items: start; }
+  .seg-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--bg); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+  .seg-body h3 { font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 5px; line-height: 1.3; }
+  .seg-body p { font-size: 14px; color: var(--muted); margin: 0; line-height: 1.65; }
+
+  .note { background: var(--accent-soft); border-radius: 10px; padding: 18px 22px; margin: 28px 0; }
+  .note p { font-size: 15px; color: var(--ink2); margin: 0; line-height: 1.7; }
+  .note.green { background: var(--green-soft); }
+
+  .tech-row { display: flex; flex-direction: column; gap: 1px; margin: 24px 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--border); }
+  .tech-item { background: var(--surface); padding: 20px 24px; }
+  .tech-item h3 { font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 6px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .tech-badge { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; background: var(--bg); color: var(--muted); border: 1px solid var(--border); }
+  .tech-item p { font-size: 14px; color: var(--muted); margin: 0; line-height: 1.65; }
+
+  .section-divider { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+
+  .soft-cta { border-top: 1px solid var(--border); padding-top: 36px; margin-top: 48px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+  .soft-cta p { font-size: 15px; color: var(--muted); margin: 0; max-width: 420px; }
+  .wa-link { display: inline-flex; align-items: center; gap: 8px; background: #25d366; color: #fff; font-size: 14px; font-weight: 600; padding: 11px 22px; border-radius: 8px; text-decoration: none; white-space: nowrap; transition: opacity .2s; flex-shrink: 0; }
+  .wa-link:hover { opacity: .88; }
+
+  .blog-img { width: 100%; border-radius: 12px; overflow: hidden; margin: 28px 0; aspect-ratio: 16/7; position: relative; background: var(--border); }
+  .blog-img img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 12px; }
+  .blog-img .img-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,.5)); color: #fff; font-size: 12px; padding: 20px 16px 10px; border-radius: 0 0 12px 12px; }
+
+  .related { border-top: 1px solid var(--border); margin-top: 56px; padding-top: 36px; }
+  .related h3 { font-family: 'Lora', serif; font-size: 18px; font-weight: 700; color: var(--ink); margin-bottom: 16px; }
+  .related-list { display: flex; flex-direction: column; gap: 1px; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: var(--border); list-style: none; }
+  .related-item { background: var(--surface); }
+  .related-item a { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; text-decoration: none; color: var(--ink); transition: background .2s; }
+  .related-item a:hover { background: var(--bg); }
+  .related-item span { font-size: 14px; font-weight: 500; }
+  .related-item .arr { font-size: 16px; color: var(--muted); flex-shrink: 0; }
+
+  .footer { border-top: 1px solid var(--border); padding: 28px 32px; text-align: center; font-size: 13px; color: var(--muted); }
+  .footer a { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 580px) {
+    .nav { padding: 12px 18px; }
+    .wrapper { padding: 0 18px; }
+    .hero { padding: 40px 0 0; }
+    .segment { grid-template-columns: 38px 1fr; gap: 12px; padding: 18px; }
+    .soft-cta { flex-direction: column; align-items: flex-start; }
+    .hero-byline { flex-wrap: wrap; gap: 8px; }
+  }
+</style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="https://cloudpixelai.in/" class="nav-brand">
-    <span class="dot"></span> CloudPixel AI
-  </a>
-  <ul class="nav-links">
-    <li><a href="https://cloudpixelai.in/#services">Services</a></li>
-    <li><a href="https://cloudpixelai.in/#pricing">Pricing</a></li>
-    <li><a href="https://cloudpixelai.in/#portfolio">Work</a></li>
-  </ul>
-  <a href="https://wa.me/918367540839?text=Hi! I want to know about the ₹2999 website plan." class="nav-cta">💬 WhatsApp Us</a>
+<nav class="nav">
+  <a class="nav-brand" href="https://cloudpixelai.in">Cloud<span>Pixel</span> AI</a>
+  <a class="nav-link" href="https://cloudpixelai.in">← Back to Home</a>
 </nav>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="breadcrumb">
-    <a href="https://cloudpixelai.in/">Home</a>
-    <span class="sep">›</span>
-    <span>Blog</span>
-    <span class="sep">›</span>
-    <span>₹2999 Website</span>
+<div class="wrapper">
+  <header class="hero">
+    <div class="hero-category">Business &amp; Digital Growth</div>
+    <h1>Why Your Business Needs a Website —<br>And How Customers Find You on Google</h1>
+    <p class="hero-intro">The way people discover businesses has quietly changed. This is a look at how that shift works — and what it means for clinics, restaurants, travel agencies, schools, and anyone running a business today.</p>
+    <div class="hero-byline">
+      <span>CloudPixel AI</span>
+      <span class="dot">·</span>
+      <span>8 min read</span>
+      <span class="dot">·</span>
+      <span>Vijayawada, AP</span>
+    </div>
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab('en',this)">English</button>
+      <button class="tab-btn" onclick="switchTab('te',this)">తెలుగు</button>
+    </div>
+  </header>
+
+  <!-- ENGLISH -->
+  <div id="tab-en" class="tab-content active">
+    <div class="blog-body">
+
+      <h2>How People Find Businesses Now</h2>
+      <p>When someone needs a doctor, wants to book a cab, or is looking for a school to admit their child — their first instinct is to reach for their phone. Not to call a friend. Not to ask a neighbour. They open a search engine, type what they're looking for, and within seconds they have a list of options in front of them.</p>
+      <p>The businesses that appear in that list get considered. The ones that don't, don't exist in that moment — even if they've been operating for years and doing excellent work.</p>
+
+      <div class="pull-quote">
+        <p>A website doesn't replace your business. It makes your business findable at the exact moment someone is looking for it.</p>
+      </div>
+
+      <div class="blog-img">
+        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=900&q=80" alt="Person searching for local business on mobile phone" loading="lazy">
+        <div class="img-caption">Most customers search on their phones before deciding which business to visit</div>
+      </div>
+
+      <p>This is the current reality. People search first, decide second, and contact third. The entire journey — from discovery to reaching out — happens on a mobile screen, often in under five minutes.</p>
+
+      <hr class="section-divider">
+
+      <h2>What This Means for Different Businesses</h2>
+      <p>The impact of being online — or not being online — looks different depending on the type of business. Here is how it plays out across the segments we work with most.</p>
+
+      <div class="segment-grid">
+        <div class="segment">
+          <div class="seg-icon">🏥</div>
+          <div class="seg-body">
+            <h3>Clinics &amp; Medical Practices</h3>
+            <p>When someone moves to a new area or needs a specialist, the first thing they do is search. A clinic with a website shows up with its name, location, timings, and what it treats. One with no website relies entirely on referrals — a limited and unpredictable source. A mobile-ready clinic website with a map and a call button removes all friction between a patient and an appointment.</p>
+          </div>
+        </div>
+        <div class="segment">
+          <div class="seg-icon">🍽️</div>
+          <div class="seg-body">
+            <h3>Restaurants &amp; Food Businesses</h3>
+            <p>Before anyone drives to a restaurant they haven't visited before, they look it up. They want to see the menu, the timings, and where it is. A restaurant without a website loses that consideration entirely. The decision is made before anyone even steps out of the house.</p>
+          </div>
+        </div>
+        <div class="segment">
+          <div class="seg-icon">🚌</div>
+          <div class="seg-body">
+            <h3>Travel Agencies</h3>
+            <p>Travel is one of the most searched categories on mobile. People look up routes, packages, and availability before calling anyone. A travel business with a clean website that lists its services and has a WhatsApp contact button receives inquiries from people who are already interested — not cold leads who need convincing from scratch.</p>
+          </div>
+        </div>
+        <div class="segment">
+          <div class="seg-icon">🎒</div>
+          <div class="seg-body">
+            <h3>Play Schools &amp; Children's Institutions</h3>
+            <p>Parents researching schools for their children are thorough. They want to see the curriculum, the environment, and the contact details. A play school with a well-structured website answers these questions before a parent even makes their first call — which means by the time they do call, they are already interested.</p>
+          </div>
+        </div>
+        <div class="segment">
+          <div class="seg-icon">💧</div>
+          <div class="seg-body">
+            <h3>Water Suppliers &amp; Local Delivery</h3>
+            <p>In areas where multiple suppliers operate, the one that appears on Google with clear contact information gets the call. For local delivery businesses especially, visibility in area-based searches is everything — people search by locality and contact whoever comes up first.</p>
+          </div>
+        </div>
+        <div class="segment">
+          <div class="seg-icon">🏠</div>
+          <div class="seg-body">
+            <h3>Home-Based &amp; E-Commerce Businesses</h3>
+            <p>A business run from home has no physical presence to attract walk-in customers. The website is the storefront. Whether someone sells handmade products, offers tutoring, or runs a cloud kitchen — the website is where customers land, understand what is being offered, and decide to order or reach out.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-img">
+        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=900&q=80" alt="Small clinic with patients — website helps patients find clinics on Google" loading="lazy">
+        <div class="img-caption">Clinics with websites get found by patients who are actively searching for care</div>
+      </div>
+
+      <hr class="section-divider">
+
+      <h2>The Mobile Experience</h2>
+      <p>Nearly every customer who visits a website today does so on a phone. This means the website needs to load quickly, display clearly on a small screen, and make it effortless to take the next step — whether that is calling, messaging on WhatsApp, or finding the location on Maps.</p>
+      <p>A website that is not built with mobile in mind creates friction at every step. Text that is too small to read, buttons that are hard to tap, pages that load slowly — all of these push a potential customer toward a competitor who made it easier.</p>
+
+      <div class="note">
+        <p>Search engines also factor in mobile performance when deciding which websites to show in results. A site that works well on mobile gets better visibility — which means more people find it in the first place.</p>
+      </div>
+
+      <hr class="section-divider">
+
+      <h2>What Goes Into a Website That Actually Works</h2>
+      <p>A functioning business website is not just a page with some text. It is a collection of elements that work together to bring in customers and make it easy for them to act.</p>
+
+      <div class="tech-row">
+        <div class="tech-item">
+          <h3>Website Structure &amp; Design <span class="tech-badge">Foundation</span></h3>
+          <p>A clean, well-organised website tells a visitor within seconds who you are, what you do, and how to reach you. Good structure means important information is easy to find without scrolling through walls of text.</p>
+        </div>
+        <div class="tech-item">
+          <h3>SEO — Search Engine Optimisation <span class="tech-badge">Visibility</span></h3>
+          <p>SEO is how a website gets found on Google without paid advertising. It involves setting up the right page titles, descriptions, and content structure so that search engines understand what the business does and show it for relevant searches. Local SEO specifically helps businesses appear for searches happening in their area.</p>
+        </div>
+        <div class="tech-item">
+          <h3>Google Analytics &amp; Search Console <span class="tech-badge">Data</span></h3>
+          <p>These tools show you what is happening on your website — how many people visited, what they searched to find you, which pages they looked at, and where they dropped off. This data helps you understand what is working and what to improve over time.</p>
+        </div>
+        <div class="tech-item">
+          <h3>Static Website <span class="tech-badge">Type</span></h3>
+          <p>A static website has fixed content that does not change without manual updates. It is fast, reliable, and ideal for businesses that need a clean online presence — contact information, services, and location — without frequently changing content. Best suited for clinics, small shops, and service providers.</p>
+        </div>
+        <div class="tech-item">
+          <h3>Dynamic Website <span class="tech-badge">Type</span></h3>
+          <p>A dynamic website can update its content automatically or be managed through a dashboard. It is the right fit for businesses that need to regularly add new content — travel agencies updating packages, schools posting notices, or restaurants changing menus.</p>
+        </div>
+        <div class="tech-item">
+          <h3>WordPress Website <span class="tech-badge">Type</span></h3>
+          <p>WordPress makes it easy to manage a website without technical knowledge. The business owner can log in and update content, add posts, or make changes independently. It is widely used because it is flexible and does not require a developer for everyday updates.</p>
+        </div>
+      </div>
+
+      <hr class="section-divider">
+
+      <h2>The Shift Happening Right Now</h2>
+      <p>The current generation of customers — whether they are in their twenties or their fifties — has grown comfortable searching online before making decisions. This is not limited to urban areas or tech-savvy individuals. It is a broad, consistent behaviour across all kinds of people.</p>
+      <p>Businesses that have a clear, mobile-friendly online presence are capturing this demand. Those that have not moved in this direction are still relying entirely on referrals, word of mouth, and foot traffic — all of which are valuable, but all of which have a ceiling.</p>
+      <p>A website does not replace any of that. It adds a new channel — one that works continuously, and reaches people at exactly the moment they are looking.</p>
+
+      <div class="soft-cta">
+        <p>If you would like to talk about what a website could look like for your specific business, we are available on WhatsApp.</p>
+        <a class="wa-link" href="https://wa.me/918367540839?text=Hi%20CloudPixel%20AI!%20I%20read%20your%20blog%20and%20have%20a%20question.">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat with us
+        </a>
+      </div>
+
+      <nav class="related" aria-label="Related articles">
+        <h3>Related Articles</h3>
+        <ul class="related-list">
+          <li class="related-item"><a href="/blog-seo-local-business.html"><span>How Local SEO Helps Your Business Rank on Google</span><span class="arr">→</span></a></li>
+          <li class="related-item"><a href="/blog-static-vs-dynamic-website.html"><span>Static vs Dynamic Website — Which One Does Your Business Need?</span><span class="arr">→</span></a></li>
+          <li class="related-item"><a href="/blog-whatsapp-business-website.html"><span>How WhatsApp Integration on Your Website Increases Enquiries</span><span class="arr">→</span></a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
 
-  <div class="tag-row">
-    <span class="tag purple">Website Design</span>
-    <span class="tag teal">Small Business</span>
-    <span class="tag red">AP & Telangana</span>
+  <!-- TELUGU -->
+  <div id="tab-te" class="tab-content">
+    <div class="blog-body">
+
+      <h2>ఇప్పుడు Business ని ఎలా వెతుకుతున్నారు?</h2>
+      <p>ఒక కొత్త area కి వెళ్ళినప్పుడు, లేదా doctor కావాలప్పుడు, లేదా పిల్లలకి school చూస్తున్నప్పుడు — మనం ముందు ఏం చేస్తాం? Phone తీసుకొని Google లో వెతుకుతాం. మన తెలుగు రాష్ట్రాల్లో కూడా ఇప్పుడు situation అదే. పక్కింటి వాళ్ళని అడిగే బదులు, phone లో search చేయడం అందరికీ habit అయిపోయింది.</p>
+      <p>Search లో వచ్చిన businesses కి customers వెళ్తున్నారు. రాని businesses గురించి వాళ్ళకి తెలియనే తెలియదు — ఎన్ని years గా run అవుతున్నా సరే, ఎంత quality ఉన్నా సరే.</p>
+
+      <div class="pull-quote">
+        <p>Website అంటే advertisement కాదు. Customer మీ కోసం search చేసిన exact moment లో మీరు కనపడటం.</p>
+      </div>
+
+      <p>ఇప్పటి generation mobile లో search చేస్తుంది, చూస్తుంది, decide చేస్తుంది — అన్నీ phone లోనే. ఆ journey లో మీరు లేకపోతే, opportunity miss అవుతోంది.</p>
+
+      <hr class="section-divider">
+
+      <h2>ఏ Business కి ఎలా Use అవుతుంది?</h2>
+      <p>Website అందరికీ same గా పని చేయదు. Business type బట్టి దాని value మారుతుంది. మనం ఎక్కువగా work చేసే segments లో ఇది ఎలా అవుతుందో చూద్దాం.</p>
+
+      <div class="segment-grid">
+        <div class="segment">
+          <div class="seg-icon">🏥</div>
+          <div class="seg-body">
+            <h3>Clinics &amp; Hospitals</h3>
+            <p>చాలా clinics కి website ఉండదు — కానీ patient ఒక కొత్త doctor కోసం search చేసినప్పుడు, Google లో కనిపించిన clinic కే వెళ్తారు. Website లో timings, doctor details, directions, ఒక call button ఉంటే — ఆ moment లో patient మీకే connect అవుతాడు. Walk-in కోసం wait చేయకుండా appointments రావడం start అవుతుంది.</p>
+          </div>
+        </div>
+        <div class="segment">
+          <div class="seg-icon">🍽️</div>
+          <div class="seg-body">
+            <h3>Restaurants &amp; Food Businesses</h3>
+            <p>ఒక కొత్త restaurant కి వెళ్ళే ముందు అందరూ online లో చూస్తారు. Menu ఉందా, timings ఏంటి, location ఎక్కడుంది — ఇవి తెలిస్తేనే వెళ్తారు. ఈ information easily దొరకని restaurant skip అవుతుంది. Decision ఇంట్లోనే అయిపోతుంది.</p>
+          </div>
+        </div>
+        <div class="segment">
+          <div class="seg-icon">🚌</div>
+          <div class="seg-body">
+            <h3>Travels &amp; Transport</h3>
+            <p>Tour packages, cab bookings, bus enquiries — అన్నీ ముందు online లో వెతుకుతారు. ఒక travel agency website లో packages చూసి, WhatsApp button tap చేసి directly enquiry చేస్తారు. Phone number మాత్రమే ఉంటే, unknown number కి call చేయడానికి చాలా మంది hesitate చేస్తారు. Website trust create చేస్తుంది.</p>
+          </div>
+        </div>
+        <div class="segment">
+          <div class="seg-icon">🎒</div>
+          <div class="seg-body">
+            <h3>Play Schools &amp; Children's Institutions</h3>
+            <p>Parents పిల్లల school చూసేటప్పుడు చాలా carefully research చేస్తారు. Curriculum, environment, contact details — ఇవి website లో clearly ఉంటే, parent already informed గా వస్తాడు. అప్పుడు admission conversation చాలా easy అవుతుంది. Information లేని school తొందరగా skip అవుతుంది.</p>
+          </div>
+        </div>
+        <div class="segment">
+          <div class="seg-icon">💧</div>
+          <div class="seg-body">
+            <h3>Water Supply &amp; Local Delivery</h3>
+            <p>ఒక area లో multiple suppliers ఉంటే, Google లో first గా కనపడిన వాడికి call వస్తుంది. Local search లో name, phone number, service area clearly ఉంటే — competitor కంటే ముందే customer మీకు reach అవుతాడు. Simple గా ఉన్న website కూడా ఇక్కడ చాలా పని చేస్తుంది.</p>
+          </div>
+        </div>
+        <div class="segment">
+          <div class="seg-icon">🏠</div>
+          <div class="seg-body">
+            <h3>Home-Based &amp; E-Commerce Businesses</h3>
+            <p>Shop లేకపోయినా పర్వాలేదు — website ఉంటే online shop అవుతుంది. ఇంట్లో చేసే products sell చేసే వాళ్ళు, tutoring చేసే వాళ్ళు, cloud kitchen run చేసే వాళ్ళు — వీళ్ళందరికీ website అనేది physical address replace చేస్తుంది. Customer product చూసి, directly order చేసి, WhatsApp చేస్తాడు.</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="section-divider">
+
+      <h2>Mobile లో Experience ఎలా ఉంటుంది?</h2>
+      <p>ఇప్పుడు దాదాపు అందరూ phone లోనే website చూస్తున్నారు. అంటే website mobile లో perfectly load అవ్వాలి, buttons clearly కనపడాలి, ఒక్క tap లో WhatsApp కి connect అవ్వాలి.</p>
+      <p>Mobile లో సరిగ్గా పని చేయని website చూసిన customer వేరే business కి వెళ్తాడు. అంత simple గా ఉంది ఇప్పటి situation. అందుకే mobile-ready గా build చేయడం ఒక basic requirement అయిపోయింది.</p>
+
+      <div class="note green">
+        <p>Google కూడా mobile-friendly websites ని search results లో priority ఇస్తుంది. అంటే మీ website mobile లో బాగా పని చేస్తే — more customers మిమ్మల్ని find చేయగలుగుతారు.</p>
+      </div>
+
+      <hr class="section-divider">
+
+      <h2>మేము ఏమేమి Provide చేస్తున్నాము</h2>
+      <p>ఒక website build చేయడం మాత్రమే కాదు. దాన్ని Google లో కనపడేలా చేయడం, data అర్థమయ్యేలా చేయడం — అన్నీ కలిపి ఒక complete setup అవుతుంది.</p>
+
+      <div class="tech-row">
+        <div class="tech-item">
+          <h3>Website Design &amp; Structure <span class="tech-badge">Foundation</span></h3>
+          <p>Business కి ఏం కావాలో అర్థం చేసుకొని, clean గా clearly గా website build చేస్తాం. Visitor 30 seconds లో మీ business గురించి అర్థం చేసుకోగలగాలి — అదే goal.</p>
+        </div>
+        <div class="tech-item">
+          <h3>SEO — Google లో కనపడటం <span class="tech-badge">Visibility</span></h3>
+          <p>SEO అంటే Google ads కాదు. మీ business relevant searches కి organic గా కనపడటం. "Clinic in Vijayawada", "travels near me" అని వెతికినప్పుడు మీరు కనపడాలంటే — SEO setup సరిగ్గా ఉండటం important.</p>
+        </div>
+        <div class="tech-item">
+          <h3>Google Analytics &amp; Search Console <span class="tech-badge">Data</span></h3>
+          <p>Website కి ఎంత మంది వస్తున్నారు, ఏ keywords తో వస్తున్నారు, ఎంత time spend చేస్తున్నారు — ఈ data చూసి మీరు decisions తీసుకోవచ్చు. Business ని data తో అర్థం చేసుకోవడం ఇప్పుడు చాలా easy అయింది.</p>
+        </div>
+        <div class="tech-item">
+          <h3>Static Website <span class="tech-badge">Type</span></h3>
+          <p>Content తక్కువగా change అయ్యే businesses కి — clinics, shops, service providers — static website perfect. Fast గా load అవుతుంది, reliable గా ఉంటుంది, maintenance తక్కువ.</p>
+        </div>
+        <div class="tech-item">
+          <h3>Dynamic Website <span class="tech-badge">Type</span></h3>
+          <p>Regularly content update చేయాల్సిన businesses కి — travel packages, school notices, restaurant menus — dynamic website కావాలి. Content easily manage చేయవచ్చు, automatically update అవుతుంది.</p>
+        </div>
+        <div class="tech-item">
+          <h3>WordPress Website <span class="tech-badge">Type</span></h3>
+          <p>WordPress తో build చేస్తే మీరే login చేసి content update చేయవచ్చు. Developer అవసరం లేకుండా, photos add చేయవచ్చు, posts రాయవచ్చు. Control పూర్తిగా మీ చేతిలోనే ఉంటుంది.</p>
+        </div>
+      </div>
+
+      <hr class="section-divider">
+
+      <h2>ఇప్పుడు ఎందుకు Important?</h2>
+      <p>Digital గా move అవ్వడం future కోసం కాదు — present కోసం. ఇప్పుడు customers search చేస్తున్నారు, ఇప్పుడు decisions తీసుకుంటున్నారు. Referrals, word of mouth — ఇవి valuable నే, కానీ వాటికి limits ఉన్నాయి.</p>
+      <p>Website ఒక్కసారి set అయిపోతే 24 గంటలూ పని చేస్తుంది. మీరు shop close చేసినప్పుడు కూడా, ఒక customer మిమ్మల్ని find చేసి contact details save చేసుకుంటాడు — మరుసటి రోజు customer అవుతాడు.</p>
+
+      <div class="soft-cta">
+        <p>మీ business కి ఏ type website suit అవుతుందో మాట్లాడాలంటే — WhatsApp లో reach అవ్వండి.</p>
+        <a class="wa-link" href="https://wa.me/918367540839?text=Hi%20CloudPixel%20AI!%20Blog%20చదివాను.%20మాట్లాడాలి.">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          మాట్లాడండి
+        </a>
+      </div>
+
+      <nav class="related" aria-label="సంబంధిత వ్యాసాలు">
+        <h3>ఇవి కూడా చదవండి</h3>
+        <ul class="related-list">
+          <li class="related-item"><a href="/blog-seo-local-business.html"><span>Local SEO తో మీ Business Google లో ఎలా Rank అవుతుంది</span><span class="arr">→</span></a></li>
+          <li class="related-item"><a href="/blog-static-vs-dynamic-website.html"><span>Static vs Dynamic Website — మీ Business కి ఏది Better?</span><span class="arr">→</span></a></li>
+          <li class="related-item"><a href="/blog-whatsapp-business-website.html"><span>Website లో WhatsApp Button ఉంటే Enquiries ఎలా పెరుగుతాయి</span><span class="arr">→</span></a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
-
-  <h1 class="hero-title">₹2999 Website — Is It <em>Actually Worth It</em> for Your Business?</h1>
-  <p class="hero-sub">Honest, no-fluff breakdown of what you get, who it's perfect for, and when you should spend more. From the team that builds them every week.</p>
-
-  <div class="author-row">
-    <div class="author-avatar">K</div>
-    <div class="author-info">
-      <span class="author-name">Krishnan — CloudPixel AI Founder</span>
-      <span class="author-meta">March 2026 · 6 min read · Vijayawada, AP</span>
-    </div>
-  </div>
-
-  <div class="hero-visual">
-    <div class="price-badge">
-      <div class="amount">₹2,999</div>
-      <div class="label">One-time · No renewal</div>
-    </div>
-    <div class="divider-vert"></div>
-    <ul class="value-list">
-      <li class="value-item"><span class="icon">✓</span> Mobile-ready landing page</li>
-      <li class="value-item"><span class="icon">✓</span> WhatsApp + Contact form</li>
-      <li class="value-item"><span class="icon">✓</span> Live in 3 days</li>
-      <li class="value-item"><span class="icon">✓</span> Free GitHub hosting</li>
-    </ul>
-  </div>
-</header>
-
-<!-- ARTICLE -->
-<div class="article-wrap">
-
-  <!-- BODY -->
-  <article class="article-body">
-
-    <!-- Section 1 -->
-    <div class="section reveal" id="s1">
-      <h2 class="section-title"><span class="num">01</span> The Real Question Every Shop Owner Asks</h2>
-      <p>When small business owners in Vijayawada, Guntur, or Hyderabad hear "₹2999 website", the first reaction is: <strong>"Ithu real ga work avutundha?"</strong> (Will this actually work?)</p>
-      <p>Fair question. You've probably seen expensive agencies quoting ₹50,000–₹1,00,000 for a website. So how can ₹2999 be legit — and more importantly, is it enough for YOUR business?</p>
-      <div class="highlight-box purple">
-        <div class="box-title">⚡ Short Answer</div>
-        <p style="margin:0">For <strong>most small businesses, shops, clinics, and home-based services</strong> in AP & Telangana — yes, a ₹2999 website is not just worth it, it's the smartest first step online you can take.</p>
-      </div>
-    </div>
-
-    <!-- Section 2 -->
-    <div class="section reveal" id="s2">
-      <h2 class="section-title"><span class="num">02</span> What Exactly Do You Get for ₹2999?</h2>
-      <p>No hidden costs. No vague promises. Here's exactly what our Basic Plan includes:</p>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="fc-icon">📱</div>
-          <div class="fc-title">Mobile-First Design</div>
-          <div class="fc-desc">90%+ of your customers will visit from a phone. Your site looks perfect on every screen.</div>
-        </div>
-        <div class="feature-card">
-          <div class="fc-icon">💬</div>
-          <div class="fc-title">WhatsApp Button</div>
-          <div class="fc-desc">One tap takes visitors directly to your WhatsApp. More inquiries from day one.</div>
-        </div>
-        <div class="feature-card">
-          <div class="fc-icon">📍</div>
-          <div class="fc-title">Google Maps</div>
-          <div class="fc-desc">Customers can find and reach your shop easily. Essential for local foot traffic.</div>
-        </div>
-        <div class="feature-card">
-          <div class="fc-icon">✏️</div>
-          <div class="fc-title">3 Free Revisions</div>
-          <div class="fc-desc">Not happy with something? We revise it. Your satisfaction is the final word.</div>
-        </div>
-        <div class="feature-card">
-          <div class="fc-icon">🚀</div>
-          <div class="fc-title">Live in 3 Days</div>
-          <div class="fc-desc">No 3-month waits. Your business is online and accepting inquiries in 72 hours.</div>
-        </div>
-        <div class="feature-card">
-          <div class="fc-icon">🆓</div>
-          <div class="fc-title">Free GitHub Hosting</div>
-          <div class="fc-desc">Zero monthly hosting fee. Your site stays live without paying anyone every year.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Section 3 -->
-    <div class="section reveal" id="s3">
-      <h2 class="section-title"><span class="num">03</span> ₹2999 vs ₹6999 vs Agency — Honest Comparison</h2>
-      <p>Here's the truth laid out plainly, so you can decide what's right for your stage of business:</p>
-      <table class="compare-table">
-        <thead>
-          <tr>
-            <th>Feature</th>
-            <th>₹2999 Basic</th>
-            <th>₹6999 Standard</th>
-            <th>Big Agency (₹50k+)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Pages</td><td>1 Landing Page</td><td>5 Pages</td><td>10–20 Pages</td></tr>
-          <tr><td>Mobile Ready</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-          <tr><td>WhatsApp CTA</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-          <tr><td>Custom Domain</td><td><span class="cross">✗</span></td><td><span class="check">✓ Free 1yr</span></td><td><span class="check">✓</span></td></tr>
-          <tr><td>SEO Setup</td><td><span class="cross">✗</span></td><td><span class="check">Basic ✓</span></td><td><span class="check">Advanced</span></td></tr>
-          <tr><td>Delivery Time</td><td><strong>3 Days</strong></td><td>5–7 Days</td><td>2–3 Months</td></tr>
-          <tr><td>Hosting Cost</td><td><strong>Free</strong></td><td>Included</td><td>₹5k–15k/yr extra</td></tr>
-          <tr><td>Best For</td><td>Shops, stalls, home biz</td><td>Clinics, agencies</td><td>Large companies</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- Section 4 -->
-    <div class="section reveal" id="s4">
-      <h2 class="section-title"><span class="num">04</span> Who Is the ₹2999 Plan Perfect For?</h2>
-      <p>This plan was designed with a very specific customer in mind. If you see yourself below, this is your plan:</p>
-      <ul class="persona-list">
-        <li>
-          <span class="pl-icon">🏪</span>
-          <span class="pl-text">
-            <strong>Small Shop or Salon Owner</strong>
-            <span>You want to be on Google Maps, look professional on WhatsApp, and send a link to customers. This does exactly that.</span>
-          </span>
-        </li>
-        <li>
-          <span class="pl-icon">🏠</span>
-          <span class="pl-text">
-            <strong>Home-Based Business</strong>
-            <span>Tiffins, tailoring, tuition, catering — a professional landing page builds instant trust with new customers.</span>
-          </span>
-        </li>
-        <li>
-          <span class="pl-icon">🌱</span>
-          <span class="pl-text">
-            <strong>First-Time Business Owner</strong>
-            <span>Just launched? Get online fast and affordable. Upgrade to a bigger plan later when you're ready to grow.</span>
-          </span>
-        </li>
-        <li>
-          <span class="pl-icon">💼</span>
-          <span class="pl-text">
-            <strong>Freelancer or Service Provider</strong>
-            <span>Electrician, plumber, photographer, makeup artist — one page with your services, photos, and contact is all you need.</span>
-          </span>
-        </li>
-      </ul>
-      <div class="highlight-box red">
-        <div class="box-title">🚫 When to Skip the Basic Plan</div>
-        <p style="margin:0">If you need multiple pages, online payments, booking systems, or SEO from day one — go straight to our <strong>Standard (₹6,999)</strong> or <strong>Premium (₹14,999)</strong> plan. We'll tell you honestly which one fits.</p>
-      </div>
-    </div>
-
-    <!-- Section 5 -->
-    <div class="section reveal" id="s5">
-      <h2 class="section-title"><span class="num">05</span> Frequently Asked Questions</h2>
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            Domain name include avutundha? <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-a">Basic plan lo free GitHub hosting undi, kaani custom .com domain include kadu. Domain kaavali ante Standard Plan (₹6,999) choose cheyyandi — adhi 1 year free domain ichi free hosting kuda ichi complete website istaamu.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            3 days lo really ready avutundha? <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-a">Avutundi! Maa team every week multiple websites deliver chestundi. Mee details (photos, business info, contact number) meeru quickly istey, 3 working days lo site live chestamu. Average completion time 2.5 days.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            Later peddha plan ki upgrade cheyyavachcha? <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-a">Absolutely! Chala mandi clients Basic tho start chesukoni, business grow avvadam tho Standard or Premium ki upgrade avutaaru. Upgrade chestey basic plan amount credit avtundi — mee investment waste kaadu.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            Technical knowledge avasarama? <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-a">Avasaram ledu. Mee pani chuskoni, maa team anni technical work handle chestundi. Meeru mee business details, photos, contact info WhatsApp lo send chesthe chaalu — migi anni mamu chestamu.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            Payment ela cheyyali? <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-a">UPI, Razorpay, bank transfer — anni methods accept chestamu. 50% advance, 50% delivery tarvata. WhatsApp lo maa team ni contact cheyyandi — anni details explain chestamu.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Final CTA -->
-    <div class="cta-block reveal">
-      <h3>మీ Business Online కి తీసుకు వద్దాం 🚀</h3>
-      <p>₹2999 lo professional website. 3 days lo live. AP & Telangana lo మీరు first అవ్వండి.</p>
-      <div class="cta-buttons">
-        <a href="https://wa.me/918367540839?text=Hi! I read the blog and want to start my ₹2999 website." class="btn-primary">💬 Start My Website Now</a>
-        <a href="https://cloudpixelai.in/#pricing" class="btn-outline">View All Plans →</a>
-      </div>
-    </div>
-
-  </article>
-
-  <!-- SIDEBAR TOC -->
-  <aside>
-    <div class="toc">
-      <div class="toc-title">📖 In This Article</div>
-      <ol>
-        <li><a href="#s1">The Real Question</a></li>
-        <li><a href="#s2">What Do You Get?</a></li>
-        <li><a href="#s3">Honest Comparison</a></li>
-        <li><a href="#s4">Who Is It For?</a></li>
-        <li><a href="#s5">FAQ</a></li>
-      </ol>
-      <div class="toc-cta">
-        <p>Ready to go online in 3 days?</p>
-        <a href="https://wa.me/918367540839?text=Hi! I want to start my ₹2999 website." class="btn-wa">💬 WhatsApp Now</a>
-      </div>
-    </div>
-  </aside>
 
 </div>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 CloudPixel AI Studio · Vijayawada, AP & Telangana</p>
-  <div style="display:flex;gap:1.5rem;flex-wrap:wrap;">
-  <a href="https://cloudpixelai.in/" style="color:var(--muted);text-decoration:none;">← Back to Home</a>
-  <a href="/blog-vizag-hotels-restaurants.html" style="color:var(--muted);text-decoration:none;">Vizag Hotels Blog →</a>
-  <a href="/blog-amaravati-car-travels.html" style="color:var(--muted);text-decoration:none;">Amaravati Travels Blog →</a>
-</div>
-  </footer>
+<footer class="footer">
+  © CloudPixel AI Studio &nbsp;·&nbsp;
+  <a href="https://cloudpixelai.in">cloudpixelai.in</a> &nbsp;·&nbsp;
+  Vijayawada, Andhra Pradesh
+</footer>
+
 <script>
-  // FAQ toggle
-  function toggleFaq(btn) {
-    const item = btn.closest('.faq-item');
-    item.classList.toggle('open');
+  function switchTab(lang, btn) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + lang).classList.add('active');
+    btn.classList.add('active');
   }
-
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  reveals.forEach(r => observer.observe(r));
 </script>
 </body>
 </html>
