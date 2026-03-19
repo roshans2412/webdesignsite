@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Marketing Blogs | CloudPixel AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Telugu&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#07070e; --surface:#0f0f1a; --card:#13131f; --border:#22223a;
+  --a1:#6c63ff; --a2:#ff5f7e; --a3:#00d4aa; --a4:#ffbe3d;
+  --text:#ddddf0; --muted:#7777aa;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.8;}
+header{
+  position:sticky;top:0;z-index:200;
+  background:rgba(7,7,14,0.93);backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px 36px;gap:12px;flex-wrap:wrap;
+}
+.logo{
+  font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;
+  background:linear-gradient(135deg,var(--a1),var(--a3));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  white-space:nowrap;
+}
+.lang-bar{display:flex;gap:0;background:var(--surface);border:1px solid var(--border);border-radius:40px;padding:4px;}
+.lang-tab{
+  padding:8px 20px;border-radius:36px;font-size:0.88rem;font-weight:600;
+  cursor:pointer;transition:all 0.25s;color:var(--muted);
+  border:none;background:transparent;display:flex;align-items:center;gap:6px;white-space:nowrap;
+}
+.lang-tab.active{background:var(--a1);color:white;box-shadow:0 2px 16px rgba(108,99,255,0.4);}
+.lang-tab:hover:not(.active){color:var(--text);}
+
+.hero{
+  text-align:center;padding:70px 36px 50px;
+  background:radial-gradient(ellipse at 50% -10%,rgba(108,99,255,0.12) 0%,transparent 65%);
+  border-bottom:1px solid var(--border);
+}
+.hero-badge{
+  display:inline-block;border:1px solid rgba(108,99,255,0.35);
+  background:rgba(108,99,255,0.1);color:var(--a1);border-radius:20px;
+  padding:5px 16px;font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;
+}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.9rem,5vw,3.6rem);font-weight:900;line-height:1.12;
+  background:linear-gradient(160deg,#fff 30%,#a89fff);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:12px;
+}
+.hero-sub{color:var(--muted);max-width:580px;margin:0 auto 28px;font-size:1rem;}
+.blog-pills{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;}
+.bp{padding:5px 16px;border-radius:20px;border:1px solid var(--border);font-size:0.82rem;color:var(--muted);}
+
+.wrap{max-width:860px;margin:0 auto;padding:52px 36px;}
+.lang-section{display:none;}
+.lang-section.show{display:block;}
+
+.blog{background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;margin-bottom:64px;}
+.banner{padding:44px 40px 30px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;min-height:210px;}
+.b1{background:linear-gradient(135deg,#0d0b28 0%,#1e1660 50%,#0b1a38 100%);}
+.b2{background:linear-gradient(135deg,#0c1f0c 0%,#173d17 50%,#0b2a1e 100%);}
+.b3{background:linear-gradient(135deg,#200d10 0%,#3d1520 50%,#20101a 100%);}
+.banner-grid{
+  position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);
+  background-size:36px 36px;
+}
+.b-num{font-size:0.72rem;letter-spacing:3px;color:rgba(255,255,255,0.35);margin-bottom:8px;z-index:1;position:relative;}
+.b-icon{position:absolute;top:24px;right:36px;font-size:3.2rem;opacity:0.18;}
+.banner h2{font-family:'Playfair Display',serif;font-size:clamp(1.25rem,3vw,1.9rem);color:#fff;line-height:1.2;z-index:1;position:relative;}
+.banner .bsub{color:rgba(255,255,255,0.5);font-size:0.88rem;margin-top:6px;z-index:1;position:relative;}
+
+.te .banner h2,.te .bc p,.te .bc h3,.te .sb h4,.te .sb p,.te .intro-box,.te .c-ttl,.te .c-dsc,.te .hl{font-family:'Tiro Telugu',serif;}
+.hi .banner h2,.hi .bc p,.hi .bc h3,.hi .sb h4,.hi .sb p,.hi .intro-box,.hi .c-ttl,.hi .c-dsc,.hi .hl{font-family:'Hind',sans-serif;}
+
+.meta{display:flex;gap:16px;flex-wrap:wrap;padding:13px 40px;border-bottom:1px solid var(--border);background:rgba(255,255,255,0.015);}
+.mi{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:0.82rem;}
+.mi span{color:var(--text);}
+.bc{padding:36px 40px;}
+.intro-box{background:rgba(108,99,255,0.08);border-left:3px solid var(--a1);border-radius:0 10px 10px 0;padding:18px 22px;margin-bottom:28px;color:#c0c0dc;font-size:1rem;}
+.sec-title{font-family:'Playfair Display',serif;font-size:1.3rem;color:#fff;margin:30px 0 14px;display:flex;align-items:center;gap:10px;}
+.sec-title::after{content:'';flex:1;height:1px;background:var(--border);}
+p{color:#b8b8d0;margin-bottom:14px;}
+
+.img-blk{border-radius:12px;overflow:hidden;margin:22px 0;border:1px solid var(--border);}
+.img-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:48px 20px;text-align:center;}
+.ph1{background:linear-gradient(135deg,#0c1630,#1a2d58);}
+.ph2{background:linear-gradient(135deg,#0c2410,#1a401a);}
+.ph3{background:linear-gradient(135deg,#2a1010,#421818);}
+.ph4{background:linear-gradient(135deg,#1a0c2a,#2e1848);}
+.ph5{background:linear-gradient(135deg,#0c2828,#183838);}
+.ph6{background:linear-gradient(135deg,#280c1a,#421428);}
+.ph-ico{font-size:2.5rem;}
+.ph-lbl{color:#fff;font-weight:600;}
+.ph-cap{color:rgba(255,255,255,0.38);font-size:0.78rem;font-style:italic;max-width:360px;}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:13px;margin:18px 0;}
+.crd{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:17px;transition:border-color 0.2s;}
+.crd:hover{border-color:var(--a1);}
+.c-ico{font-size:1.6rem;margin-bottom:7px;}
+.c-ttl{font-weight:600;color:#fff;font-size:0.88rem;margin-bottom:3px;}
+.c-dsc{color:var(--muted);font-size:0.8rem;}
+
+.steps{margin:18px 0;}
+.step{display:flex;gap:16px;margin-bottom:16px;}
+.sn{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.8rem;flex-shrink:0;}
+.sp{background:rgba(108,99,255,0.18);color:var(--a1);}
+.sg{background:rgba(0,212,170,0.18);color:var(--a3);}
+.sr{background:rgba(255,95,126,0.18);color:var(--a2);}
+.sb h4{color:#fff;margin-bottom:3px;font-size:0.9rem;}
+.sb p{margin:0;font-size:0.84rem;color:var(--muted);}
+
+.tbl{width:100%;border-collapse:collapse;margin:18px 0;font-size:0.86rem;border-radius:10px;overflow:hidden;border:1px solid var(--border);}
+.tbl th{background:rgba(108,99,255,0.14);color:var(--a1);padding:11px 13px;text-align:left;font-weight:600;}
+.tbl td{padding:9px 13px;color:#b8b8d0;border-top:1px solid var(--border);}
+.tbl tr:hover td{background:rgba(255,255,255,0.015);}
+
+.hl{border-radius:10px;padding:18px;margin:18px 0;}
+.hl-p{background:rgba(108,99,255,0.09);border:1px solid rgba(108,99,255,0.2);}
+.hl-g{background:rgba(0,212,170,0.09);border:1px solid rgba(0,212,170,0.2);}
+.hl-y{background:rgba(255,190,61,0.09);border:1px solid rgba(255,190,61,0.2);}
+
+.bars{margin:14px 0;}
+.bar-row{margin:9px 0;}
+.bar-lbl{display:flex;justify-content:space-between;font-size:0.82rem;margin-bottom:5px;}
+.bar-lbl span:last-child{color:#fff;font-weight:600;}
+.bar-track{height:5px;background:var(--border);border-radius:3px;}
+.bar-fill{height:100%;border-radius:3px;}
+
+.quote-box{
+  background:var(--surface);border-left:3px solid var(--a4);
+  border-radius:0 12px 12px 0;padding:20px 24px;margin:22px 0;
+  position:relative;
+}
+.quote-box::before{content:'"';position:absolute;top:-8px;left:16px;font-size:3rem;color:var(--a4);opacity:0.3;font-family:serif;line-height:1;}
+.quote-text{color:#d8d8b0;font-style:italic;font-size:1rem;line-height:1.7;}
+.quote-author{color:var(--a4);font-size:0.82rem;margin-top:8px;}
+
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0;}
+.tag{padding:3px 12px;border-radius:16px;font-size:0.78rem;font-weight:500;}
+.tp{background:rgba(108,99,255,0.14);color:var(--a1);border:1px solid rgba(108,99,255,0.25);}
+.tg{background:rgba(0,212,170,0.14);color:var(--a3);border:1px solid rgba(0,212,170,0.25);}
+.tr{background:rgba(255,95,126,0.14);color:var(--a2);border:1px solid rgba(255,95,126,0.25);}
+.ty{background:rgba(255,190,61,0.14);color:var(--a4);border:1px solid rgba(255,190,61,0.25);}
+
+.cta{background:linear-gradient(135deg,rgba(108,99,255,0.14),rgba(0,212,170,0.08));border:1px solid rgba(108,99,255,0.22);border-radius:14px;padding:26px;text-align:center;margin-top:34px;}
+.cta h3{font-family:'Playfair Display',serif;font-size:1.25rem;color:#fff;margin-bottom:8px;}
+.cta p{color:var(--muted);margin-bottom:16px;}
+.btn{display:inline-block;padding:10px 26px;border-radius:8px;background:var(--a1);color:#fff;font-weight:600;font-size:0.88rem;text-decoration:none;transition:all 0.2s;}
+.btn:hover{background:#5a52e0;transform:translateY(-2px);}
+
+.div{display:flex;align-items:center;gap:14px;text-align:center;color:var(--muted);font-size:0.76rem;letter-spacing:3px;text-transform:uppercase;margin:46px 0;}
+.div::before,.div::after{content:'';flex:1;height:1px;background:var(--border);}
+footer{background:var(--surface);border-top:1px solid var(--border);padding:34px;text-align:center;color:var(--muted);font-size:0.82rem;}
+
+@media(max-width:600px){
+  header{padding:13px 18px;}
+  .lang-tab{padding:7px 13px;font-size:0.78rem;}
+  .wrap{padding:32px 18px;}
+  .bc,.banner{padding:22px 18px;}
+  .meta{padding:11px 18px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">CloudPixel AI</div>
+  <div class="lang-bar">
+    <button class="lang-tab active" onclick="switchLang('te',this)">🇮🇳 తెలుగు</button>
+    <button class="lang-tab" onclick="switchLang('en',this)">🇬🇧 English</button>
+    <button class="lang-tab" onclick="switchLang('hi',this)">🇮🇳 हिंदी</button>
+  </div>
+</header>
+
+<!-- ===================== TELUGU ===================== -->
+<div id="te" class="lang-section show te">
+  <section class="hero">
+    <div class="hero-badge">✦ క్లౌడ్‌పిక్సెల్ AI బ్లాగ్ 2024</div>
+    <h1 style="font-family:'Tiro Telugu',serif;">డిజిటల్ మార్కెటింగ్<br>సంపూర్ణ గైడ్</h1>
+    <p class="hero-sub" style="font-family:'Tiro Telugu',serif;">మీ వ్యాపారాన్ని ఆన్‌లైన్‌లో పెంచుకోవడానికి — SEO, Google Analytics మరియు మొబైల్ డిజైన్ అన్నీ తెలుగులో నేర్చుకోండి.</p>
+    <div class="blog-pills">
+      <span class="bp">📈 డిజిటల్ మార్కెటింగ్</span>
+      <span class="bp">🔍 SEO</span>
+      <span class="bp">📊 Analytics</span>
+      <span class="bp">📱 మొబైల్</span>
+    </div>
+  </section>
+
+  <div class="wrap">
+
+    <!-- TE BLOG 1 -->
+    <article class="blog">
+      <div class="banner b1">
+        <div class="banner-grid"></div>
+        <div class="b-icon">📈</div>
+        <div class="b-num">పోస్ట్ 01 / 03</div>
+        <h2>మా దుకాణం గూగుల్‌లో ఎలా కనిపించింది? డిజిటల్ మార్కెటింగ్ అనుభవం</h2>
+        <div class="bsub">ఒక చిన్న వ్యాపారి అనుభవం నుండి నేర్చుకున్న పాఠాలు</div>
+      </div>
+      <div class="meta">
+        <div class="mi">📅 <span>మార్చ్ 2024</span></div>
+        <div class="mi">⏱️ <span>8 నిమిషాలు</span></div>
+        <div class="mi">📍 <span>హైదరాబాద్ / ఆంధ్ర</span></div>
+      </div>
+      <div class="bc">
+        <div class="intro-box">
+          నాకు హైదరాబాద్‌లో ఒక చిన్న ఫొటోగ్రఫీ స్టూడియో ఉంది. రోడ్డు మీద బోర్డు వేశాను, పేపర్‌లో యాడ్ ఇచ్చాను — కానీ నెలకు 10 కస్టమర్లు కూడా రాలేదు. తర్వాత CloudPixel AI సహాయంతో డిజిటల్ మార్కెటింగ్ start చేశాం. 3 నెలల్లో నెలకు 80+ కస్టమర్లు వస్తున్నారు. అది ఎలా జరిగింది? ఇందులో చెప్తాను.
+        </div>
+
+        <div class="img-blk">
+          <div class="img-ph ph1">
+            <div class="ph-ico">🏪</div>
+            <div class="ph-lbl">స్థానిక వ్యాపారం → డిజిటల్ వృద్ధి</div>
+            <div class="ph-cap">[ చిత్రం: ఒక చిన్న స్టూడియో నుండి online presence వరకు — ముందు/తర్వాత పోలిక ]</div>
+          </div>
+        </div>
+
+        <h3 class="sec-title">డిజిటల్ మార్కెటింగ్ అంటే ఏమిటి మనకు?</h3>
+        <p>మన పక్కింటోళ్ళు WhatsApp లో ఏదైనా వెతకాలంటే Google లో search చేస్తున్నారు. "హైదరాబాద్‌లో పెళ్ళి ఫొటోగ్రఫీ" అని search చేస్తే మీ పేరు కనిపిస్తే — అదే డిజిటల్ మార్కెటింగ్ పని. మీరు ఉన్న చోటే ఉండి, మీ కస్టమర్లు మిమ్మల్ని వెతుక్కుంటూ వస్తారు.</p>
+        <p>సంప్రదాయ మార్కెటింగ్‌లో మనం వెళ్ళి కస్టమర్లకు చెప్పాలి. డిజిటల్ మార్కెటింగ్‌లో కస్టమర్లే మన దగ్గరికి వస్తారు — అది కూడా వాళ్ళకు అవసరమైన సమయంలో.</p>
+
+        <div class="quote-box">
+          <div class="quote-text">పేపర్లో యాడ్ ఇస్తే 100 మంది చూస్తారు. Google లో rank అయితే, రోజు 1000 మంది "ఈ service నాకు కావాలి" అని actively వెతుకుతున్న వాళ్ళు మీ దగ్గరికి వస్తారు.</div>
+          <div class="quote-author">— CloudPixel AI అనుభవం నుండి</div>
+        </div>
+
+        <h3 class="sec-title">మన వ్యాపారానికి ఏ డిజిటల్ మార్కెటింగ్ సరిపోతుంది?</h3>
+        <div class="cards">
+          <div class="crd"><div class="c-ico">🔍</div><div class="c-ttl">Google Search (SEO)</div><div class="c-dsc">వెతికేటప్పుడు మీరు కనిపించాలి — ఇది పర్మనెంట్ strategy</div></div>
+          <div class="crd"><div class="c-ico">📱</div><div class="c-ttl">Instagram / Facebook</div><div class="c-dsc">విజువల్ వ్యాపారాలకు — ఫొటో, ఫుడ్, ఫ్యాషన్</div></div>
+          <div class="crd"><div class="c-ico">💰</div><div class="c-ttl">Google Ads</div><div class="c-dsc">వెంటనే results కావాలంటే — pay per click</div></div>
+          <div class="crd"><div class="c-ico">📧</div><div class="c-ttl">WhatsApp Marketing</div><div class="c-dsc">తెలుగు కస్టమర్లకు WhatsApp చాలా effective</div></div>
+          <div class="crd"><div class="c-ico">✍️</div><div class="c-ttl">Blog / Content</div><div class="c-dsc">నమ్మకం కలిగించే informative content</div></div>
+          <div class="crd"><div class="c-ico">🎥</div><div class="c-ttl">YouTube / Reels</div><div class="c-dsc">తెలుగు వీడియో కంటెంట్ super viral అవుతుంది</div></div>
+        </div>
+
+        <h3 class="sec-title">మన వ్యాపారానికి digital వల్ల జరిగిన మార్పు</h3>
+        <div class="steps">
+          <div class="step"><div class="sn sp">01</div><div class="sb"><h4>రోజూ కొత్త enquiries</h4><p>Google లో rank అయిన తర్వాత రోజు 3-5 కొత్త enquiries వస్తున్నాయి — పూర్వం వారానికి ఒకటి వచ్చేది.</p></div></div>
+          <div class="step"><div class="sn sp">02</div><div class="sb"><h4>Hyderabad దాటి orders వచ్చాయి</h4><p>విజయవాడ, వరంగల్ నుండి కూడా customers contact చేస్తున్నారు — ఊహించలేదు.</p></div></div>
+          <div class="step"><div class="sn sp">03</div><div class="sb"><h4>Reviews వల్ల trust పెరిగింది</h4><p>Google Reviews 50+ రావడంతో కొత్త customers చాలా quickly decide చేసుకుంటున్నారు.</p></div></div>
+          <div class="step"><div class="sn sp">04</div><div class="sb"><h4>Competition తగ్గినట్టు అనిపించింది</h4><p>మా competitors కంటే Google లో ముందు కనిపించడం వల్ల వాళ్ళ customers కూడా మా దగ్గరికి వస్తున్నారు.</p></div></div>
+        </div>
+
+        <div class="img-blk">
+          <div class="img-ph ph2">
+            <div class="ph-ico">📊</div>
+            <div class="ph-lbl">మూడు నెలల వృద్ధి చార్ట్</div>
+            <div class="ph-cap">[ చిత్రం: Enquiries 10 → 80 వరకు పెరిగిన monthly comparison graph ]</div>
+          </div>
+        </div>
+
+        <h3 class="sec-title">Digital vs సంప్రదాయ — నిజాయితీగా చెప్పాలంటే</h3>
+        <table class="tbl">
+          <thead><tr><th>విషయం</th><th>పేపర్ / బోర్డు</th><th>డిజిటల్ మార్కెటింగ్</th></tr></thead>
+          <tbody>
+            <tr><td>ఖర్చు</td><td>నెలకు ₹5,000-20,000</td><td>నెలకు ₹2,000-10,000</td></tr>
+            <tr><td>చేరే మంది</td><td>వందలు (local మాత్రమే)</td><td>వేలు (citywide/statewide)</td></tr>
+            <tr><td>Results తెలుసా?</td><td>❌ తెలియదు</td><td>✅ రోజూ data చూడవచ్చు</td></tr>
+            <tr><td>మార్చగలమా?</td><td>❌ print అయిపోయింది</td><td>✅ ఎప్పుడైనా మార్చవచ్చు</td></tr>
+            <tr><td>24/7 పని చేస్తుందా?</td><td>❌ రాత్రి కనిపించదు</td><td>✅ రాత్రి కూడా enquiries వస్తాయి</td></tr>
+          </tbody>
+        </table>
+
+        <div class="tags">
+          <span class="tag tp">#డిజిటల్‌మార్కెటింగ్</span>
+          <span class="tag tg">#హైదరాబాద్‌బిజినెస్</span>
+          <span class="tag tr">#తెలుగు‌వ్యాపారం</span>
+          <span class="tag ty">#ఆన్‌లైన్‌వృద్ధి</span>
+          <span class="tag tp">#GoogleRanking</span>
+        </div>
+        <div class="cta">
+          <h3>మీ వ్యాపారాన్ని online తీసుకువెళ్ళాలా?</h3>
+          <p>CloudPixel AI తో మాట్లాడండి — మీ వ్యాపారానికి ఏ strategy సరిపోతుందో free consultation లో చెప్తాం.</p>
+          <a href="#" class="btn">Free Consultation పొందండి →</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="div">✦ తదుపరి పోస్ట్ ✦</div>
+
+    <!-- TE BLOG 2 -->
+    <article class="blog">
+      <div class="banner b2">
+        <div class="banner-grid"></div>
+        <div class="b-icon">🔍</div>
+        <div class="b-num">పోస్ట్ 02 / 03</div>
+        <h2>SEO అంటే ఏమిటి? Google లో మీ వెబ్‌సైట్ ఎందుకు కనిపించట్లేదు?</h2>
+        <div class="bsub">ఒక్కసారి అర్థమైతే మీరే మీ వెబ్‌సైట్ rank చేయించుకోగలరు</div>
+      </div>
+      <div class="meta">
+        <div class="mi">📅 <span>మార్చ్ 2024</span></div>
+        <div class="mi">⏱️ <span>10 నిమిషాలు</span></div>
+        <div class="mi">🏆 <span>Google Top 10</span></div>
+      </div>
+      <div class="bc">
+        <div class="intro-box">
+          మీకు వెబ్‌సైట్ ఉంది. కానీ Google లో search చేస్తే 5వ పేజీలో కనిపిస్తుంది. 5వ పేజీ వరకు చాలా మంది వెళ్ళరు — అందుకే మీకు visitors రావట్లేదు. SEO అంటే మీ వెబ్‌సైట్‌ను Google కి "నేను best" అని నచ్చజెప్పడం. అది ఎలా చేయాలో చూద్దాం.
+        </div>
+
+        <div class="img-blk">
+          <div class="img-ph ph2">
+            <div class="ph-ico">🔍</div>
+            <div class="ph-lbl">Google Search Results — Page 1 vs Page 5</div>
+            <div class="ph-cap">[ చిత్రం: Page 1 కి వచ్చే traffic 90%, Page 2 కి 6% మాత్రమే — దృశ్య పోలిక ]</div>
+          </div>
+        </div>
+
+        <h3 class="sec-title">Google ఏ వెబ్‌సైట్‌ని ముందు చూపిస్తుంది?</h3>
+        <p>Google ఒక పరీక్షలా పని చేస్తుంది. "ఈ వెబ్‌సైట్ users కి నిజంగా useful గా ఉందా?" అని చూస్తుంది. ఆ పరీక్షలో pass కావాలంటే మూడు విషయాలు కావాలి:</p>
+
+        <div class="hl hl-g">
+          <strong style="color:var(--a3)">📝 1. మంచి Content (కంటెంట్)</strong>
+          <p style="margin-top:10px;font-size:0.9rem;color:#a0c8b0;">మీ website లో ఉన్న information helpful గా, complete గా ఉండాలి. "హైదరాబాద్‌లో వెడ్డింగ్ ఫొటోగ్రఫీ ఖర్చు ఎంత?" అని search చేస్తే మీ సైట్‌లో ఆ answer ఉంటే — Google మీ సైట్‌ని చూపిస్తుంది. Content length కనీసం 800-1500 words ఉండాలి. తెలుగు కంటెంట్ రాయడం మరింత effective — ఎందుకంటే competition తక్కువగా ఉంటుంది.</p>
+        </div>
+        <div class="hl hl-p">
+          <strong style="color:var(--a1)">🔗 2. Backlinks (బ్యాక్‌లింక్స్)</strong>
+          <p style="margin-top:10px;font-size:0.9rem;color:#b0a0d8;">మీ వెబ్‌సైట్ link ను ఇతర websites mention చేస్తే Google కి అది "recommendation" లా కనిపిస్తుంది. Just Just Dial, Sulekha, Google Business Profile లో మీ website link add చేయడం simple గా start చేయవచ్చు.</p>
+        </div>
+        <div class="hl hl-y">
+          <strong style="color:var(--a4)">⚡ 3. Technical SEO (వేగం & మొబైల్)</strong>
+          <p style="margin-top:10px;font-size:0.9rem;color:#d8c8a0;">మీ వెబ్‌సైట్ 3 సెకండ్లలో load కావాలి. Mobile లో perfect గా కనిపించాలి. HTTPS (lock icon) ఉండాలి. ఇవి లేకుండా rank రాదు — ఎంత good content ఉన్నా.</p>
+        </div>
+
+        <h3 class="sec-title">SEO Rank పొందడానికి Steps</h3>
+        <div class="steps">
+          <div class="step"><div class="sn sg">01</div><div class="sb"><h4>మీ Keyword వెతకండి</h4><p>"మీ వ్యాపారం + మీ city" అని search చేసి చూడండి. ఏ words తో వెతుకుతున్నారు అని అర్థమవుతుంది. Example: "photography studio Hyderabad", "పెళ్ళి ఫోటోగ్రఫీ హైదరాబాద్"</p></div></div>
+          <div class="step"><div class="sn sg">02</div><div class="sb"><h4>Google Business Profile నింపండి</h4><p>Free గా ఉంటుంది. Photos, timings, address, phone — అన్నీ add చేయండి. Reviews collect చేయండి. Local search లో వెంటనే కనిపిస్తారు.</p></div></div>
+          <div class="step"><div class="sn sg">03</div><div class="sb"><h4>వెబ్‌సైట్ pages optimize చేయండి</h4><p>ప్రతి page కి ఒక clear topic. Title లో keyword ఉండాలి. Images కి alt text ఉండాలి. Content helpful గా ఉండాలి.</p></div></div>
+          <div class="step"><div class="sn sg">04</div><div class="sb"><h4>నెలకు కనీసం 2 blogs రాయండి</h4><p>"హైదరాబాద్‌లో పెళ్ళి photos tips", "ఆరు నెలల ముందు booking ఎందుకు చేయాలి" — ఇలాంటి blogs రాయండి. Google ఇవి love చేస్తుంది.</p></div></div>
+          <div class="step"><div class="sn sg">05</div><div class="sb"><h4>Monthly progress చూడండి</h4><p>Google Search Console free tool లో మీ వెబ్‌సైట్ ఏ keywords కి rank అవుతుందో, ఎంత traffic వస్తుందో చూడవచ్చు.</p></div></div>
+        </div>
+
+        <div class="img-blk">
+          <div class="img-ph ph3">
+            <div class="ph-ico">📈</div>
+            <div class="ph-lbl">SEO 6 నెలల్లో Traffic వృద్ధి</div>
+            <div class="ph-cap">[ చిత్రం: Month 1 నుండి Month 6 వరకు organic visits పెరిగిన line graph ]</div>
+          </div>
+        </div>
+
+        <div class="tags">
+          <span class="tag tg">#SEO</span>
+          <span class="tag tp">#GoogleRanking</span>
+          <span class="tag tr">#తెలుగు‌వెబ్‌సైట్</span>
+          <span class="tag ty">#LocalSEO</span>
+          <span class="tag tg">#ఆర్గానిక్‌ట్రాఫిక్</span>
+        </div>
+        <div class="cta">
+          <h3>మీ వెబ్‌సైట్ Google లో rank కాలేదా?</h3>
+          <p>CloudPixel AI Free SEO Audit ఇస్తుంది — మీ వెబ్‌సైట్‌లో ఏ problems ఉన్నాయో, ఎలా fix చేయాలో చెప్తాం.</p>
+          <a href="#" class="btn">Free SEO Audit పొందండి →</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="div">✦ తదుపరి పోస్ట్ ✦</div>
+
+    <!-- TE BLOG 3 -->
+    <article class="blog">
+      <div class="banner b3">
+        <div class="banner-grid"></div>
+        <div class="b-icon">📊</div>
+        <div class="b-num">పోస్ట్ 03 / 03</div>
+        <h2>Google Analytics & మొబైల్ వెబ్‌సైట్ — మీ వ్యాపారానికి ఎందుకు అవసరం?</h2>
+        <div class="bsub">Data చూడకుండా వ్యాపారం నడపడం — కళ్ళు మూసుకుని నడవడం లాంటిది</div>
+      </div>
+      <div class="meta">
+        <div class="mi">📅 <span>మార్చ్ 2024</span></div>
+        <div class="mi">⏱️ <span>9 నిమిషాలు</span></div>
+        <div class="mi">📱 <span>Mobile-First India</span></div>
+      </div>
+      <div class="bc">
+        <div class="intro-box">
+          మీ shop లో రోజు ఎంత మంది వచ్చారు, ఏ వస్తువు చూసి వెళ్ళారు, ఎంత సేపు ఉన్నారు తెలుసుకోవాలనుకుంటే CCTV చూస్తారు. మీ వెబ్‌సైట్‌కి వచ్చే visitors గురించి అన్ని details తెలుసుకోవాలంటే Google Analytics — అది కూడా free గా!
+        </div>
+
+        <div class="img-blk">
+          <div class="img-ph ph5">
+            <div class="ph-ico">📊</div>
+            <div class="ph-lbl">Google Analytics Dashboard</div>
+            <div class="ph-cap">[ చిత్రం: GA4 dashboard — real-time visitors, traffic sources, top pages, bounce rate ]</div>
+          </div>
+        </div>
+
+        <h3 class="sec-title">Google Analytics లో మనం ఏం చూడవచ్చు?</h3>
+        <div class="cards">
+          <div class="crd"><div class="c-ico">👥</div><div class="c-ttl">ఎవరు వస్తున్నారు?</div><div class="c-dsc">వయస్సు, city, ఏ device వాడుతున్నారు — అన్నీ తెలుస్తాయి</div></div>
+          <div class="crd"><div class="c-ico">🔗</div><div class="c-ttl">ఎలా వచ్చారు?</div><div class="c-dsc">Google search, Social media, Direct — source తెలుస్తుంది</div></div>
+          <div class="crd"><div class="c-ico">📄</div><div class="c-ttl">ఏ page చూశారు?</div><div class="c-dsc">Popular pages, ఎంత సేపు ఉన్నారు</div></div>
+          <div class="crd"><div class="c-ico">📞</div><div class="c-ttl">Enquiry చేశారా?</div><div class="c-dsc">Form fill చేశారా, phone click చేశారా — track అవుతుంది</div></div>
+        </div>
+
+        <h3 class="sec-title">మొబైల్ వెబ్‌సైట్ — తప్పనిసరి ఎందుకు?</h3>
+        <p>మన తెలుగు రాష్ట్రాల్లో 70%+ internet usage mobile నుండే. ఎవరైనా మీ business వెతికితే mobile లో వెతుకుతారు. Mobile లో మీ site slow గా ఉంటే, design చెడిపోతే — వాళ్ళు వెంటనే back చేసి competitor దగ్గరికి వెళ్తారు.</p>
+
+        <div class="quote-box">
+          <div class="quote-text">Mobile site 3 seconds కంటే ఎక్కువ సమయం తీసుకుంటే, 53% users వెళ్ళిపోతారు. అంటే మీ potential customers సగం మంది మీరు page load అయ్యే లోగానే వెళ్ళిపోతున్నారు.</div>
+          <div class="quote-author">— Google India Mobile Research</div>
+        </div>
+
+        <div class="steps">
+          <div class="step"><div class="sn sr">01</div><div class="sb"><h4>Google Analytics Free లో setup చేయండి</h4><p>analytics.google.com → G-XXXXXXXX code → మీ website &lt;head&gt; లో paste → రెడీ!</p></div></div>
+          <div class="step"><div class="sn sr">02</div><div class="sb"><h4>మీ top 3 traffic sources note చేయండి</h4><p>Google organic, Direct, Social media — ఏది ఎక్కువ traffic తీసుకువస్తుందో focus అక్కడ పెట్టండి.</p></div></div>
+          <div class="step"><div class="sn sr">03</div><div class="sb"><h4>Bounce rate చూడండి</h4><p>80%+ bounce rate అంటే వెబ్‌సైట్ design problem ఉంది. 40-50% normal. తగ్గించాలంటే page speed మరియు content improve చేయాలి.</p></div></div>
+          <div class="step"><div class="sn sr">04</div><div class="sb"><h4>Mobile లో test చేయండి</h4><p>Google Mobile-Friendly Test (search.google.com) లో మీ URL test చేయండి. "Page is mobile friendly" message వస్తే okay.</p></div></div>
+        </div>
+
+        <div class="img-blk">
+          <div class="img-ph ph6">
+            <div class="ph-ico">📱</div>
+            <div class="ph-lbl">Mobile vs Desktop — Traffic Comparison</div>
+            <div class="ph-cap">[ చిత్రం: తెలుగు రాష్ట్రాల్లో Mobile 72% vs Desktop 28% traffic పై chart ]</div>
+          </div>
+        </div>
+
+        <div class="tags">
+          <span class="tag tr">#GoogleAnalytics</span>
+          <span class="tag tp">#మొబైల్‌ఫ్రెండ్లీ</span>
+          <span class="tag tg">#WebsiteSpeed</span>
+          <span class="tag ty">#DataDriven</span>
+          <span class="tag tr">#GA4తెలుగు</span>
+        </div>
+        <div class="cta">
+          <h3>మీ వెబ్‌సైట్ mobile లో ఎలా ఉందో తెలుసుకోవాలా?</h3>
+          <p>CloudPixel AI free website audit లో మీ site speed, mobile score, SEO score అన్నీ check చేసి report ఇస్తాం.</p>
+          <a href="#" class="btn">Free Website Audit పొందండి →</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</div>
+
+<!-- ===================== ENGLISH ===================== -->
+<div id="en" class="lang-section en">
+  <section class="hero">
+    <div class="hero-badge">✦ CloudPixel AI Blog 2024</div>
+    <h1>Digital Marketing<br>Practical Guide</h1>
+    <p class="hero-sub">Real strategies for Indian businesses — not theory, but what actually works in the Indian digital landscape in 2024.</p>
+    <div class="blog-pills">
+      <span class="bp">📈 Digital Marketing</span>
+      <span class="bp">🔍 SEO</span>
+      <span class="bp">📊 Analytics</span>
+      <span class="bp">📱 Mobile-First</span>
+    </div>
+  </section>
+
+  <div class="wrap">
+
+    <!-- EN BLOG 1 -->
+    <article class="blog">
+      <div class="banner b1">
+        <div class="banner-grid"></div>
+        <div class="b-icon">📈</div>
+        <div class="b-num">POST 01 / 03</div>
+        <h2>Why Every Indian Business Needs Digital Marketing in 2024</h2>
+        <div class="bsub">From chai stalls to IT firms — the digital shift is no longer optional</div>
+      </div>
+      <div class="meta">
+        <div class="mi">📅 <span>March 2024</span></div>
+        <div class="mi">⏱️ <span>8 min read</span></div>
+        <div class="mi">📍 <span>India-focused</span></div>
+      </div>
+      <div class="bc">
+        <div class="intro-box">
+          India has over 900 million internet users. The majority of them use Google to discover local businesses, compare prices, and make buying decisions — before they even step outside. If your business isn't showing up online when your customers are searching, you're handing that customer to your competitor. Digital marketing closes that gap.
+        </div>
+
+        <div class="img-blk">
+          <div class="img-ph ph1">
+            <div class="ph-ico">🇮🇳</div>
+            <div class="ph-lbl">India's Digital Economy — 2024</div>
+            <div class="ph-cap">[ Image: India's 900M internet users, smartphone penetration map, and online purchase growth chart ]</div>
+          </div>
+        </div>
+
+        <h3 class="sec-title">The Indian Digital Landscape — What's Changed?</h3>
+        <p>Ten years ago, a business in India could survive on word-of-mouth, a hoarding on the highway, and a listing in JustDial. That model is crumbling. Today, even a first-generation entrepreneur in Tier 2 cities runs Instagram ads, and kirana stores near metro stations use WhatsApp Business to take orders.</p>
+        <p>The shift isn't just about being "online." It's about being <strong style="color:white">discoverable at the exact moment someone needs your service.</strong> That's the fundamental promise of digital marketing — and it's why businesses investing in it consistently outperform those who don't.</p>
+
+        <div class="quote-box">
+          <div class="quote-text">In India, the customer journey now starts on a smartphone screen. If you're not in that first scroll, you don't exist for that customer.</div>
+          <div class="quote-author">— CloudPixel AI, from client experiences across South India</div>
+        </div>
+
+        <h3 class="sec-title">Core Channels for Indian Businesses</h3>
+        <div class="cards">
+          <div class="crd"><div class="c-ico">🔍</div><div class="c-ttl">SEO & Google</div><div class="c-dsc">Highest intent traffic — people actively looking for what you sell</div></div>
+          <div class="crd"><div class="c-ico">📱</div><div class="c-ttl">WhatsApp Business</div><div class="c-dsc">India's most-used app — broadcast lists, catalogs, instant support</div></div>
+          <div class="crd"><div class="c-ico">🎬</div><div class="c-ttl">YouTube & Reels</div><div class="c-dsc">Video content in regional languages drives massive organic reach</div></div>
+          <div class="crd"><div class="c-ico">💰</div><div class="c-ttl">Meta / Google Ads</div><div class="c-dsc">Fastest results — great for launches, offers, and events</div></div>
+          <div class="crd"><div class="c-ico">✍️</div><div class="c-ttl">Content & Blogging</div><div class="c-dsc">Builds long-term authority and trust with your audience</div></div>
+          <div class="crd"><div class="c-ico">⭐</div><div class="c-ttl">Google Reviews</div><div class="c-dsc">The most underused yet most powerful local trust signal in India</div></div>
+        </div>
+
+        <h3 class="sec-title">Real Impact — What Indian Businesses Experience</h3>
+        <div class="steps">
+          <div class="step"><div class="sn sp">01</div><div class="sb"><h4>Lead quality improves dramatically</h4><p>Organic search leads are warmer than cold calls. They've already searched, compared, and shortlisted you — the conversation starts at a different level.</p></div></div>
+          <div class="step"><div class="sn sp">02</div><div class="sb"><h4>Geographic barriers dissolve</h4><p>A boutique in Bengaluru started getting orders from Delhi and Ahmedabad after 4 months of consistent SEO — zero additional investment in offline reach.</p></div></div>
+          <div class="step"><div class="sn sp">03</div><div class="sb"><h4>Smaller businesses can outrank larger ones</h4><p>Digital marketing levels the playing field. A well-optimised local business website can rank above a large chain that neglects its digital presence.</p></div></div>
+          <div class="step"><div class="sn sp">04</div><div class="sb"><h4>ROI is measurable, not assumed</h4><p>Unlike a newspaper ad where you guess impact, every rupee in digital marketing can be traced to leads, calls, and conversions through analytics.</p></div></div>
+        </div>
+
+        <div class="img-blk">
+          <div class="img-ph ph2">
+            <div class="ph-ico">📊</div>
+            <div class="ph-lbl">Indian SME — Digital vs Traditional ROI</div>
+            <div class="ph-cap">[ Image: Side-by-side ROI comparison — newspaper ad vs Google campaign over 6 months ]</div>
+          </div>
+        </div>
+
+        <div class="tags">
+          <span class="tag tp">#DigitalMarketing</span>
+          <span class="tag tg">#IndianBusiness</span>
+          <span class="tag tr">#SMEIndia</span>
+          <span class="tag ty">#OnlineGrowth</span>
+          <span class="tag tp">#StartupIndia</span>
+        </div>
+        <div class="cta">
+          <h3>Not sure where to start for your business?</h3>
+          <p>CloudPixel AI works with Indian businesses of all sizes. Let's map out a digital strategy that fits your budget and goals.</p>
+          <a href="#" class="btn">Book a Free Strategy Call →</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="div">✦ Next Post ✦</div>
+
+    <!-- EN BLOG 2 -->
+    <article class="blog">
+      <div class="banner b2">
+        <div class="banner-grid"></div>
+        <div class="b-icon">🔍</div>
+        <div class="b-num">POST 02 / 03</div>
+        <h2>SEO in 2024 — What Actually Works for Indian Websites</h2>
+        <div class="bsub">Cut through the noise. Here's the honest, practical SEO playbook.</div>
+      </div>
+      <div class="meta">
+        <div class="mi">📅 <span>March 2024</span></div>
+        <div class="mi">⏱️ <span>11 min read</span></div>
+        <div class="mi">🏆 <span>Rank on Google</span></div>
+      </div>
+      <div class="bc">
+        <div class="intro-box">
+          SEO — Search Engine Optimisation — is the practice of making your website earn its place at the top of Google's results, without paying for ads. Done right, it brings you a steady stream of relevant, high-intent visitors every single day. Done wrong (or ignored), your website is essentially invisible to people who are actively looking for you.
+        </div>
+
+        <div class="img-blk">
+          <div class="img-ph ph2">
+            <div class="ph-ico">🏆</div>
+            <div class="ph-lbl">Google SERP — The War for Position 1</div>
+            <div class="ph-cap">[ Image: Click-through rate by position — #1 gets 28%, #10 gets 2.5% ]</div>
+          </div>
+        </div>
+
+        <h3 class="sec-title">The 3 Foundations of SEO (Simplified)</h3>
+        <div class="hl hl-g">
+          <strong style="color:var(--a3)">📝 Content — The Core Signal</strong>
+          <p style="margin-top:10px;font-size:0.9rem;color:#a0c8b0;">Google's job is to show users the most helpful content for their query. Your job is to be that content. Write for your actual customer — answer their real questions in depth, honestly, and clearly. A 1,200-word guide titled "How to choose a wedding photographer in Hyderabad" will outrank a thin 200-word page every time. Bilingual content (English + regional language) is a significant untapped advantage for Indian businesses.</p>
+        </div>
+        <div class="hl hl-p">
+          <strong style="color:var(--a1)">🔗 Authority — Backlinks & Trust</strong>
+          <p style="margin-top:10px;font-size:0.9rem;color:#b0a0d8;">When other reputable websites link to yours, Google interprets that as a vote of confidence. Start with easy wins: Google Business Profile, Justdial, Sulekha, IndiaMart, local chamber of commerce listings. Guest posts on industry blogs, PR mentions, and local news coverage all build the authority that accelerates your rankings.</p>
+        </div>
+        <div class="hl hl-y">
+          <strong style="color:var(--a4)">⚙️ Technical Health — The Foundation</strong>
+          <p style="margin-top:10px;font-size:0.9rem;color:#d8c8a0;">Even brilliant content won't rank if your site loads slowly, breaks on mobile, or lacks HTTPS. In India, where mobile internet dominates and 4G speeds vary, page speed is especially critical. Aim for under 3 seconds on mobile. Run Google's PageSpeed Insights regularly — it's free and tells you exactly what to fix.</p>
+        </div>
+
+        <h3 class="sec-title">SEO Ranking Factor Weights</h3>
+        <div class="bars">
+          <div class="bar-row"><div class="bar-lbl"><span>Content Relevance & Depth</span><span>95%</span></div><div class="bar-track"><div class="bar-fill" style="width:95%;background:linear-gradient(90deg,#6c63ff,#a89fff)"></div></div></div>
+          <div class="bar-row"><div class="bar-lbl"><span>Backlink Quality</span><span>88%</span></div><div class="bar-track"><div class="bar-fill" style="width:88%;background:linear-gradient(90deg,#00d4aa,#7fffff)"></div></div></div>
+          <div class="bar-row"><div class="bar-lbl"><span>Page Speed (Mobile)</span><span>85%</span></div><div class="bar-track"><div class="bar-fill" style="width:85%;background:linear-gradient(90deg,#ffbe3d,#ffaa44)"></div></div></div>
+          <div class="bar-row"><div class="bar-lbl"><span>User Experience Signals</span><span>82%</span></div><div class="bar-track"><div class="bar-fill" style="width:82%;background:linear-gradient(90deg,#ff5f7e,#ff9999)"></div></div></div>
+        </div>
+
+        <div class="img-blk">
+          <div class="img-ph ph3">
+            <div class="ph-ico">📈</div>
+            <div class="ph-lbl">Organic Traffic Growth — 6-Month Trajectory</div>
+            <div class="ph-cap">[ Image: Month-by-month organic sessions graph showing compounding growth from month 3 onwards ]</div>
+          </div>
+        </div>
+
+        <div class="tags">
+          <span class="tag tg">#SEO2024</span>
+          <span class="tag tp">#GoogleIndia</span>
+          <span class="tag tr">#OrganicTraffic</span>
+          <span class="tag ty">#KeywordResearch</span>
+          <span class="tag tg">#ContentMarketing</span>
+        </div>
+        <div class="cta">
+          <h3>Wondering why your competitors outrank you?</h3>
+          <p>CloudPixel AI's free SEO audit shows you exactly where your site stands — and a clear roadmap to improve it.</p>
+          <a href="#" class="btn">Get Your Free SEO Audit →</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="div">✦ Next Post ✦</div>
+
+    <!-- EN BLOG 3 -->
+    <article class="blog">
+      <div class="banner b3">
+        <div class="banner-grid"></div>
+        <div class="b-icon">📊</div>
+        <div class="b-num">POST 03 / 03</div>
+        <h2>Google Analytics + Mobile-First: The Two Things Indian Businesses Overlook</h2>
+        <div class="bsub">You can't improve what you don't measure — and you can't sell to someone whose phone won't load your page</div>
+      </div>
+      <div class="meta">
+        <div class="mi">📅 <span>March 2024</span></div>
+        <div class="mi">⏱️ <span>9 min read</span></div>
+        <div class="mi">📱 <span>Mobile-First India</span></div>
+      </div>
+      <div class="bc">
+        <div class="intro-box">
+          Most Indian business owners know they need a website. Far fewer regularly check how it's performing. Google Analytics 4 (GA4) is a free tool that gives you a live window into your website's behaviour — who visits, where they come from, what they read, and critically, who converts. Paired with a properly mobile-optimised site, it becomes your most powerful growth tool.
+        </div>
+
+        <div class="img-blk">
+          <div class="img-ph ph5">
+            <div class="ph-ico">📊</div>
+            <div class="ph-lbl">GA4 Real-Time Dashboard</div>
+            <div class="ph-cap">[ Image: GA4 interface showing active users, traffic channels, top-performing pages and goal completions ]</div>
+          </div>
+        </div>
+
+        <h3 class="sec-title">5 GA4 Reports Every Business Owner Should Check Monthly</h3>
+        <div class="steps">
+          <div class="step"><div class="sn sr">01</div><div class="sb"><h4>Acquisition Report — Where's your traffic coming from?</h4><p>If 80% of your traffic is "Direct" (people typing your URL), your SEO needs attention. You want a healthy mix of Organic Search, Social, and Direct.</p></div></div>
+          <div class="step"><div class="sn sr">02</div><div class="sb"><h4>Engagement Rate — Are people actually reading?</h4><p>GA4's engagement rate (opposite of bounce rate) tells you if visitors find your content worth staying for. Below 40% means your landing pages need work.</p></div></div>
+          <div class="step"><div class="sn sr">03</div><div class="sb"><h4>Pages & Screens — What's working?</h4><p>Find your top 5 pages. Then find your highest-traffic pages that convert the least — those are your optimisation priorities.</p></div></div>
+          <div class="step"><div class="sn sr">04</div><div class="sb"><h4>Device Breakdown — Mobile vs Desktop</h4><p>In India, expect 60–75% mobile traffic. If your mobile experience is poor, that's your biggest revenue leak.</p></div></div>
+          <div class="step"><div class="sn sr">05</div><div class="sb"><h4>Conversions — Are goals tracking?</h4><p>Set up at least one conversion event — form submit, WhatsApp click, phone number click. Without this, you're flying blind on ROI.</p></div></div>
+        </div>
+
+        <div class="img-blk">
+          <div class="img-ph ph6">
+            <div class="ph-ico">📱</div>
+            <div class="ph-lbl">Mobile-First Design — Responsive Across Devices</div>
+            <div class="ph-cap">[ Image: Same business website rendering perfectly on Android, iPhone, and desktop — side by side ]</div>
+          </div>
+        </div>
+
+        <div class="hl hl-g">
+          <strong style="color:var(--a3)">📱 India's Mobile Reality</strong>
+          <p style="margin-top:10px;font-size:0.9rem;color:#a0c8b0;">Over 65% of India's internet traffic is mobile. Combine that with variable 4G speeds in Tier 2/3 cities, and your mobile page load time directly impacts your revenue. Every 1-second delay in mobile load time reduces conversions by approximately 7%. A fast, thumb-friendly website isn't a luxury — it's table stakes.</p>
+        </div>
+
+        <div class="tags">
+          <span class="tag tr">#GoogleAnalytics</span>
+          <span class="tag tp">#GA4India</span>
+          <span class="tag tg">#MobileFirst</span>
+          <span class="tag ty">#ConversionRate</span>
+          <span class="tag tr">#WebPerformance</span>
+        </div>
+        <div class="cta">
+          <h3>Is your website built for India's mobile-first reality?</h3>
+          <p>CloudPixel AI audits your site's mobile performance, sets up GA4 properly, and builds the foundation for measurable growth.</p>
+          <a href="#" class="btn">Get a Free Website Audit →</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</div>
+
+<!-- ===================== HINDI ===================== -->
+<div id="hi" class="lang-section hi">
+  <section class="hero">
+    <div class="hero-badge">✦ CloudPixel AI ब्लॉग 2024</div>
+    <h1 style="font-family:'Hind',sans-serif;">डिजिटल मार्केटिंग<br>आपके धंधे के लिए</h1>
+    <p class="hero-sub" style="font-family:'Hind',sans-serif;">दिल्ली से लेकर लखनऊ तक — अपने धंधे को ऑनलाइन ले जाने का सही तरीका, सीधी और साफ भाषा में।</p>
+    <div class="blog-pills">
+      <span class="bp">📈 डिजिटल मार्केटिंग</span>
+      <span class="bp">🔍 SEO</span>
+      <span class="bp">📊 Analytics</span>
+      <span class="bp">📱 मोबाइल</span>
+    </div>
+  </section>
+
+  <div class="wrap">
+
+    <!-- HI BLOG 1 -->
+    <article class="blog">
+      <div class="banner b1">
+        <div class="banner-grid"></div>
+        <div class="b-icon">📈</div>
+        <div class="b-num">पोस्ट 01 / 03</div>
+        <h2>आपकी दुकान Google पर क्यों नहीं दिखती? डिजिटल मार्केटिंग की सच्चाई</h2>
+        <div class="bsub">एक कपड़े के व्यापारी की असली कहानी — जिसने ऑनलाइन आकर अपना धंधा 4 गुना बढ़ाया</div>
+      </div>
+      <div class="meta">
+        <div class="mi">📅 <span>मार्च 2024</span></div>
+        <div class="mi">⏱️ <span>8 मिनट</span></div>
+        <div class="mi">📍 <span>उत्तर भारत</span></div>
+      </div>
+      <div class="bc">
+        <div class="intro-box">
+          कानपुर में राजेश जी का कपड़े का धंधा था। बाज़ार में दुकान थी, बोर्ड लगा था, पर ग्राहक कम होते जा रहे थे। पड़ोस में एक नई दुकान खुली — उनके पास तो Instagram था, WhatsApp catalogue था, Google पर नाम दिखता था। महीने भर में राजेश जी के आधे ग्राहक वहाँ जाने लगे। तब राजेश जी ने डिजिटल मार्केटिंग सीखी। 6 महीने में उनके ग्राहक 4 गुना हो गए।
+        </div>
+
+        <div class="img-blk">
+          <div class="img-ph ph1">
+            <div class="ph-ico">🏪</div>
+            <div class="ph-lbl">पारंपरिक दुकान → डिजिटल धंधा</div>
+            <div class="ph-cap">[ तस्वीर: एक बाज़ार की दुकान जो ऑनलाइन आने के बाद citywide पहचान पा गई ]</div>
+          </div>
+        </div>
+
+        <h3 class="sec-title">डिजिटल मार्केटिंग मतलब क्या — सीधे शब्दों में</h3>
+        <p>जब कोई अपने मोबाइल पर "दिल्ली में बढ़िया मिठाई की दुकान" या "लखनऊ में सस्ता घर किराये पर" लिखकर search करता है — और आपकी दुकान सबसे पहले दिखती है — यही डिजिटल मार्केटिंग का कमाल है।</p>
+        <p>आज भारत में 90 करोड़ से ज़्यादा लोग इंटरनेट इस्तेमाल करते हैं। इनमें से ज़्यादातर ग्राहक कोई भी चीज़ खरीदने से पहले <strong style="color:white">पहले Google करते हैं, फिर दुकान जाते हैं।</strong> अगर आप Google पर नहीं हैं तो ये ग्राहक आप तक पहुँचेंगे ही नहीं।</p>
+
+        <div class="quote-box">
+          <div class="quote-text">पहले लोग पड़ोसी से पूछते थे — "अच्छा मिस्त्री कहाँ मिलेगा?" अब वो Google पर search करते हैं। जो पहले दिखता है, उसे काम मिलता है।</div>
+          <div class="quote-author">— एक प्लम्बिंग कंपनी के मालिक, लखनऊ</div>
+        </div>
+
+        <h3 class="sec-title">उत्तर भारत के धंधों के लिए बेस्ट डिजिटल चैनल</h3>
+        <div class="cards">
+          <div class="crd"><div class="c-ico">🔍</div><div class="c-ttl">Google Search (SEO)</div><div class="c-dsc">जो ग्राहक actively ढूँढ रहे हैं — वो सीधे आपके पास आएँ</div></div>
+          <div class="crd"><div class="c-ico">📱</div><div class="c-ttl">WhatsApp Business</div><div class="c-dsc">Catalogue भेजो, order लो, updates दो — सब WhatsApp पर</div></div>
+          <div class="crd"><div class="c-ico">🎬</div><div class="c-ttl">YouTube Shorts & Reels</div><div class="c-dsc">हिंदी में video — सबसे तेज़ reach, बिल्कुल मुफ़्त</div></div>
+          <div class="crd"><div class="c-ico">💰</div><div class="c-ttl">Facebook / Google Ads</div><div class="c-dsc">Sale या offer है? Ads सबसे fast result देते हैं</div></div>
+          <div class="crd"><div class="c-ico">⭐</div><div class="c-ttl">Google Reviews</div><div class="c-dsc">अच्छे reviews = नए ग्राहक का भरोसा। सबसे ज़रूरी।</div></div>
+          <div class="crd"><div class="c-ico">✍️</div><div class="c-ttl">Blog / Content</div><div class="c-dsc">हिंदी में helpful content — Google में rank, trust में boost</div></div>
+        </div>
+
+        <h3 class="sec-title">डिजिटल मार्केटिंग से असली फ़ायदे क्या हैं?</h3>
+        <div class="steps">
+          <div class="step"><div class="sn sp">01</div><div class="sb"><h4>पैसा कम, असर ज़्यादा</h4><p>अखबार में ₹10,000 का विज्ञापन देने से बेहतर है ₹3,000 में Google Ads — जो सिर्फ उन्हीं को दिखे जो आपकी service ढूँढ रहे हैं।</p></div></div>
+          <div class="step"><div class="sn sp">02</div><div class="sb"><h4>24 घंटे, 7 दिन धंधा</h4><p>रात के 2 बजे भी कोई आपकी website देख सकता है, form भर सकता है, WhatsApp message कर सकता है। दुकान बंद हो, धंधा चलता रहे।</p></div></div>
+          <div class="step"><div class="sn sp">03</div><div class="sb"><h4>नतीजे देख सकते हो</h4><p>अखबार का ad कितनों ने देखा — पता नहीं। Digital marketing में हर click, हर call, हर purchase का हिसाब होता है।</p></div></div>
+          <div class="step"><div class="sn sp">04</div><div class="sb"><h4>छोटी दुकान, बड़ा नाम</h4><p>एक अच्छी website और SEO से आपकी 200 sqft की दुकान किसी बड़े mall से ऑनलाइन आगे निकल सकती है।</p></div></div>
+        </div>
+
+        <div class="img-blk">
+          <div class="img-ph ph2">
+            <div class="ph-ico">📊</div>
+            <div class="ph-lbl">6 महीने में enquiries का बदलाव</div>
+            <div class="ph-cap">[ तस्वीर: महीना-दर-महीना online enquiries का graph — शुरुआत 5 से, 6वें महीने में 60+ ]</div>
+          </div>
+        </div>
+
+        <div class="tags">
+          <span class="tag tp">#डिजिटलमार्केटिंग</span>
+          <span class="tag tg">#उत्तरभारतव्यापार</span>
+          <span class="tag tr">#ऑनलाइनधंधा</span>
+          <span class="tag ty">#हिंदीमार्केटिंग</span>
+          <span class="tag tp">#SMEIndia</span>
+        </div>
+        <div class="cta">
+          <h3>अपना धंधा ऑनलाइन ले जाना है?</h3>
+          <p>CloudPixel AI से बात करें — आपके बजट और ज़रूरत के हिसाब से सही strategy बताएँगे। पहली बात free है।</p>
+          <a href="#" class="btn">Free बात करें →</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="div">✦ अगला पोस्ट ✦</div>
+
+    <!-- HI BLOG 2 -->
+    <article class="blog">
+      <div class="banner b2">
+        <div class="banner-grid"></div>
+        <div class="b-icon">🔍</div>
+        <div class="b-num">पोस्ट 02 / 03</div>
+        <h2>SEO क्या होता है? आपकी website Google के पहले पेज पर क्यों नहीं आती?</h2>
+        <div class="bsub">बिना पैसे दिए Google में ऊपर आने का तरीका — step by step</div>
+      </div>
+      <div class="meta">
+        <div class="mi">📅 <span>मार्च 2024</span></div>
+        <div class="mi">⏱️ <span>10 मिनट</span></div>
+        <div class="mi">🏆 <span>Google First Page</span></div>
+      </div>
+      <div class="bc">
+        <div class="intro-box">
+          SEO यानी Search Engine Optimisation — इसका मतलब है अपनी website को इस तरह बनाना कि Google उसे खुद ऊपर दिखाए। बिना ad के पैसे दिए। जो एक बार rank हो जाए, वो महीनों-सालों तक free में traffic लाता रहता है। यही SEO की असली ताकत है।
+        </div>
+
+        <div class="img-blk">
+          <div class="img-ph ph2">
+            <div class="ph-ico">🔍</div>
+            <div class="ph-lbl">Google Search — पहला पेज vs दूसरा पेज</div>
+            <div class="ph-cap">[ तस्वीर: पहले पेज को 92% clicks मिलते हैं, दूसरे पेज को सिर्फ 6% — comparison chart ]</div>
+          </div>
+        </div>
+
+        <h3 class="sec-title">Google कैसे decide करता है कि कौन ऊपर आएगा?</h3>
+        <p>Google एक judge की तरह है जो यह देखता है — "इस website पर वो जानकारी है जो user ढूँढ रहा है?" जिस website पर सबसे helpful, सबसे detailed, सबसे भरोसेमंद जवाब होता है — वो ऊपर आती है।</p>
+        <p>SEO में तीन चीज़ें सबसे ज़रूरी हैं:</p>
+
+        <div class="hl hl-g">
+          <strong style="color:var(--a3)">📝 1. Content — आपकी website पर क्या लिखा है?</strong>
+          <p style="margin-top:10px;font-size:0.9rem;color:#a0c8b0;">हिंदी में SEO content लिखना एक बहुत बड़ा फायदा है — क्योंकि competition अभी भी कम है। "दिल्ली में सस्ते AC repair" या "लखनऊ में wedding photographer" जैसे keywords पर हिंदी content लिखें। 800-1500 शब्दों का detailed article लिखें जो सच में helpful हो। Copy-paste नहीं, अपने experience से लिखें।</p>
+        </div>
+        <div class="hl hl-p">
+          <strong style="color:var(--a1)">🔗 2. Backlinks — दूसरी websites आपको mention करें</strong>
+          <p style="margin-top:10px;font-size:0.9rem;color:#b0a0d8;">JustDial, Sulekha, IndiaMART, Google Business Profile — इन सब पर अपना business free में register करें और website का link ज़रूर डालें। Local newspaper की website पर एक article, या किसी industry blog पर guest post — ये सब आपकी Google ranking बढ़ाते हैं।</p>
+        </div>
+        <div class="hl hl-y">
+          <strong style="color:var(--a4)">⚙️ 3. Technical SEO — website तेज़ और mobile-friendly हो</strong>
+          <p style="margin-top:10px;font-size:0.9rem;color:#d8c8a0;">उत्तर भारत में internet की speed अलग-अलग होती है। अगर आपकी website 5 सेकंड में खुलती है — ग्राहक चला जाता है। Website का load time 3 second से कम हो। Mobile पर सही दिखे। HTTPS (website पर lock icon) ज़रूर हो।</p>
+        </div>
+
+        <h3 class="sec-title">अपनी website को Google पर rank करने के steps</h3>
+        <div class="steps">
+          <div class="step"><div class="sn sg">01</div><div class="sb"><h4>Google Business Profile free में बनाएँ</h4><p>यह सबसे पहला काम है। business.google.com पर जाएँ, अपनी दुकान का नाम, पता, फ़ोन, photos — सब डालें। Local search में तुरंत दिखने लगेंगे।</p></div></div>
+          <div class="step"><div class="sn sg">02</div><div class="sb"><h4>अपने keyword पहचानें</h4><p>"आपकी service + शहर का नाम" — यही आपका keyword है। Example: "plumber in Kanpur", "कानपुर में प्लम्बर"। इस keyword को अपनी website के title, headings और content में use करें।</p></div></div>
+          <div class="step"><div class="sn sg">03</div><div class="sb"><h4>हर महीने 2-3 helpful articles लिखें</h4><p>"गर्मियों में AC का रखरखाव कैसे करें", "शादी की photography के लिए कैमरा कैसे चुनें" — ऐसे helpful articles Google को पसंद आते हैं और customers का भरोसा भी बनते हैं।</p></div></div>
+          <div class="step"><div class="sn sg">04</div><div class="sb"><h4>Customers से Google Reviews माँगें</h4><p>हर खुश ग्राहक से कहें — "Google पर हमें review दे दो।" 20+ positive reviews होने पर local search में आपकी ranking काफी बढ़ जाती है।</p></div></div>
+          <div class="step"><div class="sn sg">05</div><div class="sb"><h4>Google Search Console से progress देखें</h4><p>Free tool है — आपकी website किन keywords पर दिख रही है, कितने लोग click कर रहे हैं — सब यहाँ पता चलता है।</p></div></div>
+        </div>
+
+        <div class="img-blk">
+          <div class="img-ph ph3">
+            <div class="ph-ico">📈</div>
+            <div class="ph-lbl">SEO से traffic कैसे बढ़ता है — 6 महीने का असर</div>
+            <div class="ph-cap">[ तस्वीर: Organic visitors महीना-दर-महीना बढ़ते हुए — slow start, तेज़ growth ]</div>
+          </div>
+        </div>
+
+        <div class="tags">
+          <span class="tag tg">#SEO</span>
+          <span class="tag tp">#GoogleHindi</span>
+          <span class="tag tr">#हिंदीSEO</span>
+          <span class="tag ty">#LocalSEO</span>
+          <span class="tag tg">#फ्रीTraffic</span>
+        </div>
+        <div class="cta">
+          <h3>आपकी website Google पर rank नहीं हो रही?</h3>
+          <p>CloudPixel AI free SEO audit में बताएगा कि problem कहाँ है और कैसे fix होगी।</p>
+          <a href="#" class="btn">Free SEO Audit लें →</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="div">✦ अगला पोस्ट ✦</div>
+
+    <!-- HI BLOG 3 -->
+    <article class="blog">
+      <div class="banner b3">
+        <div class="banner-grid"></div>
+        <div class="b-icon">📊</div>
+        <div class="b-num">पोस्ट 03 / 03</div>
+        <h2>Google Analytics और Mobile Website — धंधे के लिए क्यों ज़रूरी हैं?</h2>
+        <div class="bsub">बिना data के धंधा चलाना — अँधेरे में तीर चलाने जैसा है</div>
+      </div>
+      <div class="meta">
+        <div class="mi">📅 <span>मार्च 2024</span></div>
+        <div class="mi">⏱️ <span>9 मिनट</span></div>
+        <div class="mi">📱 <span>Mobile India</span></div>
+      </div>
+      <div class="bc">
+        <div class="intro-box">
+          सोचिए — आपकी दुकान में रोज़ कितने लोग आए, किस चीज़ को सबसे ज़्यादा देखा, कितने खरीदकर गए और कितने बिना खरीदे चले गए — अगर यह सब data मिले तो आप अपनी दुकान को बेहतर बना सकते हैं। Google Analytics यही करता है आपकी website के लिए — और यह बिल्कुल मुफ़्त है।
+        </div>
+
+        <div class="img-blk">
+          <div class="img-ph ph5">
+            <div class="ph-ico">📊</div>
+            <div class="ph-lbl">Google Analytics Dashboard</div>
+            <div class="ph-cap">[ तस्वीर: GA4 का interface — live visitors, traffic sources, कौन से pages popular हैं ]</div>
+          </div>
+        </div>
+
+        <h3 class="sec-title">Google Analytics से क्या-क्या पता चलता है?</h3>
+        <div class="cards">
+          <div class="crd"><div class="c-ico">👥</div><div class="c-ttl">कौन आया?</div><div class="c-dsc">उम्र, शहर, कौन सा device — सब पता चलता है</div></div>
+          <div class="crd"><div class="c-ico">🔗</div><div class="c-ttl">कहाँ से आया?</div><div class="c-dsc">Google search, social media, WhatsApp link — source पता चलता है</div></div>
+          <div class="crd"><div class="c-ico">📄</div><div class="c-ttl">क्या देखा?</div><div class="c-dsc">कौन सा page सबसे ज़्यादा देखा, कितनी देर रुका</div></div>
+          <div class="crd"><div class="c-ico">📞</div><div class="c-ttl">Enquiry की?</div><div class="c-dsc">Form भरा? WhatsApp click किया? Call किया? — सब track होता है</div></div>
+        </div>
+
+        <h3 class="sec-title">Mobile Website क्यों ज़रूरी है — उत्तर भारत में खासकर</h3>
+        <p>दिल्ली, लखनऊ, कानपुर, जयपुर — उत्तर भारत के लगभग हर शहर में 70% से ज़्यादा internet users smartphone से browse करते हैं। अगर आपकी website mobile पर slow खुले या टेढ़ी दिखे — वो customer तुरंत back करके दूसरी website पर चला जाएगा।</p>
+
+        <div class="quote-box">
+          <div class="quote-text">जब मेरी website 8 सेकंड में खुलती थी, तब enquiries कम थीं। Speed 2 सेकंड की हुई — अगले महीने enquiries दोगुनी हो गईं। बस इतना ही फर्क था।</div>
+          <div class="quote-author">— एक clothing store owner, जयपुर</div>
+        </div>
+
+        <div class="steps">
+          <div class="step"><div class="sn sr">01</div><div class="sb"><h4>Google Analytics Setup करें — 10 मिनट में</h4><p>analytics.google.com पर जाएँ → अकाउंट बनाएँ → G-XXXXXXXX code मिलेगा → website के &lt;head&gt; में paste करें। बस हो गया।</p></div></div>
+          <div class="step"><div class="sn sr">02</div><div class="sb"><h4>Mobile Speed चेक करें</h4><p>Google का free tool — PageSpeed Insights (pagespeed.web.dev) पर अपनी website का address डालें। 0-49 = बुरा, 50-89 = ठीक, 90+ = बढ़िया।</p></div></div>
+          <div class="step"><div class="sn sr">03</div><div class="sb"><h4>Mobile Friendly Test करें</h4><p>search.google.com/test/mobile-friendly पर जाएँ और URL डालें। "Page is mobile friendly" आए तो सही है।</p></div></div>
+          <div class="step"><div class="sn sr">04</div><div class="sb"><h4>Bounce Rate देखें</h4><p>अगर 70%+ लोग एक page देखकर चले जाते हैं — तो या तो content काम नहीं आ रहा, या page slow है, या mobile पर ठीक नहीं दिखता।</p></div></div>
+          <div class="step"><div class="sn sr">05</div><div class="sb"><h4>हर महीने report देखें</h4><p>महीने के पहले हफ्ते में 30 मिनट लगाएँ — Analytics report देखें। क्या बढ़ा, क्या घटा, कहाँ ध्यान देना है — सब पता चलेगा।</p></div></div>
+        </div>
+
+        <div class="img-blk">
+          <div class="img-ph ph6">
+            <div class="ph-ico">📱</div>
+            <div class="ph-lbl">Mobile-Friendly Website — हर screen पर perfect</div>
+            <div class="ph-cap">[ तस्वीर: Android, iPhone और tablet पर एक ही website का सही display ]</div>
+          </div>
+        </div>
+
+        <div class="tags">
+          <span class="tag tr">#GoogleAnalytics</span>
+          <span class="tag tp">#मोबाइलWebsite</span>
+          <span class="tag tg">#WebsiteSpeed</span>
+          <span class="tag ty">#DataMarketing</span>
+          <span class="tag tr">#हिंदीDigital</span>
+        </div>
+        <div class="cta">
+          <h3>आपकी website की speed और mobile performance जाँचनी है?</h3>
+          <p>CloudPixel AI free audit में बताएगा — speed कितनी है, mobile score क्या है, और क्या-क्या fix करने से enquiries बढ़ेंगी।</p>
+          <a href="#" class="btn">Free Audit लें →</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</div>
+
+<footer>
+  <div class="logo" style="margin-bottom:8px;">CloudPixel AI</div>
+  <p>© 2024 CloudPixel AI · cloudpixelai.in · All Rights Reserved</p>
+  <p style="margin-top:5px;font-size:0.76rem;">Digital Marketing · SEO · Google Analytics · Mobile Design · Web Development</p>
+</footer>
+
+<script>
+function switchLang(lang, btn) {
+  document.querySelectorAll('.lang-section').forEach(s => s.classList.remove('show'));
+  document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(lang).classList.add('show');
+  btn.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
