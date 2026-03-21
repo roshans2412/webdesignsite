@@ -1154,14 +1154,12 @@ function animCount(el,target,suffix){
   let n=0;const step=Math.ceil(target/55);
   const t=setInterval(()=>{n=Math.min(n+step,target);el.textContent=n+suffix;if(n>=target)clearInterval(t);},22);
 }
-const co=new IntersectionObserver(en=>{
-  en.forEach(e=>{if(e.isIntersecting){
+window.addEventListener('load',function(){
+  setTimeout(function(){
     animCount(document.getElementById('kn1'),200,'+');
     animCount(document.getElementById('kn2'),50,'+');
-    co.unobserve(e.target);
-  }});
-},{threshold:.1});
-const kpiEl=document.querySelector('.hkpis');if(kpiEl)co.observe(kpiEl);
+  },600);
+});
 
 // TAB SWITCH
 function switchTab(tab,btn){
