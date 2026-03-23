@@ -503,6 +503,17 @@ footer ul a{color:var(--gr);text-decoration:none;font-size:.78rem;transition:col
 footer ul a:hover{color:var(--silver);}
 .fbot{border-top:1px solid var(--silver-border);padding:17px 5%;display:flex;justify-content:space-between;align-items:center;font-size:.69rem;color:var(--silver-muted);background:var(--bg2);position:relative;z-index:1;}
 
+  /* HAMBURGER MENU */
+.hmenu-btn{display:none;background:none;border:1px solid var(--silver-border);color:var(--silver);font-size:1.3rem;width:38px;height:38px;border-radius:8px;cursor:pointer;align-items:center;justify-content:center;}
+.hmenu-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:1100;backdrop-filter:blur(4px);}
+.hmenu{position:fixed;top:0;right:-280px;width:270px;height:100vh;background:var(--bg3);border-left:1px solid var(--silver-border);z-index:1200;padding:1.5rem;display:flex;flex-direction:column;gap:.5rem;transition:right .3s ease;}
+.hmenu.open{right:0;}
+.hmenu-close{background:none;border:1px solid var(--silver-border);color:var(--silver);width:34px;height:34px;border-radius:7px;cursor:pointer;font-size:1rem;margin-bottom:1rem;align-self:flex-end;}
+.hmenu a{color:var(--gr2);text-decoration:none;font-size:.9rem;font-weight:600;padding:.75rem 1rem;border-radius:8px;border:1px solid transparent;transition:all .2s;}
+.hmenu a:hover{color:var(--wh);border-color:var(--silver-border);background:var(--silver-bg);}
+.hmenu-wa{background:linear-gradient(135deg,var(--mg),var(--mg3))!important;color:#fff!important;border-color:transparent!important;text-align:center;margin-top:.5rem;box-shadow:0 4px 16px var(--mg-glow);}
+.hmenu-overlay.open{display:block;}
+@media(max-width:1024px){.hmenu-btn{display:flex;}}
 /* REVEAL */
 .rv{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;}
 .rv.in{opacity:1;transform:translateY(0);}
@@ -605,7 +616,19 @@ footer ul a:hover{color:var(--silver);}
     <li><a href="#contact-form">Contact</a></li>
   </ul>
   <a href="https://wa.me/918367540839?text=Hi%20CloudPixel%20AI%20Team!%20%F0%9F%91%8B%20I%20need%20a%20website.%20Please%20help!" class="nwa">&#128172; WhatsApp Now</a>
+<button class="hmenu-btn" id="hmenuBtn" onclick="toggleMenu()">&#9776;</button>
 </nav>
+<div class="hmenu-overlay" id="hmenuOverlay" onclick="toggleMenu()"></div>
+<div class="hmenu" id="hmenu">
+  <button class="hmenu-close" onclick="toggleMenu()">&#10005;</button>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#portfolio" onclick="toggleMenu()">Work</a>
+  <a href="#pricing" onclick="toggleMenu()">Pricing</a>
+  <a href="#blog" onclick="toggleMenu()">Blog</a>
+  <a href="#contact-form" onclick="toggleMenu()">Contact</a>
+  <a href="https://wa.me/918367540839?text=Hi%20CloudPixel%20AI%20Team!%20%F0%9F%91%8B%20I%20need%20a%20website." class="hmenu-wa">&#128172; WhatsApp Now</a>
+</div>
 
 <!-- HERO -->
 <section class="hero" id="home">
@@ -1225,7 +1248,11 @@ function sendContactForm(){
   if(msg2)msg+='%0A%F0%9F%92%AC%20Message%3A%20'+encodeURIComponent(msg2);
   window.open('https://wa.me/918367540839?text='+msg,'_blank');
 }
- function toggleBlogDropdown(e){e.preventDefault();e.stopPropagation();var dd=document.getElementById('blogDropdown');var ar=document.getElementById('blogArrow');var open=dd.style.display==='block';dd.style.display=open?'none':'block';ar.style.transform=open?'rotate(0deg)':'rotate(180deg)';}
+ function toggleMenu(){
+  document.getElementById('hmenu').classList.toggle('open');
+  document.getElementById('hmenuOverlay').classList.toggle('open');
+}
+  function toggleBlogDropdown(e){e.preventDefault();e.stopPropagation();var dd=document.getElementById('blogDropdown');var ar=document.getElementById('blogArrow');var open=dd.style.display==='block';dd.style.display=open?'none':'block';ar.style.transform=open?'rotate(0deg)':'rotate(180deg)';}
 document.addEventListener('click',function(e){var item=document.getElementById('blog-nav-item');if(item&&!item.contains(e.target)){var dd=document.getElementById('blogDropdown');var ar=document.getElementById('blogArrow');if(dd)dd.style.display='none';if(ar)ar.style.transform='rotate(0deg)';}}); 
 </script>
 </body>
