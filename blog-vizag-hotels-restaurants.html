@@ -14,12 +14,13 @@
   <title>How People Find Best Hotels and Restaurants in Visakhapatnam Using Google</title>
   <meta name="description" content="Discover how visitors find the best hotels and restaurants in Visakhapatnam using Google Search. Learn why online presence matters for local businesses in Vizag." />
   <meta name="keywords" content="hotels in Visakhapatnam, restaurants in Vizag, Google search Vizag, website for hotels Vizag, CloudPixel AI" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Segoe UI', sans-serif; background: #f9f9f9; color: #333; }
-    header { background: #0a0a0a; padding: 16px 24px; display: flex; align-items: center; gap: 12px; }
-    header span { color: #fff; font-size: 20px; font-weight: 700; }
-    header a { color: #4fc3f7; font-size: 14px; margin-left: auto; text-decoration: none; }
+    header { background: #04040e; padding: 13px 24px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.07); position: sticky; top: 0; z-index: 200; }
+    header a.back-link { color: rgba(255,255,255,0.5); font-size: 13px; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 1px; transition: color 0.2s; }
+    header a.back-link:hover { color: #fff; }
     .hero { background: linear-gradient(135deg, #0077b6, #00b4d8); color: #fff; padding: 60px 24px; text-align: center; }
     .hero h1 { font-size: 28px; max-width: 780px; margin: 0 auto 16px; line-height: 1.4; }
     .hero p { font-size: 16px; opacity: 0.9; }
@@ -36,15 +37,32 @@
     .cta-box h2 { color: #fff; border: none; padding: 0; margin: 0 0 12px; font-size: 24px; }
     .cta-box p { color: rgba(255,255,255,0.9); margin-bottom: 24px; }
     .cta-btn { display: inline-block; background: #fff; color: #0077b6; font-weight: 700; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-size: 16px; }
-    footer { background: #0a0a0a; color: #aaa; text-align: center; padding: 20px; font-size: 14px; }
-    footer a { color: #4fc3f7; text-decoration: none; }
+    footer { background: #04040e; color: rgba(255,255,255,0.4); text-align: center; padding: 20px; font-size: 13px; border-top: 1px solid rgba(255,255,255,0.07); }
+    footer a { color: #4ade80; text-decoration: none; }
   </style>
 </head>
 <body>
 
 <header>
-  <span>☁ CloudPixel AI</span>
-  <a href="https://cloudpixelai.in/">← Back to Home</a>
+  <a href="https://cloudpixelai.in" aria-label="CloudPixel AI - Home">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 56" height="40">
+      <defs>
+        <linearGradient id="cg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7EC8E3"/><stop offset="100%" stop-color="#4DA8DA"/></linearGradient>
+        <linearGradient id="pg2" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#5ab4f0"/><stop offset="100%" stop-color="#2a80c4"/></linearGradient>
+        <linearGradient id="tg2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#e040fb"/><stop offset="50%" stop-color="#4ade80"/><stop offset="100%" stop-color="#e040fb"/></linearGradient>
+        <clipPath id="cm2"><path d="M6,43 Q6,51 13,51 L47,51 Q54,51 54,43 L54,36 Q59,36 62,31 Q65,26 62,21 Q65,16 62,11 Q58,7 53,9 Q51,3 44,1 Q37,-1 33,6 Q29,0 22,0 Q14,0 11,8 Q5,6 2,13 Q-1,20 3,26 Q-2,31 -2,38 Q6,38 6,43 Z"/></clipPath>
+      </defs>
+      <path d="M6,43 Q6,51 13,51 L47,51 Q54,51 54,43 L54,36 Q59,36 62,31 Q65,26 62,21 Q65,16 62,11 Q58,7 53,9 Q51,3 44,1 Q37,-1 33,6 Q29,0 22,0 Q14,0 11,8 Q5,6 2,13 Q-1,20 3,26 Q-2,31 -2,38 Q6,38 6,43 Z" fill="url(#cg2)"/>
+      <g clip-path="url(#cm2)">
+        <rect x="14" y="10" width="7" height="7" rx="1" fill="url(#pg2)"/><rect x="23" y="10" width="7" height="7" rx="1" fill="url(#pg2)"/><rect x="32" y="10" width="7" height="7" rx="1" fill="url(#pg2)"/><rect x="41" y="10" width="7" height="7" rx="1" fill="url(#pg2)"/>
+        <rect x="14" y="19" width="7" height="7" rx="1" fill="url(#pg2)"/><rect x="23" y="19" width="7" height="7" rx="1" fill="url(#pg2)"/><rect x="32" y="19" width="7" height="7" rx="1" fill="url(#pg2)"/><rect x="41" y="19" width="7" height="7" rx="1" fill="url(#pg2)"/>
+        <rect x="14" y="28" width="7" height="7" rx="1" fill="url(#pg2)"/><rect x="23" y="28" width="7" height="7" rx="1" fill="url(#pg2)"/><rect x="32" y="28" width="7" height="7" rx="1" fill="url(#pg2)"/><rect x="41" y="28" width="7" height="7" rx="1" fill="url(#pg2)"/>
+        <rect x="14" y="37" width="7" height="7" rx="1" fill="url(#pg2)"/><rect x="23" y="37" width="7" height="7" rx="1" fill="url(#pg2)"/><rect x="32" y="37" width="7" height="7" rx="1" fill="url(#pg2)"/><rect x="41" y="37" width="7" height="7" rx="1" fill="url(#pg2)"/>
+      </g>
+      <text x="70" y="28" font-family="'Bebas Neue','Inter',sans-serif" font-size="20" font-weight="700" letter-spacing="2" dominant-baseline="central"><tspan fill="url(#tg2)">CLOUDPIXEL</tspan><tspan fill="#4ade80"> AI</tspan></text>
+    </svg>
+  </a>
+  <a class="back-link" href="https://cloudpixelai.in/">← Back to Home</a>
 </header>
 
 <div class="hero">
@@ -63,17 +81,14 @@
   <p>This is not an exception. This is the standard behavior of today's traveler.</p>
 
   <h2>Real Examples from Vizag Businesses</h2>
-
   <div class="example-box">
     <h3>🍽 Example 1 — Beachside Restaurant, RK Beach</h3>
     <p>A seafood restaurant near RK Beach started receiving 60% of its new customers through Google Maps after creating a basic website with their menu and photos. Customers from other cities began visiting specifically after reading online reviews.</p>
   </div>
-
   <div class="example-box">
     <h3>🏨 Example 2 — Budget Hotel, Gajuwaka</h3>
     <p>A mid-range hotel in Gajuwaka saw a significant increase in direct bookings after listing their property online with proper descriptions, amenities, and photos — reducing dependency on third-party booking agents.</p>
   </div>
-
   <div class="example-box">
     <h3>🚌 Example 3 — Local Tour Operator, Vizag</h3>
     <p>A local sightseeing service started appearing in Google search results for "Araku Valley tour from Vizag" after building a simple website. Enquiries from tourists increased consistently month after month.</p>
@@ -113,9 +128,9 @@
   © 2026 CloudPixel AI Studio · Vijayawada, AP & Telangana ·
   <a href="https://cloudpixelai.in/">cloudpixelai.in</a> ·
   <a href="mailto:info@cloudpixelai.in">info@cloudpixelai.in</a>
-    <br><br>
-  <a href="/blog-2999-website.html" style="color:#4fc3f7;">₹2999 Website Blog →</a> &nbsp;|&nbsp;
-  <a href="/blog-amaravati-car-travels.html" style="color:#4fc3f7;">Amaravati Travels Blog →</a>
+  <br><br>
+  <a href="/blog-2999-website.html">₹2999 Website Blog →</a> &nbsp;|&nbsp;
+  <a href="/blog-amaravati-car-travels.html">Amaravati Travels Blog →</a>
 </footer>
 
 </body>
