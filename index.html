@@ -1283,38 +1283,75 @@ document.addEventListener('click',function(e){var item=document.getElementById('
 }
 </script>
   <!-- CloudPixel AI Chatbot Widget -->
-<div id="cp-chat-widget" style="position:fixed;bottom:24px;right:24px;z-index:99999;font-family:sans-serif;pointer-events:all;">
-  <div id="cp-chat-box" style="display:none;width:320px;height:440px;background:#fff;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.18);flex-direction:column;overflow:hidden;">
-    <div style="background:#1a1a2e;padding:16px;color:#fff;display:flex;justify-content:space-between;align-items:center;">
-      <span style="font-weight:700;">☁️ CloudPixel AI</span>
-      <span onclick="toggleChat()" style="cursor:pointer;font-size:20px;">✕</span>
-    </div>
-    <div id="cp-messages" style="flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px;height:320px;"></div>
-    <div style="padding:10px;border-top:1px solid #eee;display:flex;gap:8px;">
-      <input id="cp-input" type="text" placeholder="మీ message టైప్ చేయండి..." style="flex:1;padding:8px 12px;border:1px solid #ddd;border-radius:20px;outline:none;font-size:14px;" onkeydown="if(event.key==='Enter')sendMsg()"/>
-      <button onclick="sendMsg()" style="background:#1a1a2e;color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:18px;">➤</button>
-    </div>
+<style>
+#cp-widget-btn{position:fixed;bottom:24px;right:24px;z-index:99999;width:56px;height:56px;background:#1a1a2e;border:none;border-radius:50%;color:#fff;font-size:26px;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,0.3);}
+#cp-widget-box{position:fixed;bottom:90px;right:24px;z-index:99999;width:320px;height:440px;background:#fff;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.2);display:none;flex-direction:column;overflow:hidden;}
+#cp-widget-header{background:#1a1a2e;padding:14px 16px;color:#fff;display:flex;justify-content:space-between;align-items:center;font-weight:700;}
+#cp-widget-msgs{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px;height:310px;}
+#cp-widget-footer{padding:10px;border-top:1px solid #eee;display:flex;gap:8px;}
+#cp-widget-input{flex:1;padding:8px 12px;border:1px solid #ddd;border-radius:20px;outline:none;font-size:14px;}
+#cp-widget-send{background:#1a1a2e;color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;}
+.cp-user-msg{background:#1a1a2e;color:#fff;padding:8px 12px;border-radius:12px;font-size:14px;align-self:flex-end;max-width:80%;}
+.cp-bot-msg{background:#f0f0f0;color:#222;padding:8px 12px;border-radius:12px;font-size:14px;align-self:flex-start;max-width:80%;}
+</style>
+
+<button id="cp-widget-btn" onclick="cpToggle()">💬</button>
+<div id="cp-widget-box">
+  <div id="cp-widget-header">
+    <span>☁️ CloudPixel AI</span>
+    <span onclick="cpToggle()" style="cursor:pointer;">✕</span>
   </div>
-  <button onclick="toggleChat()" id="cp-toggle-btn" style="background:#1a1a2e;color:#fff;border:none;border-radius:50%;width:56px;height:56px;font-size:28px;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,0.2);display:block;margin-left:auto;">💬</button>
+  <div id="cp-widget-msgs"></div>
+  <div id="cp-widget-footer">
+    <input id="cp-widget-input" type="text" placeholder="Message టైప్ చేయండి..." onkeydown="if(event.key==='Enter')cpSend()"/>
+    <button id="cp-widget-send" onclick="cpSend()">➤</button>
+  </div>
 </div>
+
 <script>
-  let cpHistory = [];
-  let cpOpen = false;
-  function toggleChat() {
-    cpOpen = !cpOpen;
-    document.getElementById('cp-chat-box').style.display = cpOpen ? 'flex' : 'none';
-    document.getElementById('cp-toggle-btn').style.display = cpOpen ? 'none' : 'block';
-    if (cpOpen && cpHistory.length === 0) addMsg('bot', 'నమస్కారం! 👋 నేను CloudPixel AI Assistant. మీకు ఎలా సహాయం చేయాలి?');
+var cpHistory=[];
+var cpIsOpen=false;
+function cpToggle(){
+  cpIsOpen=!cpIsOpen;
+  var box=document.getElementById('cp-widget-box');
+  box.style.display=cpIsOpen?'flex':'none';
+  if(cpIsOpen&&cpHistory.length===0){
+    cpAddMsg('bot','నమస్కారం! 👋 నేను CloudPixel AI. మీకు ఎలా సహాయం చేయాలి?');
   }
-  function addMsg(role, text) {
-    const div = document.createElement('div');
-    div.style.cssText = `max-width:80%;padding:8px 12px;border-radius:12px;font-size:14px;line-height:1.4;${role==='user'?'background:#1a1a2e;color:#fff;align-self:flex-end;':'background:#f0f0f0;color:#222;align-self:flex-start;'}`;
-    div.innerText = text;
-    document.getElementById('cp-messages').appendChild(div);
-    document.getElementById('cp-messages').scrollTop = 9999;
+}
+function cpAddMsg(role,text){
+  var msgs=document.getElementById('cp-widget-msgs');
+  var div=document.createElement('div');
+  div.className=role==='user'?'cp-user-msg':'cp-bot-msg';
+  div.innerText=text;
+  msgs.appendChild(div);
+  msgs.scrollTop=msgs.scrollHeight;
+}
+async function cpSend(){
+  var input=document.getElementById('cp-widget-input');
+  var msg=input.value.trim();
+  if(!msg)return;
+  input.value='';
+  cpAddMsg('user',msg);
+  cpHistory.push({role:'user',parts:[{text:msg}]});
+  cpAddMsg('bot','...');
+  try{
+    var res=await fetch('https://cloudpixel-agent.cloudpixelai-in.workers.dev/',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({message:msg,history:cpHistory.slice(0,-1)})
+    });
+    var data=await res.json();
+    var msgs=document.getElementById('cp-widget-msgs');
+    msgs.removeChild(msgs.lastChild);
+    cpAddMsg('bot',data.reply||data.error||'Error');
+    cpHistory.push({role:'model',parts:[{text:data.reply||''}]});
+  }catch(e){
+    var msgs=document.getElementById('cp-widget-msgs');
+    msgs.removeChild(msgs.lastChild);
+    cpAddMsg('bot','Connection error. Try again.');
   }
-  async function sendMsg() {
-    const input = document.getElementById('cp-input');
-    cons
+}
+</script>
 </body>
 </html>
