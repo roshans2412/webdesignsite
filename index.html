@@ -54,9 +54,6 @@
   --bd:rgba(34,208,90,0.1);
   --bd2:rgba(255,255,255,0.055);
   --bd3:rgba(224,64,251,0.12);
-  /* ============================================
-     CHANGE 3: SILVER + DARK THEME VARIABLES
-     ============================================ */
   --silver:#c0c0d8;
   --silver-muted:#8888a8;
   --silver-border:rgba(192,192,220,0.2);
@@ -72,9 +69,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--wh);overf
 #cur{position:fixed;width:10px;height:10px;background:var(--mg);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);box-shadow:0 0 14px var(--mg-glow);}
 #cur2{position:fixed;width:32px;height:32px;border:1.5px solid rgba(224,64,251,0.3);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:left .08s,top .08s;}
 
-/* ============================================
-   CHANGE 2: TOP TICKER BAR — Green scrolling
-   ============================================ */
+/* TOP TICKER — email + reply time only (phone removed) */
 .top-ticker{
   position:fixed;
   top:0;
@@ -100,15 +95,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--wh);overf
   padding:0 18px;
   letter-spacing:0.3px;
 }
-.top-ticker span.ti-phone{color:#22d05a;}
 .top-ticker span.ti-email{color:#90d4b0;}
 .top-ticker span.ti-msg{color:#ffffff;}
 .top-ticker span.ti-dot{color:#2a5a3a;padding:0 4px;}
 
-/* NAV — pushed down by ticker height */
+/* NAV */
 nav{
   position:fixed;
-  top:30px; /* ticker height */
+  top:30px;
   width:100%;
   z-index:990;
   height:62px;
@@ -121,13 +115,10 @@ nav{
   border-bottom:1px solid var(--bd2);
 }
 .nlogo{display:flex;align-items:center;gap:10px;}
-.nlsq{width:36px;height:36px;background:linear-gradient(135deg,var(--mg3),var(--pk));border-radius:9px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:1px;box-shadow:0 0 18px rgba(156,39,176,.45);}
 .nltx{font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:2.5px;background:linear-gradient(90deg,var(--mg2),var(--pk2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .nlinks{display:flex;gap:1.9rem;list-style:none;}
 .nlinks a{text-decoration:none;color:var(--gr2);font-size:.81rem;font-weight:500;transition:color .2s;letter-spacing:.3px;}
 .nlinks a:hover{color:var(--wh);}
-.nwa{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,var(--mg),var(--mg3));color:#fff;padding:9px 20px;border-radius:8px;text-decoration:none;font-weight:700;font-size:.79rem;box-shadow:0 0 18px var(--mg-glow);transition:all .25s;letter-spacing:.4px;}
-.nwa:hover{box-shadow:0 0 35px var(--mg-glow);transform:translateY(-2px);}
 
 /* MESH BACKGROUND */
 body::after{content:'';position:fixed;inset:0;background:
@@ -135,7 +126,7 @@ body::after{content:'';position:fixed;inset:0;background:
   radial-gradient(ellipse 60% 40% at 20% 80%,rgba(224,64,251,.05),transparent);pointer-events:none;z-index:0;}
 .gbg{position:absolute;inset:0;background-image:linear-gradient(rgba(34,208,90,.016) 1px,transparent 1px),linear-gradient(90deg,rgba(34,208,90,.016) 1px,transparent 1px);background-size:72px 72px;}
 
-/* HERO — top padding increased for ticker + nav */
+/* HERO */
 .hero{
   min-height:100vh;
   position:relative;
@@ -143,17 +134,11 @@ body::after{content:'';position:fixed;inset:0;background:
   display:grid;
   grid-template-columns:1fr 1fr;
   align-items:center;
-  padding:112px 5% 60px; /* 30px ticker + 62px nav + buffer */
+  padding:112px 5% 60px;
   gap:4rem;
   z-index:1;
 }
 .hleft{position:relative;z-index:1;}
-
-/* ============================================
-   CHANGE 3: SILVER ACCENT on hchip REMOVED
-   CHANGE 1: "VIJAYAWADA'S AI WEB STUDIO" tag removed
-   tagbadge gets silver styling
-   ============================================ */
 .tagbadge{
   display:inline-flex;
   align-items:center;
@@ -168,7 +153,6 @@ body::after{content:'';position:fixed;inset:0;background:
   letter-spacing:1px;
   margin-bottom:1.5rem;
 }
-/* Silver dot animation */
 .sdot{width:6px;height:6px;background:var(--silver);border-radius:50%;box-shadow:0 0 6px var(--silver);animation:lb 1.4s infinite;flex-shrink:0;}
 @keyframes lb{0%,100%{opacity:1}50%{opacity:.1}}
 
@@ -180,14 +164,10 @@ body::after{content:'';position:fixed;inset:0;background:
 .hbtns{display:flex;gap:.85rem;flex-wrap:wrap;margin:1.8rem 0 2.4rem;}
 .bpk{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--pk),var(--pk3));color:#fff;padding:13px 30px;border-radius:10px;text-decoration:none;font-weight:700;font-size:.87rem;box-shadow:0 0 28px var(--pk-glow);transition:all .25s;}
 .bpk:hover{box-shadow:0 0 50px var(--pk-glow);transform:translateY(-3px);}
-.bmg{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--mg),var(--mg3));color:#fff;padding:13px 30px;border-radius:10px;text-decoration:none;font-weight:700;font-size:.87rem;box-shadow:0 0 28px var(--mg-glow);transition:all .25s;}
-.bmg:hover{box-shadow:0 0 50px var(--mg-glow);transform:translateY(-3px);}
 .bgh{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--wh2);padding:13px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:.87rem;border:1px solid rgba(255,255,255,.1);transition:all .25s;}
 .bgh:hover{border-color:var(--silver);color:var(--silver);}
 
-/* ============================================
-   CHANGE 3: KPIs — silver border bottom accent
-   ============================================ */
+/* KPIs — Hero only */
 .hkpis{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--silver-border);border-radius:14px;overflow:hidden;background:rgba(192,192,220,0.03);}
 .kpi{padding:1.1rem .7rem;text-align:center;border-right:1px solid var(--silver-border);transition:background .2s;position:relative;}
 .kpi:last-child{border-right:none;}
@@ -224,7 +204,7 @@ body::after{content:'';position:fixed;inset:0;background:
 .fcv.m{color:var(--silver);}
 .fct{font-size:.62rem;color:var(--gr2);margin-top:2px;}
 
-/* TICKER — services ticker (existing, unchanged) */
+/* TICKER — services */
 .ticker{border-top:1px solid var(--silver-border);border-bottom:1px solid var(--silver-border);padding:11px 0;overflow:hidden;position:relative;z-index:1;}
 .tinner{display:flex;animation:tr 22s linear infinite;white-space:nowrap;}
 .ti{color:var(--gr2);font-size:.67rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;padding:0 2rem;flex-shrink:0;}
@@ -263,7 +243,7 @@ body::after{content:'';position:fixed;inset:0;background:
 .stitle .mg{color:var(--silver);}
 .sdesc{color:var(--gr2);font-size:.92rem;line-height:1.78;max-width:540px;}
 
-/* ABOUT */
+/* ABOUT — stats removed */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:center;margin-top:2.8rem;}
 .aright{display:flex;flex-direction:column;gap:1rem;}
 .aabout-p{color:var(--gr2);font-size:.93rem;line-height:1.85;margin-bottom:1rem;}
@@ -276,18 +256,8 @@ body::after{content:'';position:fixed;inset:0;background:
 .avi.mv{background:var(--silver-bg);border:1px solid var(--silver-border);}
 .avt{font-weight:700;font-size:.89rem;margin-bottom:2px;font-family:'Syne',sans-serif;}
 .avs{font-size:.78rem;color:var(--gr);line-height:1.6;}
-.astat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:.85rem;margin-top:2.3rem;}
-.astat{background:var(--bg3);border:1px solid var(--bd2);border-radius:13px;padding:1.35rem .9rem;text-align:center;position:relative;overflow:hidden;transition:all .25s;}
-.astat::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;}
-.astat.gstat::before{background:linear-gradient(90deg,var(--pk),var(--pk2));}
-.astat.mstat::before{background:linear-gradient(90deg,var(--silver),var(--silver-muted));}
-.astat:hover{transform:translateY(-3px);}
-.astn{font-family:'Bebas Neue',sans-serif;font-size:2.3rem;line-height:1;}
-.astn.g{color:var(--pk);}
-.astn.m{color:var(--silver);}
-.astl{font-size:.68rem;color:var(--gr);margin-top:4px;font-weight:500;}
 
-/* About visual block */
+/* About visual */
 .about-visual{border-radius:18px;overflow:hidden;position:relative;box-shadow:0 28px 75px rgba(0,0,0,.5),0 0 0 1px var(--silver-border);}
 .about-visual img{width:100%;aspect-ratio:4/3;object-fit:cover;filter:brightness(.7) saturate(1.2);}
 .about-visual-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(192,192,220,.1),rgba(0,0,0,.35));}
@@ -404,23 +374,6 @@ textarea.cpinput{resize:vertical;min-height:82px;}
 @media(max-width:1024px){.cpwrap{grid-template-columns:1fr;}}
 
 /* TEAM */
-.team-minimal{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:2.5rem;}
-.tcard-min{background:var(--bg3);border:1px solid var(--silver-border);border-radius:16px;padding:1.6rem;transition:all .3s;display:flex;flex-direction:column;gap:.85rem;}
-.tcard-min:hover{border-color:var(--silver);transform:translateY(-4px);}
-.tcard-min:nth-child(2):hover{border-color:rgba(224,64,251,.2);}
-.tcard-avatar{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:#fff;flex-shrink:0;}
-.tcard-avatar.av-g{background:linear-gradient(135deg,var(--pk),var(--pk3));box-shadow:0 4px 16px var(--pk-glow);}
-.tcard-avatar.av-m{background:linear-gradient(135deg,var(--silver),#9090b8);box-shadow:0 4px 16px rgba(192,192,220,.25);}
-.tcard-avatar.av-b{background:linear-gradient(135deg,#6366f1,#818cf8);box-shadow:0 4px 16px rgba(99,102,241,.3);}
-.tcard-name{font-weight:800;font-size:.97rem;font-family:'Syne',sans-serif;margin-bottom:1px;}
-.tcard-role{font-size:.72rem;color:var(--pk2);font-weight:600;letter-spacing:.5px;margin-bottom:.4rem;}
-.tcard-min:nth-child(2) .tcard-role{color:var(--silver);}
-.tcard-desc{font-size:.78rem;color:var(--gr2);line-height:1.65;}
-.tcard-skills{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.5rem;}
-.tskill{font-size:.64rem;font-weight:600;padding:3px 9px;border-radius:5px;}
-.tskill.sg{background:rgba(34,208,90,.08);border:1px solid rgba(34,208,90,.15);color:var(--pk2);}
-.tskill.sm{background:var(--silver-bg);border:1px solid var(--silver-border);color:var(--silver);}
-.tskill.sb{background:rgba(99,102,241,.08);border:1px solid rgba(99,102,241,.15);color:#a5b4fc;}
 .team-note{margin-top:2rem;background:var(--silver-bg);border:1px solid var(--silver-border);border-radius:13px;padding:1.2rem 1.6rem;display:flex;align-items:center;gap:.95rem;}
 .tn-icon{font-size:1.5rem;flex-shrink:0;}
 .tn-text{font-size:.81rem;color:var(--gr2);line-height:1.65;}
@@ -499,11 +452,6 @@ textarea.cpinput{resize:vertical;min-height:82px;}
 .cdi.g{background:rgba(34,208,90,.1);border:1px solid rgba(34,208,90,.15);}
 .cdi.m{background:var(--silver-bg);border:1px solid var(--silver-border);}
 
-/* FLOATING WA */
-.wa-float{position:fixed;bottom:26px;right:26px;z-index:980;width:56px;height:56px;background:linear-gradient(135deg,#25D366,#128C7E);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.65rem;box-shadow:0 8px 28px rgba(37,211,102,.4);text-decoration:none;animation:wapulse 2.5s ease-in-out infinite;transition:transform .2s;}
-.wa-float:hover{transform:scale(1.12);}
-@keyframes wapulse{0%,100%{box-shadow:0 8px 28px rgba(37,211,102,.4)}50%{box-shadow:0 8px 42px rgba(37,211,102,.6),0 0 0 9px rgba(37,211,102,.07)}}
-
 /* FOOTER */
 footer{background:var(--bg2);border-top:1px solid var(--silver-border);padding:55px 5% 0;display:grid;grid-template-columns:2.5fr 1fr 1fr 1fr;gap:3rem;position:relative;z-index:1;}
 .flb p{font-size:.78rem;color:var(--gr);line-height:1.8;max-width:260px;margin-top:.85rem;}
@@ -517,9 +465,14 @@ footer h5{font-size:.62rem;font-weight:700;letter-spacing:3px;text-transform:upp
 footer ul{list-style:none;display:flex;flex-direction:column;gap:.62rem;}
 footer ul a{color:var(--gr);text-decoration:none;font-size:.78rem;transition:color .2s;}
 footer ul a:hover{color:var(--silver);}
+
+/* WhatsApp Footer Button */
+.wa-footer-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;padding:11px 24px;border-radius:10px;text-decoration:none;font-weight:700;font-size:.85rem;box-shadow:0 4px 18px rgba(37,211,102,.35);transition:all .25s;margin-top:1rem;}
+.wa-footer-btn:hover{box-shadow:0 8px 30px rgba(37,211,102,.5);transform:translateY(-2px);}
+
 .fbot{border-top:1px solid var(--silver-border);padding:17px 5%;display:flex;justify-content:space-between;align-items:center;font-size:.69rem;color:var(--silver-muted);background:var(--bg2);position:relative;z-index:1;}
 
-  /* HAMBURGER MENU */
+/* HAMBURGER MENU */
 .hmenu-btn{display:none;background:none;border:1px solid var(--silver-border);color:var(--silver);font-size:1.3rem;width:38px;height:38px;border-radius:8px;cursor:pointer;align-items:center;justify-content:center;}
 .hmenu-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:1100;backdrop-filter:blur(4px);}
 .hmenu{position:fixed;top:0;right:-280px;width:270px;height:100vh;background:var(--bg3);border-left:1px solid var(--silver-border);z-index:1200;padding:1.5rem;display:flex;flex-direction:column;gap:.5rem;transition:right .3s ease;}
@@ -527,9 +480,9 @@ footer ul a:hover{color:var(--silver);}
 .hmenu-close{background:none;border:1px solid var(--silver-border);color:var(--silver);width:34px;height:34px;border-radius:7px;cursor:pointer;font-size:1rem;margin-bottom:1rem;align-self:flex-end;}
 .hmenu a{color:var(--gr2);text-decoration:none;font-size:.9rem;font-weight:600;padding:.75rem 1rem;border-radius:8px;border:1px solid transparent;transition:all .2s;}
 .hmenu a:hover{color:var(--wh);border-color:var(--silver-border);background:var(--silver-bg);}
-.hmenu-wa{background:linear-gradient(135deg,var(--mg),var(--mg3))!important;color:#fff!important;border-color:transparent!important;text-align:center;margin-top:.5rem;box-shadow:0 4px 16px var(--mg-glow);}
 .hmenu-overlay.open{display:block;}
 @media(max-width:1024px){.hmenu-btn{display:flex;}}
+
 /* REVEAL */
 .rv{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;}
 .rv.in{opacity:1;transform:translateY(0);}
@@ -545,9 +498,7 @@ footer ul a:hover{color:var(--silver);}
   .prc.hot{transform:none;}
   .trow{grid-template-columns:1fr 1fr;}
   footer{grid-template-columns:1fr 1fr;}
-  .astat-row{grid-template-columns:repeat(2,1fr);}
   .wu-grid{grid-template-columns:1fr;}
-  .team-minimal{grid-template-columns:1fr 1fr;}
   .port-grid{grid-template-columns:1fr 1fr;}
   #contact-grid{grid-template-columns:1fr!important;}
 }
@@ -556,9 +507,9 @@ footer ul a:hover{color:var(--silver);}
   nav{top:28px;}
   .hero{padding-top:106px;}
   .sec{padding:60px 4%;}
-  .srv-grid,.trow,.astat-row{grid-template-columns:1fr;}
+  .srv-grid,.trow{grid-template-columns:1fr;}
   footer{grid-template-columns:1fr;}
-  .team-minimal,.port-grid{grid-template-columns:1fr;}
+  .port-grid{grid-template-columns:1fr;}
   .hkpis{grid-template-columns:repeat(2,1fr);}
   .rating-summary{flex-direction:column;align-items:flex-start;}
   .rs-divider{display:none;}
@@ -569,25 +520,21 @@ footer ul a:hover{color:var(--silver);}
 <body>
 <div id="cur"></div><div id="cur2"></div>
 
-<!-- ============================================
-     CHANGE 2: TOP GREEN TICKER BAR
-     Continuously scrolling phone + email + reply time
-     ============================================ -->
+<!-- TOP TICKER — email + reply time only, phone removed -->
 <div class="top-ticker">
   <div class="top-ticker-inner">
-    <span class="ti-item ti-phone">📞 +91 8367540839</span>
+    <span class="ti-item ti-email">✉ info@cloudpixelai.in</span>
+    <span class="ti-dot">●</span>
+    <span class="ti-item ti-msg">⚡ Replies within 30 minutes · 9AM–9PM · 7 Days</span>
     <span class="ti-dot">●</span>
     <span class="ti-item ti-email">✉ info@cloudpixelai.in</span>
     <span class="ti-dot">●</span>
     <span class="ti-item ti-msg">⚡ Replies within 30 minutes · 9AM–9PM · 7 Days</span>
     <span class="ti-dot">●</span>
-      </div>
+  </div>
 </div>
 
-<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/918367540839?text=Hi%20CloudPixel%20AI%20Team!%20%F0%9F%91%8B%20I%20need%20a%20website." class="wa-float" title="WhatsApp Us">&#128172;</a>
-
-<!-- NAV -->
+<!-- NAV — WhatsApp button removed -->
 <nav>
  <div class="nlogo">
   <img src="/CloudPixelAI-Website-White.png" alt="CloudPixel AI" height="44" style="display:block;">
@@ -597,21 +544,20 @@ footer ul a:hover{color:var(--silver);}
     <li><a href="#services">Services</a></li>
     <li><a href="#portfolio">Work</a></li>
     <li><a href="#pricing">Pricing</a></li>
-  <li style="position:relative;" id="blog-nav-item">
-  <a href="#blog" id="blogToggle" onclick="toggleBlogDropdown(event)" style="display:flex;align-items:center;gap:5px;">Blog <span id="blogArrow" style="font-size:10px;transition:transform 0.2s;display:inline-block;">▾</span></a>
-  <div id="blogDropdown" style="display:none;position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);background:#0d0d20;border:1px solid rgba(34,208,90,0.18);border-radius:12px;min-width:260px;z-index:9999;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,0.6);padding:6px 0;">
-    <a href="/blog-2999-website.html" style="display:flex;align-items:center;gap:12px;padding:11px 16px;text-decoration:none;color:#ddd;font-size:0.8rem;border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.background='rgba(34,208,90,0.08)';this.style.color='#22d05a';" onmouseout="this.style.background='transparent';this.style.color='#ddd';"><span style="width:32px;height:32px;background:rgba(34,208,90,0.1);border:1px solid rgba(34,208,90,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">💰</span><span><span style="display:block;font-weight:600;">₹2999 Website Guide</span><span style="display:block;font-size:0.7rem;color:#7878a0;margin-top:2px;">Small business కి affordable website</span></span></a>
-    <a href="/blog-vizag-hotels-restaurants.html" style="display:flex;align-items:center;gap:12px;padding:11px 16px;text-decoration:none;color:#ddd;font-size:0.8rem;border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.background='rgba(34,208,90,0.08)';this.style.color='#22d05a';" onmouseout="this.style.background='transparent';this.style.color='#ddd';"><span style="width:32px;height:32px;background:rgba(34,208,90,0.1);border:1px solid rgba(34,208,90,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">🌊</span><span><span style="display:block;font-weight:600;">Vizag Hotels &amp; Restaurants</span><span style="display:block;font-size:0.7rem;color:#7878a0;margin-top:2px;">Google లో ఎలా కనిపిస్తారు?</span></span></a>
-    <a href="/blog-amaravati-car-travels.html" style="display:flex;align-items:center;gap:12px;padding:11px 16px;text-decoration:none;color:#ddd;font-size:0.8rem;" onmouseover="this.style.background='rgba(34,208,90,0.08)';this.style.color='#22d05a';" onmouseout="this.style.background='transparent';this.style.color='#ddd';"><span style="width:32px;height:32px;background:rgba(34,208,90,0.1);border:1px solid rgba(34,208,90,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">🚗</span><span><span style="display:block;font-weight:600;">Amaravati Car Travels</span><span style="display:block;font-size:0.7rem;color:#7878a0;margin-top:2px;">Vijayawada → Amaravati opportunity</span></span></a>
-    <a href="/blog-playschool.html" style="display:flex;align-items:center;gap:12px;padding:11px 16px;text-decoration:none;color:#ddd;font-size:0.8rem;border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.background='rgba(34,208,90,0.08)';this.style.color='#22d05a';" onmouseout="this.style.background='transparent';this.style.color='#ddd';"><span style="width:32px;height:32px;background:rgba(34,208,90,0.1);border:1px solid rgba(34,208,90,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">🏫</span><span><span style="display:block;font-weight:600;">Play School Success Story</span><span style="display:block;font-size:0.7rem;color:#7878a0;margin-top:2px;">15+ enquiries online లో వచ్చాయి</span></span></a>
-    <a href="/blog-digital-marketing-guide.html" style="display:flex;align-items:center;gap:12px;padding:11px 16px;text-decoration:none;color:#ddd;font-size:0.8rem;border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.background='rgba(34,208,90,0.08)';this.style.color='#22d05a';" onmouseout="this.style.background='transparent';this.style.color='#ddd';"><span style="width:32px;height:32px;background:rgba(34,208,90,0.1);border:1px solid rgba(34,208,90,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">📈</span><span><span style="display:block;font-weight:600;">Digital Marketing Guide</span><span style="display:block;font-size:0.7rem;color:#7878a0;margin-top:2px;">SEO, Analytics — తెలుగులో నేర్చుకోండి</span></span></a>
-    <div style="padding:8px 16px;border-top:1px solid rgba(255,255,255,0.05);text-align:center;"><a href="#blog" onclick="document.getElementById('blogDropdown').style.display='none';" style="font-size:0.72rem;color:#22d05a;text-decoration:none;font-weight:600;">All Blogs చూడండి →</a></div>
-  </div>
-</li>
+    <li style="position:relative;" id="blog-nav-item">
+      <a href="#blog" id="blogToggle" onclick="toggleBlogDropdown(event)" style="display:flex;align-items:center;gap:5px;">Blog <span id="blogArrow" style="font-size:10px;transition:transform 0.2s;display:inline-block;">▾</span></a>
+      <div id="blogDropdown" style="display:none;position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);background:#0d0d20;border:1px solid rgba(34,208,90,0.18);border-radius:12px;min-width:260px;z-index:9999;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,0.6);padding:6px 0;">
+        <a href="/blog-2999-website.html" style="display:flex;align-items:center;gap:12px;padding:11px 16px;text-decoration:none;color:#ddd;font-size:0.8rem;border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.background='rgba(34,208,90,0.08)';this.style.color='#22d05a';" onmouseout="this.style.background='transparent';this.style.color='#ddd';"><span style="width:32px;height:32px;background:rgba(34,208,90,0.1);border:1px solid rgba(34,208,90,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">💰</span><span><span style="display:block;font-weight:600;">₹2999 Website Guide</span><span style="display:block;font-size:0.7rem;color:#7878a0;margin-top:2px;">Small business కి affordable website</span></span></a>
+        <a href="/blog-vizag-hotels-restaurants.html" style="display:flex;align-items:center;gap:12px;padding:11px 16px;text-decoration:none;color:#ddd;font-size:0.8rem;border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.background='rgba(34,208,90,0.08)';this.style.color='#22d05a';" onmouseout="this.style.background='transparent';this.style.color='#ddd';"><span style="width:32px;height:32px;background:rgba(34,208,90,0.1);border:1px solid rgba(34,208,90,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">🌊</span><span><span style="display:block;font-weight:600;">Vizag Hotels &amp; Restaurants</span><span style="display:block;font-size:0.7rem;color:#7878a0;margin-top:2px;">Google లో ఎలా కనిపిస్తారు?</span></span></a>
+        <a href="/blog-amaravati-car-travels.html" style="display:flex;align-items:center;gap:12px;padding:11px 16px;text-decoration:none;color:#ddd;font-size:0.8rem;" onmouseover="this.style.background='rgba(34,208,90,0.08)';this.style.color='#22d05a';" onmouseout="this.style.background='transparent';this.style.color='#ddd';"><span style="width:32px;height:32px;background:rgba(34,208,90,0.1);border:1px solid rgba(34,208,90,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">🚗</span><span><span style="display:block;font-weight:600;">Amaravati Car Travels</span><span style="display:block;font-size:0.7rem;color:#7878a0;margin-top:2px;">Vijayawada → Amaravati opportunity</span></span></a>
+        <a href="/blog-playschool.html" style="display:flex;align-items:center;gap:12px;padding:11px 16px;text-decoration:none;color:#ddd;font-size:0.8rem;border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.background='rgba(34,208,90,0.08)';this.style.color='#22d05a';" onmouseout="this.style.background='transparent';this.style.color='#ddd';"><span style="width:32px;height:32px;background:rgba(34,208,90,0.1);border:1px solid rgba(34,208,90,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">🏫</span><span><span style="display:block;font-weight:600;">Play School Success Story</span><span style="display:block;font-size:0.7rem;color:#7878a0;margin-top:2px;">15+ enquiries online లో వచ్చాయి</span></span></a>
+        <a href="/blog-digital-marketing-guide.html" style="display:flex;align-items:center;gap:12px;padding:11px 16px;text-decoration:none;color:#ddd;font-size:0.8rem;" onmouseover="this.style.background='rgba(34,208,90,0.08)';this.style.color='#22d05a';" onmouseout="this.style.background='transparent';this.style.color='#ddd';"><span style="width:32px;height:32px;background:rgba(34,208,90,0.1);border:1px solid rgba(34,208,90,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">📈</span><span><span style="display:block;font-weight:600;">Digital Marketing Guide</span><span style="display:block;font-size:0.7rem;color:#7878a0;margin-top:2px;">SEO, Analytics — తెలుగులో నేర్చుకోండి</span></span></a>
+        <div style="padding:8px 16px;border-top:1px solid rgba(255,255,255,0.05);text-align:center;"><a href="#blog" onclick="document.getElementById('blogDropdown').style.display='none';" style="font-size:0.72rem;color:#22d05a;text-decoration:none;font-weight:600;">All Blogs చూడండి →</a></div>
+      </div>
+    </li>
     <li><a href="#contact-form">Contact</a></li>
   </ul>
-  <a href="https://wa.me/918367540839?text=Hi%20CloudPixel%20AI%20Team!%20%F0%9F%91%8B%20I%20need%20a%20website.%20Please%20help!" class="nwa">&#128172; WhatsApp Now</a>
-<button class="hmenu-btn" id="hmenuBtn" onclick="toggleMenu()">&#9776;</button>
+  <button class="hmenu-btn" id="hmenuBtn" onclick="toggleMenu()">&#9776;</button>
 </nav>
 <div class="hmenu-overlay" id="hmenuOverlay" onclick="toggleMenu()"></div>
 <div class="hmenu" id="hmenu">
@@ -622,15 +568,12 @@ footer ul a:hover{color:var(--silver);}
   <a href="#pricing" onclick="toggleMenu()">Pricing</a>
   <a href="#blog" onclick="toggleMenu()">Blog</a>
   <a href="#contact-form" onclick="toggleMenu()">Contact</a>
-  <a href="https://wa.me/918367540839?text=Hi%20CloudPixel%20AI%20Team!%20%F0%9F%91%8B%20I%20need%20a%20website." class="hmenu-wa">&#128172; WhatsApp Now</a>
 </div>
 
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="gbg"></div>
   <div class="hleft">
-    <!-- CHANGE 1: "VIJAYAWADA'S AI WEB STUDIO" hchip REMOVED -->
-    <!-- CHANGE 3: tagbadge now uses silver styling -->
     <div class="tagbadge"><span class="sdot"></span>Smart Websites for AP &amp; Telangana Businesses</div>
     <h1>
       <span class="w1">PROFESSIONAL</span>
@@ -639,9 +582,10 @@ footer ul a:hover{color:var(--silver);}
       <span class="w3">Live in 3–5 days. Built for shops, clinics, startups &amp; brands across AP &amp; Telangana. Starting ₹2,999.</span>
     </h1>
     <div class="hbtns">
-      <a href="https://wa.me/918367540839?text=Hi%20CloudPixel%20AI%20Team!%20%F0%9F%91%8B%20I%20want%20to%20start%20my%20project!" class="bpk">&#128640; Start Your Project</a>
+      <a href="#contact-form" class="bpk">&#128640; Start Your Project</a>
       <a href="#portfolio" class="bgh">View Our Work &#8594;</a>
     </div>
+    <!-- STATS — only here, removed from About & Team -->
     <div class="hkpis">
       <div class="kpi"><div class="kpin g" id="kn1">75+</div><div class="kpil">Domains Built</div></div>
       <div class="kpi"><div class="kpin m" id="kn2">100%</div><div class="kpil">24/7 Support</div></div>
@@ -661,8 +605,9 @@ footer ul a:hover{color:var(--silver);}
   </div>
 </section>
 
-<!-- TICKER — services (existing) -->
+<!-- TICKER -->
 <div class="ticker"><div class="tinner">
+  <span class="ti">Website Design</span><span class="td g">&#10022;</span><span class="ti">SEO Optimization</span><span class="td m">&#10022;</span><span class="ti">E-Commerce</span><span class="td g">&#10022;</span><span class="ti">Maintenance &amp; Support</span><span class="td m">&#10022;</span><span class="ti">AI-Powered</span><span class="td g">&#10022;</span><span class="ti">Mobile-Ready</span><span class="td m">&#10022;</span><span class="ti">AP &amp; Telangana</span><span class="td g">&#10022;</span><span class="ti">CloudPixel AI</span><span class="td m">&#10022;</span>
   <span class="ti">Website Design</span><span class="td g">&#10022;</span><span class="ti">SEO Optimization</span><span class="td m">&#10022;</span><span class="ti">E-Commerce</span><span class="td g">&#10022;</span><span class="ti">Maintenance &amp; Support</span><span class="td m">&#10022;</span><span class="ti">AI-Powered</span><span class="td g">&#10022;</span><span class="ti">Mobile-Ready</span><span class="td m">&#10022;</span><span class="ti">AP &amp; Telangana</span><span class="td g">&#10022;</span><span class="ti">CloudPixel AI</span><span class="td m">&#10022;</span>
 </div></div>
 
@@ -676,7 +621,7 @@ footer ul a:hover{color:var(--silver);}
   </div>
 </div>
 
-<!-- ABOUT -->
+<!-- ABOUT — stats row removed -->
 <section class="sec seca" id="about">
   <div class="stag g">Who We Are</div>
   <div class="stitle">AP &amp; TELANGANA'S <span class="pk">TRUSTED WEB STUDIO</span></div>
@@ -694,18 +639,12 @@ footer ul a:hover{color:var(--silver);}
       <p class="aabout-p">We are <strong>CloudPixel AI Studio</strong> — based in Vijayawada, serving businesses across <strong>AP &amp; Telangana</strong>. We help small businesses, shops, clinics &amp; startups build beautiful websites that attract customers and grow revenue.</p>
       <div class="aval"><div class="avi gv">&#129302;</div><div><div class="avt">AI-Enhanced Design</div><div class="avs">Latest AI tools to create modern, unique websites faster than any traditional studio.</div></div></div>
       <div class="aval mv"><div class="avi mv">&#128176;</div><div><div class="avt">Best Price in AP</div><div class="avs">Professional quality starting at just ₹2,999 — made for Indian small businesses.</div></div></div>
-      <div class="aval"><div class="avi gv">&#129309;</div><div><div class="avt">Direct WhatsApp Support</div><div class="avs">No call centers. Talk directly to our team — available 9AM–9PM, 7 days a week.</div></div></div>
+      <div class="aval"><div class="avi gv">&#129309;</div><div><div class="avt">Direct Support</div><div class="avs">No call centers. Talk directly to our team — available 9AM–9PM, 7 days a week.</div></div></div>
     </div>
-  </div>
-  <div class="astat-row rv">
-    <div class="astat gstat"><div class="astn g">75+</div><div class="astl">Domains Built</div></div>
-    <div class="astat mstat"><div class="astn m">100%</div><div class="astl">24/7 Support</div></div>
-    <div class="astat gstat"><div class="astn g">3 Day</div><div class="astl">Fastest Delivery</div></div>
-    <div class="astat mstat"><div class="astn m">4.6&#9733;</div><div class="astl">Average Rating</div></div>
   </div>
 </section>
 
-<!-- SERVICES — 4 main only + AI badge -->
+<!-- SERVICES -->
 <section class="sec" id="services">
   <div class="stag m">What We Do</div>
   <div class="stitle">4 CORE SERVICES FOR <span class="pk">YOUR BUSINESS</span></div>
@@ -716,7 +655,7 @@ footer ul a:hover{color:var(--silver);}
       <span class="srvi">&#127760;</span>
       <h3>Business Website Design</h3>
       <p>Multi-page professional sites for shops, clinics &amp; agencies. Mobile-ready, fast, built to convert visitors into customers across AP &amp; Telangana.</p>
-      <a href="https://wa.me/918367540839?text=Hi!%20I%20need%20a%20Business%20Website." class="srvlnk g">Get Your Website Now &#8594;</a>
+      <a href="#contact-form" class="srvlnk g">Get Your Website Now &#8594;</a>
     </div>
     <div class="srv">
       <div class="srv-line m"></div>
@@ -724,7 +663,7 @@ footer ul a:hover{color:var(--silver);}
       <span class="srvi">&#128200;</span>
       <h3>SEO Optimization</h3>
       <p>Rank on Google for "Website Design Vijayawada" &amp; more. Keyword research, on-page SEO, Google Analytics &amp; Search Console setup included.</p>
-      <a href="https://wa.me/918367540839?text=Hi!%20I%20need%20SEO%20Setup." class="srvlnk m">Start SEO Now &#8594;</a>
+      <a href="#contact-form" class="srvlnk m">Start SEO Now &#8594;</a>
     </div>
     <div class="srv">
       <div class="srv-line g"></div>
@@ -732,7 +671,7 @@ footer ul a:hover{color:var(--silver);}
       <span class="srvi">&#128722;</span>
       <h3>E-Commerce Store</h3>
       <p>Full online stores with Razorpay/UPI, product catalog, cart, admin panel &amp; WhatsApp ordering. Start generating revenue from day one.</p>
-      <a href="https://wa.me/918367540839?text=Hi!%20I%20need%20an%20E-Commerce%20Store." class="srvlnk g">Build My Store &#8594;</a>
+      <a href="#contact-form" class="srvlnk g">Build My Store &#8594;</a>
     </div>
     <div class="srv">
       <div class="srv-line m"></div>
@@ -740,7 +679,7 @@ footer ul a:hover{color:var(--silver);}
       <span class="srvi">&#128295;</span>
       <h3>Maintenance &amp; Support</h3>
       <p>Monthly updates, security monitoring, performance improvements &amp; content changes. We keep your website fresh, fast &amp; secure year-round.</p>
-      <a href="https://wa.me/918367540839?text=Hi!%20I%20need%20Website%20Maintenance." class="srvlnk m">Get Support &#8594;</a>
+      <a href="#contact-form" class="srvlnk m">Get Support &#8594;</a>
     </div>
   </div>
   <div class="ai-badge-strip rv">
@@ -749,7 +688,7 @@ footer ul a:hover{color:var(--silver);}
       <strong>AI Content &amp; Automation — Available Add-On</strong>
       <span>AI-powered website content, blog articles, WhatsApp chatbot &amp; social media posts. Ask us for a custom quote.</span>
     </div>
-    <a href="https://wa.me/918367540839?text=Hi!%20I%20need%20AI%20Content%20%26%20Automation." class="ai-badge-cta">&#128172; Ask About AI Add-On</a>
+    <a href="#contact-form" class="ai-badge-cta">&#128172; Ask About AI Add-On</a>
   </div>
 </section>
 
@@ -781,7 +720,7 @@ footer ul a:hover{color:var(--silver);}
       </div>
     </div>
     <div class="port-card">
-      <img class="port-card-img" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="Salon Website">
+      <img class="port-card-img" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="Coaching Centre">
       <div class="port-card-ov"></div>
       <div class="port-card-body">
         <div class="port-tag b">&#128218; Coaching Centre</div>
@@ -793,7 +732,7 @@ footer ul a:hover{color:var(--silver);}
     </div>
   </div>
   <div class="port-more rv">
-    <p>&#128640; Need a sample for your industry? <a href="https://wa.me/918367540839?text=Hi!%20I%20want%20to%20see%20a%20sample%20website%20for%20my%20business.">WhatsApp us — we'll show you one instantly!</a> &nbsp;|&nbsp; Gym • Real Estate • Coaching • Travels • Play School &amp; more</p>
+    <p>&#128640; Need a sample for your industry? <a href="#contact-form">Contact us — we'll show you one instantly!</a> &nbsp;|&nbsp; Gym • Real Estate • Coaching • Travels • Play School &amp; more</p>
   </div>
 </section>
 
@@ -813,7 +752,7 @@ footer ul a:hover{color:var(--silver);}
         <div class="prcn">One-time · No renewal</div>
         <div class="prck">Perfect for small shops, salons &amp; home businesses. Go online in 3 days.</div>
         <ul class="prcl"><li>1-Page Landing Website</li><li>Mobile Responsive Design</li><li>Contact Form + WhatsApp Button</li><li>Google Maps Integration</li><li>3 Free Revisions</li><li>Delivered in 3 Days</li><li>Free GitHub Hosting</li><li class="off">Custom .com Domain</li><li class="off">SEO Optimization</li><li class="off">Logo Design</li></ul>
-        <button class="pbtn go" onclick="window.open('https://wa.me/918367540839?text=Hi!%20Interested%20in%20Basic%20Plan%20%E2%82%B92%2C999.','_blank')">Get Your Website Now &#8594;</button>
+        <button class="pbtn go" onclick="document.getElementById('contact-form').scrollIntoView({behavior:'smooth'})">Get Your Website Now &#8594;</button>
       </div>
       <div class="prc hot rv">
         <div class="htag">&#10024; MOST POPULAR</div>
@@ -822,7 +761,7 @@ footer ul a:hover{color:var(--silver);}
         <div class="prcn">One-time · Domain renews yearly</div>
         <div class="prck">Best for growing businesses, clinics &amp; agencies serious about more clients.</div>
         <ul class="prcl"><li>5-Page Full Business Website</li><li>Mobile Responsive Design</li><li>Contact Form + WhatsApp Button</li><li>Google Maps + Social Links</li><li>5 Free Revisions</li><li>Delivered in 5–7 Days</li><li>Custom .com Domain — 1 Year FREE</li><li>Basic SEO Setup</li><li>Logo Design Included</li><li class="off">E-Commerce / Payment Gateway</li></ul>
-        <button class="pbtn ms" onclick="window.open('https://wa.me/918367540839?text=Hi!%20Interested%20in%20Standard%20Plan%20%E2%82%B98%2C499.','_blank')">Start Your Project &#8594;</button>
+        <button class="pbtn ms" onclick="document.getElementById('contact-form').scrollIntoView({behavior:'smooth'})">Start Your Project &#8594;</button>
       </div>
       <div class="prc rv">
         <div class="prct g">Premium Plan</div><span class="prci">&#128081;</span>
@@ -830,7 +769,7 @@ footer ul a:hover{color:var(--silver);}
         <div class="prcn">One-time · Domain renews yearly</div>
         <div class="prck">Full-scale for e-commerce, institutes, real estate &amp; serious brands.</div>
         <ul class="prcl"><li>10+ Pages Full Custom Website</li><li>Mobile Responsive Design</li><li>Online Store + Razorpay / UPI</li><li>Admin Panel to Update Content</li><li>Up to 10 Revisions</li><li>Delivered in 14–21 Days</li><li>Custom .com Domain — 1 Year FREE</li><li>Hosting Setup &amp; Configuration — FREE</li><li>Advanced SEO + Google Analytics</li><li>Logo + Full Brand Identity Kit</li><li>1 Month Free Maintenance (then &#8377;999/month)</li></ul>
-        <button class="pbtn go" onclick="window.open('https://wa.me/918367540839?text=Hi!%20Interested%20in%20Premium%20Plan%20%E2%82%B919%2C999.','_blank')">Get Your Website Now &#8594;</button>
+        <button class="pbtn go" onclick="document.getElementById('contact-form').scrollIntoView({behavior:'smooth'})">Get Your Website Now &#8594;</button>
       </div>
     </div>
   </div>
@@ -875,7 +814,6 @@ footer ul a:hover{color:var(--silver);}
           <div class="cpfield full"><label class="cplabel">Extra Requirements</label><textarea class="cpinput" id="cf-notes" placeholder="Reference sites, features, colors, Telugu/English content, etc."></textarea></div>
         </div>
         <button class="cpsubmit" onclick="sendCustomQuote()">&#128172; Send to WhatsApp &amp; Get Quote</button>
-        <p style="font-size:.69rem;color:var(--gr);text-align:center;margin-top:.85rem;">&#128994; Our Team replies within 30 minutes · 9AM–9PM</p>
       </div>
     </div>
   </div>
@@ -885,14 +823,12 @@ footer ul a:hover{color:var(--silver);}
 <section class="sec seca" id="team">
   <div class="stag g">Our Team</div>
   <div class="stitle">THE PEOPLE BEHIND <span class="mg">YOUR SUCCESS</span></div>
-
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.3rem;margin-top:2.5rem;" class="rv">
-
-    <div class="tcard-min" style="position:relative;overflow:hidden;">
+    <div class="tcard-min" style="position:relative;overflow:hidden;background:var(--bg3);border:1px solid var(--silver-border);border-radius:16px;padding:1.6rem;display:flex;flex-direction:column;gap:.85rem;transition:all .3s;">
       <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--pk),var(--pk2));"></div>
       <div style="font-size:1.6rem;margin-bottom:.7rem;">🎨</div>
-      <div class="tcard-name">Website Designer</div>
-      <div class="tcard-role" style="color:var(--pk2);margin-bottom:.6rem;">Design Specialist</div>
+      <div style="font-weight:800;font-size:.97rem;font-family:'Syne',sans-serif;">Website Designer</div>
+      <div style="font-size:.72rem;color:var(--pk2);font-weight:600;letter-spacing:.5px;margin-bottom:.4rem;">Design Specialist</div>
       <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px;">
         <li style="font-size:.76rem;color:var(--gr2);padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--pk);">→</span> Modern UI/UX Design</li>
         <li style="font-size:.76rem;color:var(--gr2);padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--pk);">→</span> Mobile-First Layouts</li>
@@ -901,12 +837,11 @@ footer ul a:hover{color:var(--silver);}
         <li style="font-size:.76rem;color:var(--gr2);padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--pk);">→</span> AI-Powered Design Tools</li>
       </ul>
     </div>
-
-    <div class="tcard-min" style="position:relative;overflow:hidden;">
+    <div class="tcard-min" style="position:relative;overflow:hidden;background:var(--bg3);border:1px solid var(--silver-border);border-radius:16px;padding:1.6rem;display:flex;flex-direction:column;gap:.85rem;transition:all .3s;">
       <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--silver),var(--silver-muted));"></div>
       <div style="font-size:1.6rem;margin-bottom:.7rem;">✍️</div>
-      <div class="tcard-name">Content Writer</div>
-      <div class="tcard-role" style="color:var(--silver);margin-bottom:.6rem;">Content Specialist</div>
+      <div style="font-weight:800;font-size:.97rem;font-family:'Syne',sans-serif;">Content Writer</div>
+      <div style="font-size:.72rem;color:var(--silver);font-weight:600;letter-spacing:.5px;margin-bottom:.4rem;">Content Specialist</div>
       <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px;">
         <li style="font-size:.76rem;color:var(--gr2);padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--silver);">→</span> Website Copywriting</li>
         <li style="font-size:.76rem;color:var(--gr2);padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--silver);">→</span> SEO Blog Articles</li>
@@ -915,12 +850,11 @@ footer ul a:hover{color:var(--silver);}
         <li style="font-size:.76rem;color:var(--gr2);padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--silver);">→</span> Social Media Captions</li>
       </ul>
     </div>
-
-    <div class="tcard-min" style="position:relative;overflow:hidden;">
+    <div class="tcard-min" style="position:relative;overflow:hidden;background:var(--bg3);border:1px solid var(--silver-border);border-radius:16px;padding:1.6rem;display:flex;flex-direction:column;gap:.85rem;transition:all .3s;">
       <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--pk),var(--pk2));"></div>
       <div style="font-size:1.6rem;margin-bottom:.7rem;">📈</div>
-      <div class="tcard-name">Digital Marketer</div>
-      <div class="tcard-role" style="color:var(--pk2);margin-bottom:.6rem;">Marketing Specialist</div>
+      <div style="font-weight:800;font-size:.97rem;font-family:'Syne',sans-serif;">Digital Marketer</div>
+      <div style="font-size:.72rem;color:var(--pk2);font-weight:600;letter-spacing:.5px;margin-bottom:.4rem;">Marketing Specialist</div>
       <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px;">
         <li style="font-size:.76rem;color:var(--gr2);padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--pk);">→</span> Google SEO Setup</li>
         <li style="font-size:.76rem;color:var(--gr2);padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--pk);">→</span> Facebook &amp; Instagram Ads</li>
@@ -929,12 +863,11 @@ footer ul a:hover{color:var(--silver);}
         <li style="font-size:.76rem;color:var(--gr2);padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--pk);">→</span> Analytics &amp; Reporting</li>
       </ul>
     </div>
-
-    <div class="tcard-min" style="position:relative;overflow:hidden;">
+    <div class="tcard-min" style="position:relative;overflow:hidden;background:var(--bg3);border:1px solid var(--silver-border);border-radius:16px;padding:1.6rem;display:flex;flex-direction:column;gap:.85rem;transition:all .3s;">
       <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--silver),var(--silver-muted));"></div>
       <div style="font-size:1.6rem;margin-bottom:.7rem;">🔍</div>
-      <div class="tcard-name">Business Analyst</div>
-      <div class="tcard-role" style="color:var(--silver);margin-bottom:.6rem;">Strategy Specialist</div>
+      <div style="font-weight:800;font-size:.97rem;font-family:'Syne',sans-serif;">Business Analyst</div>
+      <div style="font-size:.72rem;color:var(--silver);font-weight:600;letter-spacing:.5px;margin-bottom:.4rem;">Strategy Specialist</div>
       <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px;">
         <li style="font-size:.76rem;color:var(--gr2);padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--silver);">→</span> Business Requirement Study</li>
         <li style="font-size:.76rem;color:var(--gr2);padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--silver);">→</span> Competitor Research</li>
@@ -943,34 +876,14 @@ footer ul a:hover{color:var(--silver);}
         <li style="font-size:.76rem;color:var(--gr2);padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--silver);">→</span> Client Success Management</li>
       </ul>
     </div>
-
   </div>
-
-  <div class="team-note rv" style="margin-top:1.5rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem;padding:1.4rem 1.8rem;">
-    <div style="display:flex;align-items:center;gap:.95rem;">
-      <div class="tn-icon">🏆</div>
-      <div class="tn-text">
-        <strong>Enterprise Quality. Affordable Price.</strong><br>
-        Our team brings 15+ years of combined expertise — delivering professional results for AP &amp; Telangana businesses.
-      </div>
-    </div>
-    <div style="display:flex;gap:1.8rem;flex-wrap:wrap;">
-      <div style="text-align:center;">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--pk);line-height:1;">15+</div>
-        <div style="font-size:.62rem;color:var(--gr2);margin-top:2px;letter-spacing:1px;text-transform:uppercase;">Yrs Experience</div>
-      </div>
-      <div style="text-align:center;">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--silver);line-height:1;">4</div>
-        <div style="font-size:.62rem;color:var(--gr2);margin-top:2px;letter-spacing:1px;text-transform:uppercase;">Specialists</div>
-      </div>
-      <div style="text-align:center;">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--pk);line-height:1;">75+</div>
-        <div style="font-size:.62rem;color:var(--gr2);margin-top:2px;letter-spacing:1px;text-transform:uppercase;">Happy Clients</div>
-      </div>
-    </div>
+  <!-- Team note — stats removed -->
+  <div class="team-note rv" style="margin-top:1.5rem;">
+    <div class="tn-icon">🏆</div>
+    <div class="tn-text"><strong>Enterprise Quality. Affordable Price.</strong><br>Our team brings 15+ years of combined expertise — delivering professional results for AP &amp; Telangana businesses.</div>
   </div>
-
 </section>
+
 <!-- TESTIMONIALS -->
 <section class="sec" id="testimonials">
   <div class="stag m">Client Reviews</div>
@@ -1000,7 +913,7 @@ footer ul a:hover{color:var(--silver);}
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- CONTACT — Phone only here, 1 time -->
 <section class="sec seca" id="contact-form" style="padding-bottom:55px;">
   <div class="stag g">Get In Touch</div>
   <div class="stitle">CONTACT <span class="pk">US</span></div>
@@ -1010,7 +923,7 @@ footer ul a:hover{color:var(--silver);}
         <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--silver),var(--mg));"></div>
         <div style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:1px;margin-bottom:1.3rem;">REACH US DIRECTLY</div>
         <div style="display:flex;flex-direction:column;gap:.85rem;">
-          <a href="https://wa.me/918367540839" class="ccard gcard"><div class="ccard-ic ci-wa">&#128172;</div><div><div class="ct">WhatsApp — Contact Us Now</div><div class="cs">+91 8367540839 · Reply in 30 mins</div></div></a>
+          <!-- Phone — only 1 time on entire page -->
           <a href="tel:+918367540839" class="ccard mcard"><div class="ccard-ic ci-ph">&#128222;</div><div><div class="ct">Call Us</div><div class="cs">+91 8367540839</div></div></a>
           <a href="mailto:info@cloudpixelai.in" class="ccard gcard"><div class="ccard-ic ci-em">&#128231;</div><div><div class="ct">Email Us</div><div class="cs">info@cloudpixelai.in</div></div></a>
           <div class="ccard plain"><div class="ccard-ic ci-lo">&#128205;</div><div><div class="ct">Location</div><div class="cs">Vijayawada, Andhra Pradesh &amp; Telangana</div></div></div>
@@ -1045,19 +958,18 @@ footer ul a:hover{color:var(--silver);}
         </div>
       </div>
       <div style="margin-bottom:1rem;"><div class="cpfield"><label class="cplabel">Your Message</label><textarea class="cpinput" id="cnt-msg" style="width:100%;min-height:80px;" placeholder="Tell us about your business and what you need..."></textarea></div></div>
-      <button class="cpsubmit" onclick="sendContactForm()" style="background:linear-gradient(135deg,var(--mg),var(--mg3));box-shadow:0 8px 22px var(--mg-glow);">&#128172; Get Your Website Now</button>
+      <button class="cpsubmit" onclick="sendContactForm()" style="background:linear-gradient(135deg,var(--mg),var(--mg3));box-shadow:0 8px 22px var(--mg-glow);">&#128172; Send Message via WhatsApp</button>
       <p style="font-size:.69rem;color:var(--gr);text-align:center;margin-top:.75rem;">&#128275; Your information is safe. We never share your details.</p>
     </div>
   </div>
 </section>
 
-  <!-- BLOG SECTION -->
+<!-- BLOG SECTION -->
 <section class="sec seca" id="blog">
   <div class="stag g">Latest from Our Blog</div>
   <div class="stitle">REAL STORIES. <span class="pk">REAL GROWTH.</span></div>
   <p class="sdesc" style="margin-bottom:2.5rem;">Local businesses కి digital presence ఎందుకు అవసరమో — real examples తో చదవండి.</p>
   <div class="port-grid rv" style="grid-template-columns:repeat(2,1fr);">
-
     <div class="port-card">
       <div class="port-card-ov" style="position:relative;aspect-ratio:16/10;background:linear-gradient(135deg,#0a2a1a,#1a4a2a);display:flex;align-items:center;justify-content:center;font-size:3.5rem;">💻</div>
       <div class="port-card-body">
@@ -1068,7 +980,6 @@ footer ul a:hover{color:var(--silver);}
         <a href="/blog-2999-website.html" class="port-cta">Read More →</a>
       </div>
     </div>
-
     <div class="port-card">
       <div class="port-card-ov" style="position:relative;aspect-ratio:16/10;background:linear-gradient(135deg,#1a0a2e,#2e1a4a);display:flex;align-items:center;justify-content:center;font-size:3.5rem;">🏫</div>
       <div class="port-card-body">
@@ -1083,13 +994,12 @@ footer ul a:hover{color:var(--silver);}
       <div class="port-card-ov" style="position:relative;aspect-ratio:16/10;background:linear-gradient(135deg,#00274a,#004a7a);display:flex;align-items:center;justify-content:center;font-size:3.5rem;">🏖</div>
       <div class="port-card-body">
         <div class="port-tag m">🌊 Visakhapatnam</div>
-        <h3>Vizag Hotels & Restaurants — Google లో ఎలా కనిపిస్తారు?</h3>
+        <h3>Vizag Hotels &amp; Restaurants — Google లో ఎలా కనిపిస్తారు?</h3>
         <p>Visitors Google లో ఎలా search చేస్తున్నారు — Vizag businesses కి opportunity.</p>
         <div class="port-features"><span class="pf">Hotels</span><span class="pf">Restaurants</span><span class="pf">Vizag</span></div>
         <a href="/blog-vizag-hotels-restaurants.html" class="port-cta">Read More →</a>
       </div>
     </div>
-
     <div class="port-card">
       <div class="port-card-ov" style="position:relative;aspect-ratio:16/10;background:linear-gradient(135deg,#2a1500,#4a2800);display:flex;align-items:center;justify-content:center;font-size:3.5rem;">🚗</div>
       <div class="port-card-body">
@@ -1100,29 +1010,27 @@ footer ul a:hover{color:var(--silver);}
         <a href="/blog-amaravati-car-travels.html" class="port-cta">Read More →</a>
       </div>
     </div>
-
   </div>
 </section>
-<!-- CTA -->
+
+<!-- CTA — phone removed, only project CTA -->
 <section class="ctasec" id="contact">
   <div class="ctaorb1"></div><div class="ctaorb2x"></div>
   <h2>READY TO <span class="gg">BUILD</span><br>SOMETHING <span class="mm">BOLD?</span></h2>
-  <p>WhatsApp our team now — free consultation &amp; instant quote in 5 minutes!</p>
+  <p>Contact our team now — free consultation &amp; instant quote in 5 minutes!</p>
   <div class="ctabtns">
-    <a href="https://wa.me/918367540839?text=Hi%20CloudPixel%20AI%20Team!%20I%20want%20to%20get%20my%20website%20now." class="bpk" style="font-size:.95rem;padding:15px 36px;">&#128640; Get Your Website Now</a>
-    <a href="tel:+918367540839" class="bgh" style="font-size:.95rem;padding:15px 36px;">&#128222; Call Now</a>
+    <a href="#contact-form" class="bpk" style="font-size:.95rem;padding:15px 36px;">&#128640; Get Your Website Now</a>
   </div>
   <div class="ctadet">
-    <div class="cd"><div class="cdi g">&#128241;</div><span>+91 8367540839</span></div>
     <div class="cd"><div class="cdi m">&#128231;</div><span>info@cloudpixelai.in</span></div>
     <div class="cd"><div class="cdi g">&#128205;</div><span>Vijayawada, AP &amp; Telangana</span></div>
     <div class="cd"><div class="cdi m">&#9200;</div><span>9AM – 9PM Daily</span></div>
   </div>
 </section>
 
-  <!-- CloudPixel AI Chat Widget -->
+<!-- AI CHAT WIDGET — unchanged, working -->
 <style>
-#cp-chat-btn{position:fixed;bottom:28px;right:100px;width:60px;height:60px;background:linear-gradient(135deg,#00d4ff,#0066ff);border-radius:50%;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(0,102,255,0.4);z-index:9999;font-size:26px;color:#fff;display:flex;align-items:center;justify-content:center;}
+#cp-chat-btn{position:fixed;bottom:28px;right:28px;width:60px;height:60px;background:linear-gradient(135deg,#00d4ff,#0066ff);border-radius:50%;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(0,102,255,0.4);z-index:9999;font-size:26px;color:#fff;display:flex;align-items:center;justify-content:center;}
 #cp-chat-box{position:fixed;bottom:100px;right:28px;width:340px;height:460px;background:#0a0a1a;border:1px solid rgba(0,212,255,0.3);border-radius:16px;z-index:9999;display:none;flex-direction:column;box-shadow:0 8px 32px rgba(0,102,255,0.3);}
 #cp-chat-header{padding:16px;background:linear-gradient(135deg,#00d4ff22,#0066ff22);border-bottom:1px solid rgba(0,212,255,0.2);border-radius:16px 16px 0 0;color:#00d4ff;font-weight:700;font-size:14px;}
 #cp-chat-messages{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px;}
@@ -1133,9 +1041,7 @@ footer ul a:hover{color:var(--silver);}
 #cp-input{flex:1;background:rgba(255,255,255,0.05);border:1px solid rgba(0,212,255,0.3);border-radius:8px;padding:8px 12px;color:#fff;font-size:13px;outline:none;}
 #cp-send{background:linear-gradient(135deg,#0066ff,#00d4ff);border:none;border-radius:8px;padding:8px 14px;color:#fff;cursor:pointer;font-size:14px;}
 </style>
-
 <button id="cp-chat-btn" onclick="document.getElementById('cp-chat-box').style.display=document.getElementById('cp-chat-box').style.display==='flex'?'none':'flex'">💬</button>
-
 <div id="cp-chat-box">
   <div id="cp-chat-header">☁ CloudPixel AI Assistant</div>
   <div id="cp-chat-messages">
@@ -1146,9 +1052,8 @@ footer ul a:hover{color:var(--silver);}
     <button id="cp-send" onclick="cpSend()">➤</button>
   </div>
 </div>
-
 <script>
-const CP_API = "https://cloudpixel-agent-999576942357.us-central1.run.app/chat";
+const CP_API="https://cloudpixel-agent-999576942357.us-central1.run.app/chat";
 async function cpSend(){
   const input=document.getElementById('cp-input');
   const msg=input.value.trim();
@@ -1162,18 +1067,20 @@ async function cpSend(){
     const d=await r.json();
     msgs.innerHTML+=`<div class="cp-msg cp-bot">${d.response}</div>`;
   }catch(e){
-    msgs.innerHTML+=`<div class="cp-msg cp-bot">Sorry, connection error. WhatsApp: +91 8367540839</div>`;
+    msgs.innerHTML+=`<div class="cp-msg cp-bot">Sorry, connection error. Please try again.</div>`;
   }
   msgs.scrollTop=msgs.scrollHeight;
 }
 </script>
 
-<!-- FOOTER -->
+<!-- FOOTER — WhatsApp only here (1 time), phone removed -->
 <footer>
   <div class="flb">
     <div class="fllogo"><img src="/CloudPixelAI-LinkedIn-DarkNavy.png" alt="CloudPixel AI" height="38" style="display:block;"></div>
     <p>Smart, affordable &amp; AI-powered websites for businesses across Andhra Pradesh &amp; Telangana. Based in Vijayawada, AP.</p>
     <div class="fsocs"><div class="fsc">&#128152;</div><div class="fsc">&#128248;</div><div class="fsc">&#128188;</div><div class="fsc">&#9654;</div></div>
+    <!-- WHATSAPP — only 1 time on entire page, here in footer -->
+    <a href="https://wa.me/918367540839?text=Hi%20CloudPixel%20AI%20Team!%20%F0%9F%91%8B%20I%20need%20a%20website." class="wa-footer-btn">&#128172; WhatsApp Us</a>
   </div>
   <div><h5>Services</h5><ul>
     <li><a href="#services">Business Website</a></li>
@@ -1188,7 +1095,6 @@ async function cpSend(){
     <li><a href="#testimonials">Reviews</a></li>
   </ul></div>
   <div><h5>Contact</h5><ul>
-    <li><a href="https://wa.me/918367540839">WhatsApp</a></li>
     <li><a href="tel:+918367540839">+91 8367540839</a></li>
     <li><a href="mailto:info@cloudpixelai.in">info@cloudpixelai.in</a></li>
     <li><a href="#">Vijayawada, AP</a></li>
@@ -1228,16 +1134,13 @@ document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
   document.getElementById('heroSlider').addEventListener('mouseleave',()=>{timer=setInterval(()=>go((c+1)%slides.length),3800);});
 })();
 
-// COUNTER ANIMATION
+// COUNTER
 function animCount(el,target,suffix){
   let n=0;const step=Math.ceil(target/55);
   const t=setInterval(()=>{n=Math.min(n+step,target);el.textContent=n+suffix;if(n>=target)clearInterval(t);},22);
 }
 document.addEventListener('DOMContentLoaded',function(){
-  setTimeout(function(){
-    animCount(document.getElementById('kn1'),75,'+');
-    
-  },600);
+  setTimeout(function(){animCount(document.getElementById('kn1'),75,'+');},600);
 });
 
 // TAB SWITCH
@@ -1290,12 +1193,29 @@ function sendContactForm(){
   if(msg2)msg+='%0A%F0%9F%92%AC%20Message%3A%20'+encodeURIComponent(msg2);
   window.open('https://wa.me/918367540839?text='+msg,'_blank');
 }
- function toggleMenu(){
+
+function toggleMenu(){
   document.getElementById('hmenu').classList.toggle('open');
   document.getElementById('hmenuOverlay').classList.toggle('open');
 }
-  function toggleBlogDropdown(e){e.preventDefault();e.stopPropagation();var dd=document.getElementById('blogDropdown');var ar=document.getElementById('blogArrow');var open=dd.style.display==='block';dd.style.display=open?'none':'block';ar.style.transform=open?'rotate(0deg)':'rotate(180deg)';}
-document.addEventListener('click',function(e){var item=document.getElementById('blog-nav-item');if(item&&!item.contains(e.target)){var dd=document.getElementById('blogDropdown');var ar=document.getElementById('blogArrow');if(dd)dd.style.display='none';if(ar)ar.style.transform='rotate(0deg)';}}); 
+
+function toggleBlogDropdown(e){
+  e.preventDefault();e.stopPropagation();
+  var dd=document.getElementById('blogDropdown');
+  var ar=document.getElementById('blogArrow');
+  var open=dd.style.display==='block';
+  dd.style.display=open?'none':'block';
+  ar.style.transform=open?'rotate(0deg)':'rotate(180deg)';
+}
+document.addEventListener('click',function(e){
+  var item=document.getElementById('blog-nav-item');
+  if(item&&!item.contains(e.target)){
+    var dd=document.getElementById('blogDropdown');
+    var ar=document.getElementById('blogArrow');
+    if(dd)dd.style.display='none';
+    if(ar)ar.style.transform='rotate(0deg)';
+  }
+});
 </script>
 
 <script type="application/ld+json">
@@ -1322,7 +1242,5 @@ document.addEventListener('click',function(e){var item=document.getElementById('
   "priceRange": "₹₹"
 }
 </script>
-  
 </body>
 </html>
-
