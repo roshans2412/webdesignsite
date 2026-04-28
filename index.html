@@ -938,7 +938,7 @@ async function cpSend(){
   try{
     const r=await fetch(CP_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg})});
     const d=await r.json();
-    msgs.innerHTML+=`<div class="cp-msg cp-bot">${d.response}</div>`;
+    msgs.innerHTML+=`<div class="cp-msg cp-bot">${d.reply}</div>`;
   }catch(e){
     msgs.innerHTML+=`<div class="cp-msg cp-bot">Sorry, connection error. Please try again.</div>`;
   }
